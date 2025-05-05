@@ -38,10 +38,18 @@ const Home = () => {
               <div className="absolute top-0 right-0 bg-black bg-opacity-10 p-2 rounded-bl-lg">
                 <span className="text-xs font-bold text-black opacity-70">EST. 2020</span>
               </div>
-              <div>
-                <span className="inline-block px-3 py-1 bg-black text-white text-sm font-bold rounded mb-4">CREATIVE DEVELOPER</span>
-                <h2 className="font-archivo text-black text-5xl font-black leading-tight tracking-tighter">
-                  I'M MAYACHE,<br/>
+              <div className="relative">
+                <div className="absolute -left-2 top-0 w-1 h-32 bg-black bg-opacity-20 rounded"></div>
+                <span className="inline-block px-3 py-1 bg-black text-white text-sm font-bold rounded mb-4 hover-scale shadow-md">
+                  <span className="inline-block w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
+                  CREATIVE DEVELOPER
+                </span>
+                <h2 className="font-archivo text-black text-5xl font-black leading-tight tracking-tighter text-shadow-sm relative z-10">
+                  <span className="relative inline-block">
+                    I'M <span className="gradient-text bg-clip-text">MAYACHE</span>,
+                    <span className="absolute -right-2 -top-2 bg-mayache-teal text-white text-xs px-1 rounded-full font-bold transform rotate-12">PRO</span>
+                  </span>
+                  <br/>
                   A DESIGNER<br/>
                   AND<br/>
                   FULLSTACK<br/>
@@ -49,16 +57,33 @@ const Home = () => {
                   BASED IN<br/>
                   MOROCCO.
                 </h2>
+                <div className="flex space-x-2 mt-2">
+                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">React</span>
+                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Next.js</span>
+                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Figma</span>
+                </div>
               </div>
               <div>
                 <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
                   I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites. This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.
                 </p>
-                <div className="mt-4 flex space-x-3">
-                  <a href="#contact" className="inline-block px-4 py-2 bg-black text-white text-sm font-bold rounded hover:bg-gray-800 transition-colors duration-200">
+                <div className="mt-6 flex space-x-3">
+                  <a href="#contact" className="group relative inline-flex items-center px-5 py-3 bg-black text-white text-sm font-bold rounded hover:bg-gray-800 transition-all duration-300 overflow-hidden shadow-md">
+                    <span className="absolute -left-4 w-2 h-full bg-mayache-teal transform skew-x-[20deg] group-hover:translate-x-52 transition-transform duration-700"></span>
+                    <span className="mr-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </span>
                     CONTACT ME
                   </a>
-                  <a href="#portfolio" className="inline-block px-4 py-2 border border-black text-black text-sm font-bold rounded hover:bg-black hover:text-white transition-colors duration-200">
+                  <a href="#portfolio" className="group relative inline-flex items-center px-5 py-3 border-2 border-black text-black text-sm font-bold rounded overflow-hidden transition-all duration-300 hover:bg-black hover:text-white shadow-md">
+                    <span className="absolute -left-4 w-2 h-full bg-mayache-orange transform skew-x-[20deg] opacity-50 group-hover:translate-x-52 transition-transform duration-700"></span>
+                    <span className="mr-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                      </svg>
+                    </span>
                     VIEW WORK
                   </a>
                 </div>
@@ -254,27 +279,44 @@ const Home = () => {
             </GridSection>
           </div>
 
-          {/* Bottom Row - 5 blocks */}
+          {/* Bottom Row - Project Cards */}
           {/* Project 1 - Orange Block */}
           <GridSection 
             background="bg-mayache-orange" 
             colSpan="col-span-1"
             id="portfolio"
           >
-            <div className="flex h-full flex-col justify-between hover-lift">
-              <div className="flex items-center">
+            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
+              {/* Corner decoration */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform duration-500"></div>
+              
+              <div className="flex items-center relative z-10">
                 <div className="flex space-x-2">
-                  <FaGithub className="h-6 w-6 text-white" />
-                  <SiFigma className="h-6 w-6 text-white" />
+                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                    <FaGithub className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                    <SiFigma className="h-5 w-5 text-white" />
+                  </div>
                 </div>
+                <span className="ml-auto inline-block px-2 py-0.5 bg-white bg-opacity-20 text-white text-xs font-bold rounded">2023</span>
               </div>
-              <div>
-                <h2 className="font-archivo text-white text-xl font-black mt-4">
-                  BOOKING-APP (MERN)
+              
+              <div className="relative z-10">
+                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
+                <h2 className="font-archivo text-white text-xl font-black leading-tight">
+                  BOOKING-APP
+                  <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(MERN)</span>
                 </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide">
+                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
                   A modern reservation system built using the MERN stack with real-time availability updates.
                 </p>
+                <div className="mt-3">
+                  <a href="#" className="inline-flex items-center text-white text-xs font-bold group/link">
+                    VIEW PROJECT
+                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
             </div>
           </GridSection>
@@ -284,17 +326,43 @@ const Home = () => {
             colSpan="col-span-1"
             background="bg-mayache-teal"
           >
-            <div className="flex h-full flex-col justify-between hover-lift">
-              <div className="flex items-center">
-                <SiWordpress className="h-6 w-6 text-white" />
+            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
+              {/* Background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="grid grid-cols-3 h-full w-full">
+                  {[...Array(9)].map((_, index) => (
+                    <div key={index} className="border border-white border-opacity-20"></div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <h2 className="font-archivo text-white text-xl font-black mt-4">
+              
+              <div className="flex items-center justify-between relative z-10">
+                <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                  <SiWordpress className="h-5 w-5 text-white" />
+                </div>
+                <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">NEW</span>
+              </div>
+              
+              <div className="relative z-10">
+                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
+                <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
                   PORTFOLIO SHOWCASE
+                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide">
+                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
                   An elegantly designed portfolio collection featuring interactive animations and responsive layouts.
                 </p>
+                <div className="mt-3 flex items-center">
+                  <a href="#" className="inline-flex items-center text-white text-xs font-bold mr-3 group/link">
+                    LIVE DEMO
+                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                  </a>
+                  <a href="#" className="inline-flex items-center text-white text-xs mr-3">|</a>
+                  <a href="#" className="inline-flex items-center text-white text-xs font-bold group/link">
+                    CASE STUDY
+                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
             </div>
           </GridSection>
