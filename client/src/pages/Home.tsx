@@ -127,11 +127,11 @@ const Home = () => {
                 </div>
                 
                 {/* Soft skills overlay (appears on hover) */}
-                <div className="absolute inset-0 flex flex-col h-full bg-red-500 opacity-0 transition-all duration-300 group-hover:opacity-100 p-5">
-                  <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                <div className="absolute inset-0 flex flex-col h-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-100 p-5">
+                  <h2 className="font-archivo text-red-500 text-4xl font-black mb-2">
                     SOFTSKILL
                   </h2>
-                  <ul className="text-white text-base font-archivo uppercase space-y-1">
+                  <ul className="text-red-500 text-base font-archivo uppercase space-y-1">
                     <li>DESIGN</li>
                     <li>PROGRAMMING</li>
                     <li>PAINTER</li>
