@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="250" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
-  <!-- Face -->
-  <path d="M100 50 C50 50, 40 120, 60 160 C70 180, 90 190, 100 190 C110 190, 130 180, 140 160 C160 120, 150 50, 100 50" fill="#8ecbff" />
+<svg width="220" height="300" viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Face and head -->
+  <path d="M110 40 C70 40, 60 100, 75 150 C85 180, 95 190, 110 190 C125 190, 135 180, 145 150 C160 100, 150 40, 110 40" fill="#84b7cf" />
   
   <!-- Hair -->
-  <path d="M80 50 C70 40, 60 20, 90 15 C100 12, 110 12, 120 15 C150 20, 140 40, 130 50" fill="#2b5876" />
+  <path d="M85 60 C75 50, 70 30, 90 25 C100 22, 120 22, 130 25 C150 30, 145 50, 135 60" fill="#2b5876" />
   
   <!-- Crown -->
-  <path d="M70 25 L85 15 L95 25 L105 15 L115 25 L100 35 L70 25" fill="#ff4040" />
+  <path d="M85 25 L95 15 L105 25 L115 15 L125 25 L105 30 L85 25" fill="#ff5555" />
   
-  <!-- Left Eye -->
-  <ellipse cx="80" cy="90" rx="12" ry="15" fill="white" />
-  <ellipse cx="80" cy="90" rx="6" ry="8" fill="#000" />
+  <!-- Eyes (sad/concerned) -->
+  <ellipse cx="90" cy="90" rx="10" ry="12" fill="white" />
+  <ellipse cx="90" cy="90" rx="5" ry="6" fill="#000" />
   
-  <!-- Right Eye -->
-  <ellipse cx="120" cy="90" rx="12" ry="15" fill="white" />
-  <ellipse cx="120" cy="90" rx="6" ry="8" fill="#000" />
+  <ellipse cx="130" cy="90" rx="10" ry="12" fill="white" />
+  <ellipse cx="130" cy="90" rx="5" ry="6" fill="#000" />
   
-  <!-- Blush -->
-  <circle cx="65" cy="110" r="8" fill="#ff6666" />
-  <circle cx="135" cy="110" r="8" fill="#ff6666" />
+  <!-- Cheeks with blush marks -->
+  <circle cx="70" cy="110" r="10" fill="#ff6666" opacity="0.6" />
+  <circle cx="150" cy="110" r="10" fill="#ff6666" opacity="0.6" />
   
-  <!-- Mouth -->
-  <path d="M90 130 C95 140, 105 140, 110 130" stroke="#000" stroke-width="3" fill="none" />
+  <!-- Shirt/outfit (blue) -->
+  <path d="M75 150 C85 200, 135 200, 145 150" fill="#ffffff" />
+  <path d="M75 150 C65 170, 60 180, 70 190 C80 200, 90 205, 95 200" fill="#ffffff" />
   
-  <!-- Envelope -->
-  <rect x="70" y="200" width="80" height="50" fill="#ffcccc" />
-  <path d="M70 200 L110 220 L150 200" stroke="#ff0000" stroke-width="2" fill="none" />
-  
-  <!-- Shirt -->
-  <path d="M60 170 C80 220, 120 220, 140 170" fill="#ffffff" />
+  <!-- Envelope/Paper (pink) -->
+  <path d="M90 190 L100 210 L140 190" fill="#ff98c9" />
+  <path d="M100 210 L120 220 L140 190" fill="#ff98c9" stroke="#ff5555" stroke-width="1" />
   
   <!-- Arm -->
-  <path d="M60 170 C40 170, 30 190, 50 200 C60 205, 70 205, 70 200" fill="#ffffff" />
+  <path d="M145 150 C160 160, 170 180, 160 200 C150 220, 130 210, 140 190" fill="#ffffff" />
 </svg>
