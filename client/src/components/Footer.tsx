@@ -6,45 +6,11 @@ const Footer = () => {
   return (
     <footer className="bg-white py-6 px-6 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="font-archivo text-black text-xl font-black mb-4">MAYACHE</h3>
-            <p className="text-gray-700 text-sm mb-4 uppercase tracking-wide max-w-xs">
-              Creative software developer specializing in building beautiful, functional, and user-friendly digital experiences.
-            </p>
             <p className="text-sm font-bold">
               <span className="text-mayache-teal">• </span>Available for freelance work
             </p>
-          </div>
-          
-          <div className="md:mx-auto">
-            <h3 className="font-archivo text-black text-lg font-black mb-4">QUICK LINKS</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-700 text-sm uppercase tracking-wide hover:text-black transition-colors flex items-center">
-                  <span className="w-1 h-1 bg-mayache-red rounded-full mr-2"></span>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#skills" className="text-gray-700 text-sm uppercase tracking-wide hover:text-black transition-colors flex items-center">
-                  <span className="w-1 h-1 bg-mayache-blue rounded-full mr-2"></span>
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" className="text-gray-700 text-sm uppercase tracking-wide hover:text-black transition-colors flex items-center">
-                  <span className="w-1 h-1 bg-mayache-yellow rounded-full mr-2"></span>
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-700 text-sm uppercase tracking-wide hover:text-black transition-colors flex items-center">
-                  <span className="w-1 h-1 bg-mayache-green rounded-full mr-2"></span>
-                  Contact
-                </a>
-              </li>
-            </ul>
           </div>
           
           <div className="lg:ml-auto">

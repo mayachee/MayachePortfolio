@@ -129,35 +129,36 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 </ul>
               </nav>
               
-              {/* Language selection */}
+              {/* Language selection - simplified to icons */}
               <div className="mb-8">
-                <h3 className="text-xs text-gray-500 uppercase mb-2 font-bold">Language</h3>
-                <div className="flex space-x-2">
+                <div className="flex space-x-3">
                   <button 
                     onClick={() => changeLanguage('en')}
-                    className={`px-3 py-2 text-xs font-bold rounded-lg transition-colors ${i18n.language === 'en' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'en' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    aria-label="English"
                   >
-                    English
+                    EN
                   </button>
                   <button 
                     onClick={() => changeLanguage('de')}
-                    className={`px-3 py-2 text-xs font-bold rounded-lg transition-colors ${i18n.language === 'de' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'de' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    aria-label="German"
                   >
-                    Deutsch
+                    DE
                   </button>
-                </div>
-                <div className="flex space-x-2 mt-2">
                   <button 
                     onClick={() => changeLanguage('fr')}
-                    className={`px-3 py-2 text-xs font-bold rounded-lg transition-colors ${i18n.language === 'fr' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'fr' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    aria-label="French"
                   >
-                    Français
+                    FR
                   </button>
                   <button 
                     onClick={() => changeLanguage('es')}
-                    className={`px-3 py-2 text-xs font-bold rounded-lg transition-colors ${i18n.language === 'es' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'es' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    aria-label="Spanish"
                   >
-                    Español
+                    ES
                   </button>
                 </div>
               </div>
