@@ -201,9 +201,9 @@ const Home = () => {
               <div className="flex flex-col h-full justify-between">
                 <div className="text-center">
                   <img 
-                    src="/assets/character.svg" 
-                    alt="Character illustration" 
-                    className="w-28 h-28 mx-auto"
+                    src="/assets/message-sent.png" 
+                    alt="Message sent illustration" 
+                    className="w-36 h-36 mx-auto object-contain"
                   />
                   <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
                     WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
