@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma } from "react-icons/si";
 import MessageSentImg from "../assets/message-sent.png";
 import PortfolioBgImg from "../assets/portfolio-bg.jpg";
+import UxSchoolImg from "../assets/ux-school.webp";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -119,18 +120,18 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Second internship section */}
+            {/* UI/UX Private School with background image */}
             <GridSection 
-              background="bg-mayache-yellow" 
+              backgroundImage={UxSchoolImg}
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h2 className="font-archivo text-black text-3xl font-black mb-1">
+                  <h2 className="font-archivo text-white text-3xl font-black mb-1">
                     UI/UX PRIVATE SCHOOL
                   </h2>
-                  <h3 className="text-black text-base font-archivo mb-1">DESIGN AGENCY</h3>
-                  <p className="text-black text-xs font-normal uppercase">
-                    Looking for a clean and fast build for your design? I'm your man. Specialized in UI/UX design for private schools and educational platforms.
+                  <h3 className="text-white text-base font-archivo mb-1">DESIGN AGENCY</h3>
+                  <p className="text-white text-xs font-normal uppercase">
+                    Specialized in UI/UX design for private schools and educational platforms. Creating modern digital experiences for students and educators.
                   </p>
                 </div>
                 <div className="flex space-x-2 mt-auto justify-end">
@@ -244,31 +245,24 @@ const Home = () => {
           </GridSection>
 
           {/* Grid section with background image */}
-          <div className="col-span-1 relative">
-            <div 
-              className="h-full w-full p-6 relative"
-              style={{
-                backgroundImage: `url(${PortfolioBgImg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center'
-              }}
-            >
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-              <div className="relative z-10 flex h-full flex-col justify-between">
-                <div className="flex items-center">
-                  <SiWordpress className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-archivo text-white text-xl font-black mt-4">
-                    PORTFOLIO SHOWCASE
-                  </h2>
-                  <p className="text-white text-xs mt-2 font-normal uppercase">
-                    View my latest portfolio projects and creative designs. Click to explore more.
-                  </p>
-                </div>
+          <GridSection 
+            colSpan="col-span-1"
+            backgroundImage={PortfolioBgImg}
+          >
+            <div className="flex h-full flex-col justify-between">
+              <div className="flex items-center">
+                <SiWordpress className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h2 className="font-archivo text-white text-xl font-black mt-4">
+                  PORTFOLIO SHOWCASE
+                </h2>
+                <p className="text-white text-xs mt-2 font-normal uppercase">
+                  View my latest portfolio projects and creative designs. Click to explore more.
+                </p>
               </div>
             </div>
-          </div>
+          </GridSection>
 
 
         </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 interface GridSectionProps {
   children: ReactNode;
   background?: string;
+  backgroundImage?: string;
   colSpan?: string;
   rowSpan?: string;
   id?: string;
@@ -12,6 +13,7 @@ interface GridSectionProps {
 const GridSection = ({
   children,
   background = "bg-white",
+  backgroundImage,
   colSpan = "col-span-1",
   rowSpan = "row-span-1",
   id,
@@ -24,7 +26,15 @@ const GridSection = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
+      style={backgroundImage ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      } : {}}
     >
+      {backgroundImage && (
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      )}
       <div className="relative z-10 flex flex-col h-full">
         {children}
       </div>
