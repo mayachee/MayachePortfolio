@@ -42,35 +42,66 @@ const Home = () => {
           </GridSection>
 
           {/* Middle column - Purple Block */}
-          <GridSection 
-            background="bg-purple-600" 
-            colSpan="col-span-1" 
-            rowSpan="row-span-2"
-          >
-            <div className="flex flex-col h-full justify-between">
-              <div>
-                <h2 className="font-archivo text-white text-4xl font-black mb-2">
-                  INTERNSHIP
-                </h2>
-                <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
-                <p className="text-white text-xs font-normal uppercase">
-                  Day handsome addition horrible sensible goodness two contempt. Evening for married his account removal. Estimable me disposing of be moonlight cordially curiosity. Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite excellent son gentleman acuteness her. Do is voice total power mr ye might round still.
-                </p>
+          <div className="col-span-1 grid grid-rows-2 gap-2">
+            {/* INTERNSHIP Section */}
+            <GridSection 
+              background="bg-purple-600" 
+              id="internship"
+            >
+              <div className="flex flex-col h-full justify-between">
+                <div>
+                  <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                    INTERNSHIP
+                  </h2>
+                  <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
+                  <p className="text-white text-xs font-normal uppercase">
+                    Day handsome addition horrible sensible goodness two contempt. Evening for married his account removal. Estimable me disposing of be moonlight cordially curiosity.
+                  </p>
+                </div>
+                <div className="flex space-x-2 mt-auto justify-end">
+                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 15l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div className="flex space-x-2 mt-auto justify-end">
-                <button className="bg-black w-10 h-10 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 15l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                <button className="bg-black w-10 h-10 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
+            </GridSection>
+            
+            {/* Second internship section */}
+            <GridSection 
+              background="bg-mayache-yellow" 
+            >
+              <div className="flex flex-col h-full justify-between">
+                <div>
+                  <h2 className="font-archivo text-black text-3xl font-black mb-1">
+                    EXPERIENCE
+                  </h2>
+                  <h3 className="text-black text-base font-archivo mb-1">DESIGN AGENCY</h3>
+                  <p className="text-black text-xs font-normal uppercase">
+                    Worked on various projects for clients in different industries. Designed and developed websites and applications.
+                  </p>
+                </div>
+                <div className="flex space-x-2 mt-auto justify-end">
+                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 15l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-          </GridSection>
+            </GridSection>
+          </div>
 
           <div className="col-span-1 grid grid-rows-2 gap-2">
             {/* Right column top - Red Block */}
