@@ -72,7 +72,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-mayache-dark text-5xl font-black tracking-tight">MAYACHE</h1>
+          <h1 className="text-mayache-dark text-5xl font-black tracking-tight font-archivo">MAYACHE</h1>
         </motion.div>
         <motion.div 
           className="text-right"
@@ -80,7 +80,7 @@ const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-4xl font-black tracking-tight">PORTFOLIO</h2>
+          <h2 className="text-4xl font-black tracking-tight font-archivo">PORTFOLIO</h2>
         </motion.div>
       </header>
       {languageSelector()}

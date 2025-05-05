@@ -25,7 +25,7 @@ const Home = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <motion.h2 
-                  className="font-poppins text-black text-5xl font-black leading-tight"
+                  className="font-archivo text-black text-5xl font-black leading-tight"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, staggerChildren: 0.1 }}

@@ -65,7 +65,7 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-3xl font-black tracking-tight">COPYRIGHT © {currentYear}</h2>
+          <h2 className="text-3xl font-black tracking-tight font-archivo">COPYRIGHT</h2>
         </motion.div>
       </div>
     </footer>
