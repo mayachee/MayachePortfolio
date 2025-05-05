@@ -1,48 +1,44 @@
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiGithub, SiFigma, SiLinkedin } from "react-icons/si";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-mayache-dark py-8 px-6 border-t border-gray-800">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex space-x-4 mb-4 md:mb-0">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-mayache-green transition-colors"
-              aria-label="GitHub"
-            >
-              <FaGithub className="h-6 w-6" />
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-mayache-green transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin className="h-6 w-6" />
-            </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-mayache-green transition-colors"
-              aria-label="Instagram"
-            >
-              <FaInstagram className="h-6 w-6" />
-            </a>
-          </div>
-          <p className="text-white text-lg font-poppins font-bold mb-4 md:mb-0">
-            {t("footer.copyright")}
-          </p>
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Mayache. {t("footer.rights")}
-          </p>
+    <footer className="bg-white py-4 px-6 max-w-1200 mx-auto">
+      <div className="flex justify-between items-center">
+        <div className="flex space-x-6 items-center">
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-black hover:text-mayache-green transition-colors"
+            aria-label="GitHub"
+          >
+            <SiGithub className="h-6 w-6" />
+          </a>
+          <a 
+            href="https://figma.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-black hover:text-mayache-green transition-colors"
+            aria-label="Figma"
+          >
+            <SiFigma className="h-6 w-6" />
+          </a>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-black hover:text-mayache-green transition-colors"
+            aria-label="LinkedIn"
+          >
+            <SiLinkedin className="h-6 w-6" />
+          </a>
+        </div>
+        <div className="text-right">
+          <h2 className="text-3xl font-black">COPYRIGHT</h2>
         </div>
       </div>
     </footer>

@@ -59,24 +59,29 @@
     font-family: 'Inter', sans-serif;
   }
 
-  .bg-mayache-green {
-    background-color: hsl(126, 83%, 68%);
+  .bg-mayache-green,
+  .bg-green-400 {
+    background-color: #84f554;
   }
 
-  .bg-mayache-purple {
-    background-color: hsl(262, 73%, 59%);
+  .bg-mayache-purple,
+  .bg-purple-600 {
+    background-color: #6324c6;
   }
 
-  .bg-mayache-pink {
-    background-color: hsl(322, 100%, 64%);
+  .bg-mayache-pink,
+  .bg-pink-500 {
+    background-color: #ff41a6;
   }
 
-  .bg-mayache-red {
-    background-color: hsl(0, 100%, 66%);
+  .bg-mayache-red,
+  .bg-red-500 {
+    background-color: #f54444;
   }
 
-  .bg-mayache-yellow {
-    background-color: hsl(39, 100%, 70%);
+  .bg-mayache-yellow,
+  .bg-yellow-400 {
+    background-color: #ffce40;
   }
 
   .bg-mayache-blue {
@@ -88,31 +93,31 @@
   }
 
   .text-mayache-green {
-    color: hsl(126, 83%, 68%);
+    color: #84f554;
   }
 
   .text-mayache-purple {
-    color: hsl(262, 73%, 59%);
+    color: #6324c6;
   }
 
   .text-mayache-pink {
-    color: hsl(322, 100%, 64%);
+    color: #ff41a6;
   }
 
   .text-mayache-red {
-    color: hsl(0, 100%, 66%);
+    color: #f54444;
   }
 
   .text-mayache-yellow {
-    color: hsl(39, 100%, 70%);
+    color: #ffce40;
   }
 
   .text-mayache-blue {
-    color: hsl(220, 76%, 59%);
+    color: #3871e0;
   }
 
   .text-mayache-dark {
-    color: hsl(0, 0%, 12%);
+    color: #000000;
   }
 
   .hover-lift {
@@ -125,10 +130,13 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 0.75rem;
+    padding: 0.75rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
   }
 
   @media (max-width: 768px) {

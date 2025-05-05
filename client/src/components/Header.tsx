@@ -77,113 +77,60 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-white py-4 px-6 flex justify-between items-center">
+      <header className="bg-white py-4 px-6 flex justify-between items-center max-w-1200 mx-auto">
         <div className="logo">
           <h1 className="text-mayache-dark text-4xl font-black">MAYACHE</h1>
         </div>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6">
-            <li>
-              <a
-                href="#about"
-                className="text-mayache-dark font-medium hover:text-mayache-green transition-colors"
-              >
-                {t("nav.about")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                className="text-mayache-dark font-medium hover:text-mayache-green transition-colors"
-              >
-                {t("nav.skills")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#portfolio"
-                className="text-mayache-dark font-medium hover:text-mayache-green transition-colors"
-              >
-                {t("nav.portfolio")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="text-mayache-dark font-medium hover:text-mayache-green transition-colors"
-              >
-                {t("nav.contact")}
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div className="language-selector flex space-x-2">
-          <button
-            className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
-              i18n.language === "en"
-                ? "border-mayache-green"
-                : "border-gray-300 hover:border-mayache-green"
-            } focus:outline-none transition-colors`}
-            onClick={() => changeLanguage("en")}
-            aria-label="Switch to English"
-          >
-            {languageFlags.en}
-          </button>
-          <button
-            className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
-              i18n.language === "de"
-                ? "border-mayache-green"
-                : "border-gray-300 hover:border-mayache-green"
-            } focus:outline-none transition-colors`}
-            onClick={() => changeLanguage("de")}
-            aria-label="Switch to German"
-          >
-            {languageFlags.de}
-          </button>
-          <button
-            className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
-              i18n.language === "fr"
-                ? "border-mayache-green"
-                : "border-gray-300 hover:border-mayache-green"
-            } focus:outline-none transition-colors`}
-            onClick={() => changeLanguage("fr")}
-            aria-label="Switch to French"
-          >
-            {languageFlags.fr}
-          </button>
-          <button
-            className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
-              i18n.language === "es"
-                ? "border-mayache-green"
-                : "border-gray-300 hover:border-mayache-green"
-            } focus:outline-none transition-colors`}
-            onClick={() => changeLanguage("es")}
-            aria-label="Switch to Spanish"
-          >
-            {languageFlags.es}
-          </button>
+        <div className="text-right">
+          <h2 className="text-3xl font-black">PORTFOLIO</h2>
         </div>
-        <button
-          className="md:hidden text-mayache-dark"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
       </header>
+      <div className="language-selector hidden">
+        <button
+          className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
+            i18n.language === "en"
+              ? "border-mayache-green"
+              : "border-gray-300 hover:border-mayache-green"
+          } focus:outline-none transition-colors`}
+          onClick={() => changeLanguage("en")}
+          aria-label="Switch to English"
+        >
+          {languageFlags.en}
+        </button>
+        <button
+          className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
+            i18n.language === "de"
+              ? "border-mayache-green"
+              : "border-gray-300 hover:border-mayache-green"
+          } focus:outline-none transition-colors`}
+          onClick={() => changeLanguage("de")}
+          aria-label="Switch to German"
+        >
+          {languageFlags.de}
+        </button>
+        <button
+          className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
+            i18n.language === "fr"
+              ? "border-mayache-green"
+              : "border-gray-300 hover:border-mayache-green"
+          } focus:outline-none transition-colors`}
+          onClick={() => changeLanguage("fr")}
+          aria-label="Switch to French"
+        >
+          {languageFlags.fr}
+        </button>
+        <button
+          className={`w-8 h-8 rounded-full overflow-hidden border-2 ${
+            i18n.language === "es"
+              ? "border-mayache-green"
+              : "border-gray-300 hover:border-mayache-green"
+          } focus:outline-none transition-colors`}
+          onClick={() => changeLanguage("es")}
+          aria-label="Switch to Spanish"
+        >
+          {languageFlags.es}
+        </button>
+      </div>
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

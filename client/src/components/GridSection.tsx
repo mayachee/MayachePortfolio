@@ -12,14 +12,14 @@ interface GridSectionProps {
 const GridSection = ({
   children,
   background = "bg-white",
-  colSpan = "col-span-6 md:col-span-3",
+  colSpan = "col-span-1",
   rowSpan = "row-span-1",
   id,
 }: GridSectionProps) => {
   return (
     <motion.div
       id={id}
-      className={`${background} rounded-xl p-8 ${colSpan} ${rowSpan} hover-lift`}
+      className={`${background} p-6 ${colSpan} ${rowSpan} hover-lift flex flex-col`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
