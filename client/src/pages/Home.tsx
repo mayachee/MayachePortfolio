@@ -196,22 +196,18 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Wanna Talk Block - Blue */}
+            {/* Wanna Talk Block with background image */}
             <GridSection 
               background="bg-mayache-blue"
+              backgroundImage={MessageSentImg}
               id="contact"
             >
-              <div className="flex flex-col h-full justify-between">
-                <div className="text-center">
-                  <img 
-                    src={MessageSentImg} 
-                    alt="Message sent illustration" 
-                    className="w-36 h-36 mx-auto object-contain"
-                  />
-                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
+              <div className="flex flex-col h-full justify-center">
+                <div className="text-center z-20">
+                  <h3 className="font-archivo text-white text-2xl font-black text-center">
                     WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
                   </h3>
-                  <p className="text-white text-xs text-center mt-1">
+                  <p className="text-white text-xs text-center mt-2">
                     mayacheyassine2000@gmail.com
                   </p>
                 </div>
