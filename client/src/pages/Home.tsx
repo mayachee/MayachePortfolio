@@ -209,39 +209,162 @@ const Home = () => {
               colSpan=""
               id="skills"
             >
-              <div className="relative overflow-hidden h-full cursor-pointer" style={{ perspective: '1000px' }}>
-                {/* Front side - HARDSKILL */}
-                <div className="absolute inset-0 flex flex-col h-full p-5 bg-mayache-red transition-all duration-500 ease-in-out backface-hidden transform-gpu group-hover:rotate-y-180 z-10">
-                  <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">FLIP ME</span>
-                  <h2 className="font-archivo text-white text-4xl font-black mb-4 leading-tight">
-                    HARD<br/>SKILLS
-                  </h2>
-                  <ul className="text-white text-base font-archivo uppercase space-y-2">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>FIGMA</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>PHOTOSHOP</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>REACT</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>NEXT.JS</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>JAVA/C++</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>PYTHON</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-white rounded-full mr-2"></span>PHP</li>
-                  </ul>
-                </div>
-                
-                {/* Back side - SOFTSKILL */}
-                <div className="absolute inset-0 flex flex-col h-full p-5 bg-white rotate-y-180 transition-all duration-500 ease-in-out backface-hidden transform-gpu group-hover:rotate-y-0 z-20">
-                  <span className="inline-block px-2 py-1 bg-mayache-red bg-opacity-10 text-mayache-red text-xs font-bold rounded mb-2">FLIP BACK</span>
-                  <h2 className="font-archivo text-mayache-red text-4xl font-black mb-4 leading-tight">
-                    SOFT<br/>SKILLS
-                  </h2>
-                  <ul className="text-mayache-red text-base font-archivo uppercase space-y-2">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>DESIGN</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>PROGRAMMING</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>PAINTER</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>CREATIVITY</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>FLEXIBILITY</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>TEAM-WORK</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-mayache-red rounded-full mr-2"></span>COMMUNICATION</li>
-                  </ul>
+              <div className="relative overflow-hidden h-full group" style={{ perspective: '1500px' }}>
+                <div className="h-full w-full transition-all duration-700 ease-out transform-gpu preserve-3d hover:rotate-y-180 cursor-pointer relative">
+                  {/* Front side - HARDSKILL */}
+                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 backface-hidden">
+                    <div className="absolute top-4 right-4 flex space-x-1">
+                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
+                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
+                      <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
+                    </div>
+                    
+                    <div className="flex items-center mb-2">
+                      <span className="inline-flex items-center px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded">
+                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
+                        FLIP ME
+                      </span>
+                      <div className="ml-auto rotate-180 text-white/30 text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    <h2 className="font-archivo text-white text-4xl font-black mb-6 leading-tight text-shadow-sm relative">
+                      HARD<br/>SKILLS
+                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
+                    </h2>
+                    
+                    <ul className="text-white text-base font-archivo uppercase space-y-3">
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        FIGMA
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        PHOTOSHOP
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        REACT
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        NEXT.JS
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        JAVA/C++
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        PYTHON
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-white rounded-full"></span>
+                        </span>
+                        PHP
+                      </li>
+                    </ul>
+                    
+                    {/* Decorative circles */}
+                    <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
+                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black bg-opacity-5 rounded-full"></div>
+                  </div>
+                  
+                  {/* Back side - SOFTSKILL */}
+                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-white rotate-y-180 backface-hidden">
+                    <div className="absolute top-4 right-4 flex space-x-1">
+                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-60"></span>
+                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-80"></span>
+                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full"></span>
+                    </div>
+                  
+                    <div className="flex items-center mb-2">
+                      <span className="inline-flex items-center px-2 py-1 bg-mayache-red bg-opacity-10 text-mayache-red text-xs font-bold rounded">
+                        <span className="w-2 h-2 bg-mayache-red rounded-full mr-1.5 animate-pulse"></span>
+                        FLIP BACK
+                      </span>
+                      <div className="ml-auto text-mayache-red/30 text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    <h2 className="font-archivo text-mayache-red text-4xl font-black mb-6 leading-tight relative">
+                      SOFT<br/>SKILLS
+                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-mayache-red opacity-30"></div>
+                    </h2>
+                    
+                    <ul className="text-mayache-red text-base font-archivo uppercase space-y-3">
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        DESIGN
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        PROGRAMMING
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        PAINTER
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        CREATIVITY
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        FLEXIBILITY
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        TEAM-WORK
+                      </li>
+                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                        </span>
+                        COMMUNICATION
+                      </li>
+                    </ul>
+                    
+                    {/* Decorative pattern */}
+                    <div className="absolute right-0 bottom-0 w-1/3 h-1/3 opacity-5">
+                      <div className="grid grid-cols-3 h-full w-full">
+                        {[...Array(9)].map((_, index) => (
+                          <div key={index} className="border border-mayache-red"></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </GridSection>
@@ -251,27 +374,51 @@ const Home = () => {
               background="bg-mayache-blue"
               id="contact"
             >
-              <div className="flex flex-col h-full justify-center hover-lift">
-                <div className="text-center">
-                  <div className="relative">
+              <div className="flex flex-col h-full justify-center hover-scale overflow-hidden relative">
+                {/* Background decoration */}
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-white bg-opacity-5 rounded-full transform translate-x-1/4 translate-y-1/4"></div>
+                <div className="absolute top-0 left-0 w-20 h-20 bg-white bg-opacity-5 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                
+                <div className="text-center relative z-10">
+                  <div className="relative inline-block">
+                    <div className="absolute inset-0 bg-white bg-opacity-10 blur-xl rounded-full transform scale-125 animate-pulse-slow"></div>
                     <img 
                       src={MessageSentImg} 
                       alt="Message sent illustration" 
-                      className="w-32 h-32 mx-auto object-contain transition-transform duration-300 hover:scale-110"
+                      className="w-32 h-32 mx-auto object-contain transition-transform duration-300 hover:scale-110 relative z-10"
                     />
-                    <div className="absolute -top-2 -right-2 bg-white text-mayache-blue text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">
+                    <div className="absolute -top-2 -right-2 bg-white text-mayache-blue text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md animate-bounce-gentle">
                       <span>+1</span>
                     </div>
                   </div>
-                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-3 leading-tight">
-                    WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
+                  
+                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-4 leading-tight text-shadow-sm">
+                    <span className="opacity-90">WANNA</span><br/>
+                    <span className="opacity-95">TALK?</span><br/>
+                    <span className="opacity-100">SEND ME A</span><br/>
+                    <span className="relative inline-block">
+                      MESSAGE
+                      <span className="absolute bottom-0 left-0 w-full h-1 bg-white opacity-30"></span>
+                    </span>
                   </h3>
-                  <p className="text-white text-xs text-center mt-2 tracking-wide">
+                  
+                  <p className="text-white text-xs text-center mt-3 tracking-wide opacity-80">
                     mayacheyassine2000@gmail.com
                   </p>
-                  <div className="mt-3">
-                    <a href="mailto:mayacheyassine2000@gmail.com" className="inline-block px-3 py-1 bg-white text-mayache-blue text-xs font-bold rounded hover:bg-opacity-90 transition-all duration-200">
-                      EMAIL ME
+                  
+                  <div className="mt-4">
+                    <a 
+                      href="mailto:mayacheyassine2000@gmail.com" 
+                      className="group relative inline-flex items-center px-4 py-2 bg-white text-mayache-blue text-xs font-bold rounded-full overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+                    >
+                      <span className="absolute inset-0 bg-white group-hover:bg-opacity-90 transition-colors duration-300"></span>
+                      <span className="absolute -left-4 w-12 h-full bg-mayache-blue opacity-10 transform skew-x-[20deg] group-hover:translate-x-32 transition-transform duration-700"></span>
+                      <span className="relative flex items-center z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        EMAIL ME
+                      </span>
                     </a>
                   </div>
                 </div>
