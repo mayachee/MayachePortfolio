@@ -112,7 +112,7 @@ const Home = () => {
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-2023</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP 1
+                      INTERNSHIP
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
@@ -236,50 +236,60 @@ const Home = () => {
                       <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
                     </h2>
                     
-                    <ul className="text-white text-base font-archivo uppercase space-y-3">
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        FIGMA
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        PHOTOSHOP
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        REACT
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        NEXT.JS
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        JAVA/C++
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        PYTHON
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-white rounded-full"></span>
-                        </span>
-                        PHP
-                      </li>
-                    </ul>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="space-y-3">
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">FIGMA</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">PHOTOSHOP</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">REACT</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">JAVA/C++</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">PYTHON</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">PHP</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-white rounded-full"></span>
+                          </span>
+                          <span className="text-white text-base font-archivo uppercase">TYPESCRIPT</span>
+                        </div>
+                      </div>
+                    </div>
                     
                     {/* Decorative circles */}
                     <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
@@ -311,50 +321,60 @@ const Home = () => {
                       <div className="absolute bottom-0 left-0 w-14 h-1 bg-mayache-red opacity-30"></div>
                     </h2>
                     
-                    <ul className="text-mayache-red text-base font-archivo uppercase space-y-3">
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        DESIGN
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        PROGRAMMING
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        PAINTER
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        CREATIVITY
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        FLEXIBILITY
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        TEAM-WORK
-                      </li>
-                      <li className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                        <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                          <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                        </span>
-                        COMMUNICATION
-                      </li>
-                    </ul>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="space-y-3">
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">TEAM PLAYER</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">COMMUNICATION</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">LEADERSHIP</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">ADAPTABILITY</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">TIME MANAGEMENT</span>
+                        </div>
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">DETAIL-ORIENTED</span>
+                        </div>
+                      </div>
+                    </div>
                     
                     {/* Decorative pattern */}
                     <div className="absolute right-0 bottom-0 w-1/3 h-1/3 opacity-5">
@@ -402,20 +422,7 @@ const Home = () => {
                     </span>
                   </h3>
                   
-                  <div className="mt-4">
-                    <button 
-                      className="group relative inline-flex items-center px-4 py-2 bg-white text-mayache-blue text-xs font-bold rounded-full overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
-                    >
-                      <span className="absolute inset-0 bg-white group-hover:bg-opacity-90 transition-colors duration-300"></span>
-                      <span className="absolute -left-4 w-12 h-full bg-mayache-blue opacity-10 transform skew-x-[20deg] group-hover:translate-x-32 transition-transform duration-700"></span>
-                      <span className="relative flex items-center z-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                        CONTACT ME
-                      </span>
-                    </button>
-                  </div>
+
                 </div>
               </div>
             </GridSection>
@@ -453,12 +460,7 @@ const Home = () => {
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
                   A modern reservation system built using the MERN stack with real-time availability updates.
                 </p>
-                <div className="mt-3">
-                  <a href="#" className="inline-flex items-center text-white text-xs font-bold group/link">
-                    VIEW PROJECT
-                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-                  </a>
-                </div>
+
               </div>
             </div>
           </GridSection>
@@ -494,17 +496,7 @@ const Home = () => {
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
                   An elegantly designed portfolio collection featuring interactive animations and responsive layouts.
                 </p>
-                <div className="mt-3 flex items-center">
-                  <a href="#" className="inline-flex items-center text-white text-xs font-bold mr-3 group/link">
-                    LIVE DEMO
-                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-                  </a>
-                  <a href="#" className="inline-flex items-center text-white text-xs mr-3">|</a>
-                  <a href="#" className="inline-flex items-center text-white text-xs font-bold group/link">
-                    CASE STUDY
-                    <span className="ml-1 inline-block transition-transform duration-300 group-hover/link:translate-x-1">→</span>
-                  </a>
-                </div>
+
               </div>
             </div>
           </GridSection>
