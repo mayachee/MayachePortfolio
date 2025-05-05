@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
@@ -7,6 +8,15 @@ import { SiWordpress, SiFigma } from "react-icons/si";
 
 const Home = () => {
   const { t } = useTranslation();
+  const [activeInternship, setActiveInternship] = useState<number>(1);
+  
+  const showPreviousInternship = () => {
+    setActiveInternship(prev => (prev === 1 ? 3 : prev - 1));
+  };
+  
+  const showNextInternship = () => {
+    setActiveInternship(prev => (prev === 3 ? 1 : prev + 1));
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
@@ -43,28 +53,62 @@ const Home = () => {
 
           {/* Middle column - Purple Block */}
           <div className="col-span-1 grid grid-rows-2 gap-2">
-            {/* INTERNSHIP Section */}
+            {/* INTERNSHIP Section with Slider */}
             <GridSection 
               background="bg-purple-600" 
               id="internship"
             >
-              <div className="flex flex-col h-full justify-between">
-                <div>
-                  <h2 className="font-archivo text-white text-4xl font-black mb-2">
-                    INTERNSHIP
-                  </h2>
-                  <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
-                  <p className="text-white text-xs font-normal uppercase">
-                    Day handsome addition horrible sensible goodness two contempt. Evening for married his account removal. Estimable me disposing of be moonlight cordially curiosity.
-                  </p>
+              <div className="flex flex-col h-full justify-between relative overflow-hidden">
+                {/* Content container with slider */}
+                <div className="relative overflow-hidden h-32">
+                  {/* INTERNSHIP 1 */}
+                  <div className={`transition-all duration-300 absolute inset-0 ${activeInternship === 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                    <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                      INTERNSHIP 1
+                    </h2>
+                    <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
+                    <p className="text-white text-xs font-normal uppercase">
+                      First internship experience focused on web development and frontend design. Created responsive interfaces and learned modern JavaScript frameworks.
+                    </p>
+                  </div>
+                  
+                  {/* INTERNSHIP 2 */}
+                  <div className={`transition-all duration-300 absolute inset-0 ${activeInternship === 2 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                    <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                      INTERNSHIP 2
+                    </h2>
+                    <h3 className="text-white text-base font-archivo mb-2">UI/UX DESIGN</h3>
+                    <p className="text-white text-xs font-normal uppercase">
+                      Second internship focused on user experience design and interface prototyping. Created wireframes and worked on user testing methodologies.
+                    </p>
+                  </div>
+                  
+                  {/* INTERNSHIP 3 */}
+                  <div className={`transition-all duration-300 absolute inset-0 ${activeInternship === 3 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                    <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                      INTERNSHIP 3
+                    </h2>
+                    <h3 className="text-white text-base font-archivo mb-2">BACKEND DEVELOPMENT</h3>
+                    <p className="text-white text-xs font-normal uppercase">
+                      Third internship specializing in server-side technologies and database optimization. Built APIs and implemented security best practices.
+                    </p>
+                  </div>
                 </div>
+                
+                {/* Navigation buttons */}
                 <div className="flex space-x-2 mt-auto justify-end">
-                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                  <button 
+                    className="bg-black w-8 h-8 flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                    onClick={showPreviousInternship}
+                  >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5 15l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
-                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                  <button 
+                    className="bg-black w-8 h-8 flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                    onClick={showNextInternship}
+                  >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -88,12 +132,16 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="flex space-x-2 mt-auto justify-end">
-                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                  <button 
+                    className="bg-black w-8 h-8 flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                  >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5 15l7-7 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
-                  <button className="bg-black w-8 h-8 flex items-center justify-center">
+                  <button 
+                    className="bg-black w-8 h-8 flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                  >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
