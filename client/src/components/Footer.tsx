@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="font-archivo text-black text-xl font-black mb-4">MAYACHE</h3>
             <p className="text-gray-700 text-sm mb-4 uppercase tracking-wide max-w-xs">
-              Creative full-stack developer specializing in building beautiful, functional, and user-friendly digital experiences.
+              Creative software developer specializing in building beautiful, functional, and user-friendly digital experiences.
             </p>
             <p className="text-sm font-bold">
               <span className="text-mayache-teal">• </span>Available for freelance work

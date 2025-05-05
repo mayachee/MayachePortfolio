@@ -44,7 +44,7 @@ const Home = () => {
                   <span className="inline-block w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
                   CREATIVE DEVELOPER
                 </span>
-                <h2 className="font-archivo text-black text-5xl font-black leading-tight tracking-tighter text-shadow-sm relative z-10">
+                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tighter text-shadow-sm relative z-10">
                   <span className="relative inline-block">
                     I'M <span className="gradient-text bg-clip-text">MAYACHE</span>,
                     <span className="absolute -right-2 -top-2 bg-mayache-teal text-white text-xs px-1 rounded-full font-bold transform rotate-12">PRO</span>
@@ -52,7 +52,7 @@ const Home = () => {
                   <br/>
                   A DESIGNER<br/>
                   AND<br/>
-                  FULLSTACK<br/>
+                  SOFTWARE<br/>
                   DEVELOPER<br/>
                   BASED IN<br/>
                   MOROCCO.
