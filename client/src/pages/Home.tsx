@@ -402,24 +402,19 @@ const Home = () => {
                     </span>
                   </h3>
                   
-                  <p className="text-white text-xs text-center mt-3 tracking-wide opacity-80">
-                    mayacheyassine2000@gmail.com
-                  </p>
-                  
                   <div className="mt-4">
-                    <a 
-                      href="mailto:mayacheyassine2000@gmail.com" 
+                    <button 
                       className="group relative inline-flex items-center px-4 py-2 bg-white text-mayache-blue text-xs font-bold rounded-full overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
                     >
                       <span className="absolute inset-0 bg-white group-hover:bg-opacity-90 transition-colors duration-300"></span>
                       <span className="absolute -left-4 w-12 h-full bg-mayache-blue opacity-10 transform skew-x-[20deg] group-hover:translate-x-32 transition-transform duration-700"></span>
                       <span className="relative flex items-center z-10">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        EMAIL ME
+                        CONTACT ME
                       </span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

@@ -37,16 +37,7 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
-            <p className="text-sm font-bold flex items-center">
-              <span className="inline-block w-2 h-2 bg-mayache-teal rounded-full mr-2"></span>
-              <span className="text-gray-700">Available for freelance work</span>
-            </p>
-            
-            <a href="mailto:mayacheyassine2000@gmail.com" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
-              mayacheyassine2000@gmail.com
-            </a>
-            
+          <div>
             <p className="text-gray-400 text-sm">
               © {currentYear} <span className="font-bold text-black">MAYACHE</span>
             </p>
