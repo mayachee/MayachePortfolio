@@ -79,32 +79,40 @@ const Home = () => {
             rowSpan="row-span-2"
             id="skills"
           >
+            <div className="flex flex-col h-full">
+              <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                HARDSKILL
+              </h2>
+              <ul className="text-white text-base font-archivo uppercase space-y-1">
+                <li>FIGMA</li>
+                <li>PHOTOSHOP</li>
+                <li>REACT</li>
+                <li>NEXTJS</li>
+                <li>JAVA/C++</li>
+                <li>PYTHON</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+          </GridSection>
+          
+          {/* Wanna Talk Block - Blue */}
+          <GridSection 
+            background="bg-mayache-blue" 
+            colSpan="col-span-1" 
+            rowSpan="row-span-1"
+            id="contact"
+          >
             <div className="flex flex-col h-full justify-between">
-              <div>
-                <h2 className="font-archivo text-white text-4xl font-black mb-2">
-                  HARDSKILL
-                </h2>
-                <ul className="text-white text-base font-archivo uppercase space-y-1">
-                  <li>FIGMA</li>
-                  <li>PHOTOSHOP</li>
-                  <li>REACT</li>
-                  <li>NEXTJS</li>
-                  <li>JAVA/C++</li>
-                  <li>PYTHON</li>
-                  <li>PHP</li>
-                </ul>
-              </div>
-
-              <div className="mt-auto text-center">
+              <div className="text-center">
                 <img 
                   src="/assets/character.svg" 
                   alt="Character illustration" 
-                  className="w-32 h-32 mx-auto mt-4"
+                  className="w-28 h-28 mx-auto"
                 />
-                <h3 className="font-archivo text-white text-2xl font-black text-center mt-4">
+                <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
                   WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
                 </h3>
-                <p className="text-white text-xs text-center mt-2">
+                <p className="text-white text-xs text-center mt-1">
                   mayacheyassine2000@gmail.com
                 </p>
               </div>
@@ -127,7 +135,7 @@ const Home = () => {
               </div>
               <div>
                 <h2 className="font-archivo text-black text-xl font-black mt-4">
-                  WEBFLOW DEVELOPMENT
+                  BOOKING-APP (MERN)
                 </h2>
                 <p className="text-black text-xs mt-2 font-normal uppercase">
                   Looking for a clean and fast build for your design? I'm your man.
@@ -169,7 +177,7 @@ const Home = () => {
               </div>
               <div>
                 <h2 className="font-archivo text-white text-xl font-black mt-4">
-                  ECO WEBSITES
+                  UI/UX PRIVATE SCHOOL
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase">
                   Looking for a clean and fast build for your design? I'm your man.

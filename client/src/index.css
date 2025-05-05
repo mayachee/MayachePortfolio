@@ -135,7 +135,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, minmax(180px, auto)) minmax(120px, auto);
+    grid-auto-rows: minmax(120px, auto);
     gap: 0.5rem;
     padding: 0.5rem;
     width: 100%;
