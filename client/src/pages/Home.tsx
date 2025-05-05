@@ -194,69 +194,7 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Purple Block - CREATE UI/UX */}
-          <GridSection 
-            background="bg-purple-600" 
-            colSpan="col-span-1"
-          >
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center">
-                <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6H20M9 12H20M9 18H20M5 6V6.01M5 12V12.01M5 18V18.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <h2 className="font-archivo text-white text-xl font-black mt-4">
-                  CREATE UI/UX
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase">
-                  Looking for a clean and fast build for your design? I'm your man.
-                </p>
-              </div>
-            </div>
-          </GridSection>
-          
-          {/* Additional block 1 - Pink */}
-          <GridSection 
-            background="bg-pink-500" 
-            colSpan="col-span-1"
-          >
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center">
-                <FaGithub className="h-6 w-6 text-black" />
-              </div>
-              <div>
-                <h2 className="font-archivo text-black text-xl font-black mt-4">
-                  PORTFOLIO
-                </h2>
-                <p className="text-black text-xs mt-2 font-normal uppercase">
-                  Check out my latest projects and designs. Creative solutions for modern web.
-                </p>
-              </div>
-            </div>
-          </GridSection>
-          
-          {/* Additional block 2 - Green */}
-          <GridSection 
-            background="bg-green-400" 
-            colSpan="col-span-1"
-          >
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center">
-                <svg className="h-6 w-6 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <h2 className="font-archivo text-black text-xl font-black mt-4">
-                  SECURITY FIRST
-                </h2>
-                <p className="text-black text-xs mt-2 font-normal uppercase">
-                  All websites built with security in mind. HTTPS, secure data handling, and more.
-                </p>
-              </div>
-            </div>
-          </GridSection>
+
         </div>
       </main>
       
