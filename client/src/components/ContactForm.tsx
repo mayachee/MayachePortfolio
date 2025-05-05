@@ -70,12 +70,12 @@ const ContactForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">{t("contact.form.name")}</FormLabel>
+              <FormLabel className="text-white">Your Name</FormLabel>
               <FormControl>
                 <Input
                   {...field}
                   className="bg-white bg-opacity-10 border border-white border-opacity-20 text-white focus:ring-mayache-green"
-                  placeholder={t("contact.form.namePlaceholder")}
+                  placeholder="Enter your name"
                 />
               </FormControl>
               <FormMessage />
@@ -87,13 +87,13 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">{t("contact.form.email")}</FormLabel>
+              <FormLabel className="text-white">Email Address</FormLabel>
               <FormControl>
                 <Input
                   {...field}
                   type="email"
                   className="bg-white bg-opacity-10 border border-white border-opacity-20 text-white focus:ring-mayache-green"
-                  placeholder={t("contact.form.emailPlaceholder")}
+                  placeholder="Enter your email"
                 />
               </FormControl>
               <FormMessage />
@@ -105,13 +105,13 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">{t("contact.form.message")}</FormLabel>
+              <FormLabel className="text-white">Message</FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   rows={5}
                   className="bg-white bg-opacity-10 border border-white border-opacity-20 text-white focus:ring-mayache-green"
-                  placeholder={t("contact.form.messagePlaceholder")}
+                  placeholder="What would you like to discuss?"
                 />
               </FormControl>
               <FormMessage />
@@ -123,7 +123,7 @@ const ContactForm = () => {
           className="w-full bg-mayache-green text-mayache-dark font-poppins font-bold hover:bg-opacity-90"
           disabled={isSubmitting}
         >
-          {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
+          {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
         </Button>
       </form>
     </Form>

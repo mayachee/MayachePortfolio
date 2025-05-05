@@ -62,9 +62,13 @@ const Home = () => {
               {t("skills.title")}
             </h2>
             <ul className="text-white text-lg space-y-1">
-              {t("skills.list", { returnObjects: true }).map((skill: string, index: number) => (
-                <li key={index}>{skill}</li>
-              ))}
+              <li>FIGMA</li>
+              <li>PHOTOSHOP</li>
+              <li>REACT</li>
+              <li>NEXTJS</li>
+              <li>JAVA/C++</li>
+              <li>PYTHON</li>
+              <li>PHP</li>
             </ul>
             
             <div className="mt-8">
@@ -135,23 +139,56 @@ const Home = () => {
               {t("projects.title")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {t("projects.items", { returnObjects: true }).map((project: any, index: number) => (
-                <div key={index} className="rounded-lg overflow-hidden shadow-lg hover-lift">
-                  <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <svg className="w-24 h-24 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                  </div>
-                  <div className="p-4 bg-mayache-dark">
-                    <h3 className="font-poppins text-white text-xl font-bold">{project.title}</h3>
-                    <p className="text-gray-300 text-sm">{project.tech}</p>
-                    <div className="mt-4 flex justify-between">
-                      <a href={project.live} className="text-mayache-green hover:underline transition-colors">{t("projects.viewLive")}</a>
-                      <a href={project.github} className="text-mayache-green hover:underline transition-colors">{t("projects.github")}</a>
-                    </div>
+              {/* Project 1 */}
+              <div className="rounded-lg overflow-hidden shadow-lg hover-lift">
+                <div className="h-48 bg-gray-300 flex items-center justify-center">
+                  <svg className="w-24 h-24 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div className="p-4 bg-mayache-dark">
+                  <h3 className="font-poppins text-white text-xl font-bold">E-commerce Platform</h3>
+                  <p className="text-gray-300 text-sm">NextJS, TailwindCSS, Stripe</p>
+                  <div className="mt-4 flex justify-between">
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">View Live</a>
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">GitHub</a>
                   </div>
                 </div>
-              ))}
+              </div>
+              
+              {/* Project 2 */}
+              <div className="rounded-lg overflow-hidden shadow-lg hover-lift">
+                <div className="h-48 bg-gray-300 flex items-center justify-center">
+                  <svg className="w-24 h-24 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div className="p-4 bg-mayache-dark">
+                  <h3 className="font-poppins text-white text-xl font-bold">SaaS Dashboard</h3>
+                  <p className="text-gray-300 text-sm">React, NextJS, GraphQL</p>
+                  <div className="mt-4 flex justify-between">
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">View Live</a>
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Project 3 */}
+              <div className="rounded-lg overflow-hidden shadow-lg hover-lift">
+                <div className="h-48 bg-gray-300 flex items-center justify-center">
+                  <svg className="w-24 h-24 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div className="p-4 bg-mayache-dark">
+                  <h3 className="font-poppins text-white text-xl font-bold">AI Content Generator</h3>
+                  <p className="text-gray-300 text-sm">Python, NextJS, OpenAI</p>
+                  <div className="mt-4 flex justify-between">
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">View Live</a>
+                    <a href="#" className="text-mayache-green hover:underline transition-colors">GitHub</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </GridSection>
 
@@ -162,15 +199,15 @@ const Home = () => {
             id="contact"
           >
             <h2 className="font-poppins text-white text-4xl font-black mb-6">
-              {t("contact.title")}
+              GET IN TOUCH
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p className="text-white text-lg mb-4">
-                  {t("contact.intro")}
+                  Let's create something amazing together. I'm always open to discussing new projects and opportunities.
                 </p>
                 <p className="text-white text-lg mb-6">
-                  {t("contact.details")} <span className="font-medium">{t("contact.cta.email")}</span>
+                  Email me directly at <span className="font-medium">contact@mayache.com</span>
                 </p>
                 <div className="flex space-x-4 mt-8">
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-mayache-green transition-colors">
