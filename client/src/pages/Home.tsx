@@ -41,7 +41,7 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Middle column top - Purple Block */}
+          {/* Middle column - Purple Block */}
           <GridSection 
             background="bg-purple-600" 
             colSpan="col-span-1" 
@@ -72,52 +72,51 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Right column top - Red Block */}
-          <GridSection 
-            background="bg-red-500" 
-            colSpan="col-span-1" 
-            rowSpan="row-span-2"
-            id="skills"
-          >
-            <div className="flex flex-col h-full">
-              <h2 className="font-archivo text-white text-4xl font-black mb-2">
-                HARDSKILL
-              </h2>
-              <ul className="text-white text-base font-archivo uppercase space-y-1">
-                <li>FIGMA</li>
-                <li>PHOTOSHOP</li>
-                <li>REACT</li>
-                <li>NEXTJS</li>
-                <li>JAVA/C++</li>
-                <li>PYTHON</li>
-                <li>PHP</li>
-              </ul>
-            </div>
-          </GridSection>
-          
-          {/* Wanna Talk Block - Blue */}
-          <GridSection 
-            background="bg-mayache-blue" 
-            colSpan="col-span-1" 
-            rowSpan="row-span-1"
-            id="contact"
-          >
-            <div className="flex flex-col h-full justify-between">
-              <div className="text-center">
-                <img 
-                  src="/assets/character.svg" 
-                  alt="Character illustration" 
-                  className="w-28 h-28 mx-auto"
-                />
-                <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
-                  WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
-                </h3>
-                <p className="text-white text-xs text-center mt-1">
-                  mayacheyassine2000@gmail.com
-                </p>
+          <div className="col-span-1 grid grid-rows-2 gap-2">
+            {/* Right column top - Red Block */}
+            <GridSection 
+              background="bg-red-500" 
+              colSpan=""
+              id="skills"
+            >
+              <div className="flex flex-col h-full">
+                <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                  HARDSKILL
+                </h2>
+                <ul className="text-white text-base font-archivo uppercase space-y-1">
+                  <li>FIGMA</li>
+                  <li>PHOTOSHOP</li>
+                  <li>REACT</li>
+                  <li>NEXTJS</li>
+                  <li>JAVA/C++</li>
+                  <li>PYTHON</li>
+                  <li>PHP</li>
+                </ul>
               </div>
-            </div>
-          </GridSection>
+            </GridSection>
+            
+            {/* Wanna Talk Block - Blue */}
+            <GridSection 
+              background="bg-mayache-blue"
+              id="contact"
+            >
+              <div className="flex flex-col h-full justify-between">
+                <div className="text-center">
+                  <img 
+                    src="/assets/character.svg" 
+                    alt="Character illustration" 
+                    className="w-28 h-28 mx-auto"
+                  />
+                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
+                    WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
+                  </h3>
+                  <p className="text-white text-xs text-center mt-1">
+                    mayacheyassine2000@gmail.com
+                  </p>
+                </div>
+              </div>
+            </GridSection>
+          </div>
 
           {/* Bottom Row - 3 blocks */}
           {/* Pink Block - BOOKING-APP */}
