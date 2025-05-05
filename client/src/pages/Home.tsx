@@ -60,21 +60,28 @@ const Home = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <motion.h2 
-                  className="font-poppins text-white text-4xl font-black mb-4"
+                  className="font-archivo text-white text-4xl font-black mb-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
                   INTERNSHIP
                 </motion.h2>
-                <motion.p 
-                  className="text-white text-sm font-medium leading-tight"
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  DAY HANDSOME ADDITION HORRIBLE SENSIBLE GOODNESS TWO CONTEMPT. EVENING FOR MARRIED HIS ACCOUNT REMOVAL. ESTIMABLE ME DISPOSING OF BE MOONLIGHT CORDIALLY CURIOSITY. DELAY RAPID JOY SHARE ALLOW AGE MANOR SIX. WENT WHY FAR SAW MANY KNEW. EXQUISITE EXCELLENT SON GENTLEMAN ACUTENESS HER. DO IS VOICE TOTAL POWER MR YE MIGHT ROUND STILL.
-                </motion.p>
+                  <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
+                  <motion.p 
+                    className="text-white text-sm font-medium leading-tight"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    DAY HANDSOME ADDITION HORRIBLE SENSIBLE GOODNESS TWO CONTEMPT. EVENING FOR MARRIED HIS ACCOUNT REMOVAL. ESTIMABLE ME DISPOSING OF BE MOONLIGHT CORDIALLY CURIOSITY. DELAY RAPID JOY SHARE ALLOW AGE MANOR SIX. WENT WHY FAR SAW MANY KNEW. EXQUISITE EXCELLENT SON GENTLEMAN ACUTENESS HER. DO IS VOICE TOTAL POWER MR YE MIGHT ROUND STILL.
+                  </motion.p>
+                </motion.div>
               </div>
               <motion.div 
                 className="flex space-x-2 mt-auto justify-end"
@@ -106,7 +113,7 @@ const Home = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <motion.h2 
-                  className="font-poppins text-white text-4xl font-black mb-4"
+                  className="font-archivo text-white text-4xl font-black mb-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
@@ -182,11 +189,11 @@ const Home = () => {
               >
                 <div className="mt-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" 
-                    alt="Developer profile" 
-                    className="w-32 h-32 rounded-full mx-auto mt-4 object-cover border-2 border-white"
+                    src="/assets/character.svg" 
+                    alt="Character illustration" 
+                    className="w-40 h-40 mx-auto mt-4"
                   />
-                  <h3 className="font-poppins text-white text-2xl font-black text-center mt-4">
+                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-4">
                     WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
                   </h3>
                   <p className="text-white text-sm text-center mt-2">
@@ -215,8 +222,8 @@ const Home = () => {
                   <FaGithub className="h-8 w-8 text-black" />
                 </div>
                 <div>
-                  <h2 className="font-poppins text-black text-2xl font-black mt-4">
-                    WEBFLOW DEVELOPMENT
+                  <h2 className="font-archivo text-black text-2xl font-black mt-4">
+                    BOOKING-APP (MERN)
                   </h2>
                   <p className="text-black text-sm mt-2 font-medium">
                     LOOKING FOR A CLEAN AND FAST BUILD FOR YOUR DESIGN? I'M YOUR MAN.
@@ -235,8 +242,8 @@ const Home = () => {
                   <SiWordpress className="h-8 w-8 text-black" />
                 </div>
                 <div>
-                  <h2 className="font-poppins text-black text-2xl font-black mt-4">
-                    ECO WEBSITES
+                  <h2 className="font-archivo text-black text-2xl font-black mt-4">
+                    CREATE WEBSITES
                   </h2>
                   <p className="text-black text-sm mt-2 font-medium">
                     LOOKING FOR A CLEAN AND FAST BUILD FOR YOUR DESIGN? I'M YOUR MAN.
@@ -255,8 +262,8 @@ const Home = () => {
                   <FaGlobe className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-poppins text-white text-2xl font-black mt-4">
-                    ECO WEBSITES
+                  <h2 className="font-archivo text-white text-2xl font-black mt-4">
+                    UI/UX PRIVATE SCHOOL
                   </h2>
                   <p className="text-white text-sm mt-2 font-medium">
                     LOOKING FOR A CLEAN AND FAST BUILD FOR YOUR DESIGN? I'M YOUR MAN.
