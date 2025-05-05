@@ -124,7 +124,7 @@ const Home = () => {
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2023-2024</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP 2
+                      INTERNSHIP
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">UI/UX DESIGN</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
@@ -136,7 +136,7 @@ const Home = () => {
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2024-2025</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP 3
+                      INTERNSHIP
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">BACKEND DEV</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
@@ -305,8 +305,8 @@ const Home = () => {
                     </div>
                   
                     <div className="flex items-center mb-2">
-                      <span className="inline-flex items-center px-2 py-1 bg-mayache-red bg-opacity-10 text-mayache-red text-xs font-bold rounded">
-                        <span className="w-2 h-2 bg-mayache-red rounded-full mr-1.5 animate-pulse"></span>
+                      <span className="inline-flex items-center px-2 py-1 bg-mayache-red text-white text-xs font-bold rounded">
+                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
                         FLIP BACK
                       </span>
                       <div className="ml-auto text-mayache-red/30 text-xs">
@@ -316,7 +316,7 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <h2 className="font-archivo text-mayache-red text-4xl font-black mb-6 leading-tight relative">
+                    <h2 className="font-archivo text-mayache-red text-4xl font-black mb-4 leading-tight relative">
                       SOFT<br/>SKILLS
                       <div className="absolute bottom-0 left-0 w-14 h-1 bg-mayache-red opacity-30"></div>
                     </h2>
