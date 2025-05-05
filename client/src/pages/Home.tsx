@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma } from "react-icons/si";
+import MessageSentImg from "../assets/message-sent.png";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -201,7 +202,7 @@ const Home = () => {
               <div className="flex flex-col h-full justify-between">
                 <div className="text-center">
                   <img 
-                    src="/assets/message-sent.png" 
+                    src={MessageSentImg} 
                     alt="Message sent illustration" 
                     className="w-36 h-36 mx-auto object-contain"
                   />
