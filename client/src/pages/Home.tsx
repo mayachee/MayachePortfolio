@@ -41,22 +41,16 @@ const Home = () => {
             <p className="text-white text-lg">
               {t("internship.description")}
             </p>
-            <div className="flex space-x-2 mt-6">
-              <button className="bg-mayache-dark rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-80 transition-colors">
-                <FaChevronUp className="h-5 w-5 text-white" />
-              </button>
-              <button className="bg-mayache-dark rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-80 transition-colors">
-                <FaChevronDown className="h-5 w-5 text-white" />
-              </button>
-            </div>
-            
-            <div className="mt-8">
-              <a 
-                href="#" 
-                className="inline-block bg-mayache-green text-mayache-dark font-poppins font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors"
-              >
-                APPLY NOW
-              </a>
+            <div className="mt-8 space-y-3">
+              <div className="bg-mayache-dark bg-opacity-30 p-4 rounded-lg hover:bg-opacity-40 transition-colors cursor-pointer">
+                <h3 className="font-poppins text-white text-xl font-bold">INTERNSHIP 1</h3>
+                <p className="text-white text-sm mt-1">Front-end development position for creative minds</p>
+              </div>
+              
+              <div className="bg-mayache-dark bg-opacity-30 p-4 rounded-lg hover:bg-opacity-40 transition-colors cursor-pointer">
+                <h3 className="font-poppins text-white text-xl font-bold">INTERNSHIP 2</h3>
+                <p className="text-white text-sm mt-1">UX/UI design position for innovative thinkers</p>
+              </div>
             </div>
           </GridSection>
 
