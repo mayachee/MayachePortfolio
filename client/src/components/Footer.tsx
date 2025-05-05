@@ -68,15 +68,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+        <div className="pt-6 border-t border-gray-100 flex justify-center items-center">
+          <p className="text-gray-500 text-sm">
             © {currentYear} MAYACHE. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 text-xs uppercase hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 text-xs uppercase hover:text-black transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 text-xs uppercase hover:text-black transition-colors">Cookies</a>
-          </div>
         </div>
       </div>
     </footer>
