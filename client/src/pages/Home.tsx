@@ -49,6 +49,15 @@ const Home = () => {
                 <FaChevronDown className="h-5 w-5 text-white" />
               </button>
             </div>
+            
+            <div className="mt-8">
+              <a 
+                href="#" 
+                className="inline-block bg-mayache-green text-mayache-dark font-poppins font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors"
+              >
+                APPLY NOW
+              </a>
+            </div>
           </GridSection>
 
           {/* Skills Section */}
