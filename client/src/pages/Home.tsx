@@ -110,8 +110,9 @@ const Home = () => {
               colSpan=""
               id="skills"
             >
-              <div className="relative overflow-hidden h-full">
-                <div className="flex flex-col h-full transition-all duration-300 group-hover:opacity-0">
+              <div className="relative overflow-hidden h-full cursor-pointer" style={{ perspective: '1000px' }}>
+                {/* Front side - HARDSKILL */}
+                <div className="absolute inset-0 flex flex-col h-full p-5 bg-red-500 transition-all duration-500 ease-in-out backface-hidden transform-gpu group-hover:rotate-y-180 z-10">
                   <h2 className="font-archivo text-white text-4xl font-black mb-2">
                     HARDSKILL
                   </h2>
@@ -126,8 +127,8 @@ const Home = () => {
                   </ul>
                 </div>
                 
-                {/* Soft skills overlay (appears on hover) */}
-                <div className="absolute inset-0 flex flex-col h-full bg-white opacity-0 transition-all duration-300 group-hover:opacity-100 p-5">
+                {/* Back side - SOFTSKILL */}
+                <div className="absolute inset-0 flex flex-col h-full p-5 bg-white rotate-y-180 transition-all duration-500 ease-in-out backface-hidden transform-gpu group-hover:rotate-y-0 z-20">
                   <h2 className="font-archivo text-red-500 text-4xl font-black mb-2">
                     SOFTSKILL
                   </h2>
