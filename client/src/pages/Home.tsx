@@ -6,6 +6,7 @@ import GridSection from "@/components/GridSection";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma } from "react-icons/si";
 import MessageSentImg from "../assets/message-sent.png";
+import PortfolioBgImg from "../assets/portfolio-bg.jpg";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -242,25 +243,32 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Yellow Block - CREATE WEBSITES */}
-          <GridSection 
-            background="bg-yellow-400" 
-            colSpan="col-span-1"
-          >
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center">
-                <SiWordpress className="h-6 w-6 text-black" />
-              </div>
-              <div>
-                <h2 className="font-archivo text-black text-xl font-black mt-4">
-                  ECO WEBSITES
-                </h2>
-                <p className="text-black text-xs mt-2 font-normal uppercase">
-                  Looking for a clean and fast build for your design? I'm your man.
-                </p>
+          {/* Grid section with background image */}
+          <div className="col-span-1 relative">
+            <div 
+              className="h-full w-full p-6 relative"
+              style={{
+                backgroundImage: `url(${PortfolioBgImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center'
+              }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+              <div className="relative z-10 flex h-full flex-col justify-between">
+                <div className="flex items-center">
+                  <SiWordpress className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h2 className="font-archivo text-white text-xl font-black mt-4">
+                    PORTFOLIO SHOWCASE
+                  </h2>
+                  <p className="text-white text-xs mt-2 font-normal uppercase">
+                    View my latest portfolio projects and creative designs. Click to explore more.
+                  </p>
+                </div>
               </div>
             </div>
-          </GridSection>
+          </div>
 
 
         </div>
