@@ -27,13 +27,15 @@
   --radius: 0.5rem;
 
   /* Custom colors */
-  --mayache-green: 126 83% 68%;
-  --mayache-purple: 262 73% 59%;
-  --mayache-pink: 322 100% 64%;
-  --mayache-red: 0 100% 66%;
-  --mayache-yellow: 39 100% 70%;
-  --mayache-blue: 220 76% 59%;
-  --mayache-brown: 28 62% 42%;
+  --mayache-green: 142 76% 56%;
+  --mayache-purple: 265 83% 65%;
+  --mayache-pink: 328 100% 59%;
+  --mayache-red: 356 93% 64%;
+  --mayache-yellow: 42 96% 65%;
+  --mayache-blue: 215 83% 60%;
+  --mayache-brown: 28 75% 45%;
+  --mayache-orange: 16 94% 58%;
+  --mayache-teal: 180 75% 48%;
   --mayache-dark: 0 0% 12%;
 }
 
@@ -85,35 +87,43 @@
 
   .bg-mayache-green,
   .bg-green-400 {
-    background-color: #84f554;
+    background-color: hsl(142, 76%, 56%);
   }
 
   .bg-mayache-purple,
   .bg-purple-600 {
-    background-color: #6324c6;
+    background-color: hsl(265, 83%, 65%);
   }
 
   .bg-mayache-pink,
   .bg-pink-500 {
-    background-color: #ff41a6;
+    background-color: hsl(328, 100%, 59%);
   }
 
   .bg-mayache-red,
   .bg-red-500 {
-    background-color: #f54444;
+    background-color: hsl(356, 93%, 64%);
   }
 
   .bg-mayache-yellow,
   .bg-yellow-400 {
-    background-color: #ffce40;
+    background-color: hsl(42, 96%, 65%);
   }
 
   .bg-mayache-blue {
-    background-color: hsl(220, 76%, 59%);
+    background-color: hsl(215, 83%, 60%);
   }
   
   .bg-mayache-brown {
-    background-color: hsl(28, 62%, 42%);
+    background-color: hsl(28, 75%, 45%);
+  }
+  
+  .bg-mayache-orange {
+    background-color: hsl(16, 94%, 58%);
+  }
+  
+  .bg-mayache-teal {
+    background-color: hsl(180, 75%, 48%);
   }
 
   .bg-mayache-dark {
@@ -121,27 +131,39 @@
   }
 
   .text-mayache-green {
-    color: #84f554;
+    color: hsl(142, 76%, 56%);
   }
 
   .text-mayache-purple {
-    color: #6324c6;
+    color: hsl(265, 83%, 65%);
   }
 
   .text-mayache-pink {
-    color: #ff41a6;
+    color: hsl(328, 100%, 59%);
   }
 
   .text-mayache-red {
-    color: #f54444;
+    color: hsl(356, 93%, 64%);
   }
 
   .text-mayache-yellow {
-    color: #ffce40;
+    color: hsl(42, 96%, 65%);
   }
 
   .text-mayache-blue {
-    color: #3871e0;
+    color: hsl(215, 83%, 60%);
+  }
+  
+  .text-mayache-brown {
+    color: hsl(28, 75%, 45%);
+  }
+  
+  .text-mayache-orange {
+    color: hsl(16, 94%, 58%);
+  }
+  
+  .text-mayache-teal {
+    color: hsl(180, 75%, 48%);
   }
 
   .text-mayache-dark {
