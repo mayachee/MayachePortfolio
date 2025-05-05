@@ -120,17 +120,17 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* UI/UX Private School with background image */}
+            {/* UI/UX Private School section */}
             <GridSection 
-              backgroundImage={UxSchoolImg}
+              background="bg-mayache-yellow"
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <h2 className="font-archivo text-white text-3xl font-black mb-1">
+                  <h2 className="font-archivo text-black text-3xl font-black mb-1">
                     UI/UX PRIVATE SCHOOL
                   </h2>
-                  <h3 className="text-white text-base font-archivo mb-1">DESIGN AGENCY</h3>
-                  <p className="text-white text-xs font-normal uppercase">
+                  <h3 className="text-black text-base font-archivo mb-1">DESIGN AGENCY</h3>
+                  <p className="text-black text-xs font-normal uppercase">
                     Specialized in UI/UX design for private schools and educational platforms. Creating modern digital experiences for students and educators.
                   </p>
                 </div>
@@ -196,15 +196,19 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Wanna Talk Block with background image */}
+            {/* Wanna Talk Block */}
             <GridSection 
               background="bg-mayache-blue"
-              backgroundImage={MessageSentImg}
               id="contact"
             >
               <div className="flex flex-col h-full justify-center">
-                <div className="text-center z-20">
-                  <h3 className="font-archivo text-white text-2xl font-black text-center">
+                <div className="text-center">
+                  <img 
+                    src={MessageSentImg} 
+                    alt="Message sent illustration" 
+                    className="w-32 h-32 mx-auto object-contain"
+                  />
+                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-2">
                     WANNA<br/>TALK?<br/>SEND ME A<br/>MESSAGE.
                   </h3>
                   <p className="text-white text-xs text-center mt-2">
@@ -240,10 +244,10 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Grid section with background image */}
+          {/* Portfolio showcase section */}
           <GridSection 
             colSpan="col-span-1"
-            backgroundImage={PortfolioBgImg}
+            background="bg-mayache-brown"
           >
             <div className="flex h-full flex-col justify-between">
               <div className="flex items-center">

@@ -33,6 +33,7 @@
   --mayache-red: 0 100% 66%;
   --mayache-yellow: 39 100% 70%;
   --mayache-blue: 220 76% 59%;
+  --mayache-brown: 28 62% 42%;
   --mayache-dark: 0 0% 12%;
 }
 
@@ -109,6 +110,10 @@
 
   .bg-mayache-blue {
     background-color: hsl(220, 76%, 59%);
+  }
+  
+  .bg-mayache-brown {
+    background-color: hsl(28, 62%, 42%);
   }
 
   .bg-mayache-dark {
