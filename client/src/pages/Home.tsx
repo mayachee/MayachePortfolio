@@ -104,25 +104,43 @@ const Home = () => {
           </div>
 
           <div className="col-span-1 grid grid-rows-2 gap-2">
-            {/* Right column top - Red Block */}
+            {/* Right column top - Red Block with hover effect */}
             <GridSection 
               background="bg-red-500" 
               colSpan=""
               id="skills"
             >
-              <div className="flex flex-col h-full">
-                <h2 className="font-archivo text-white text-4xl font-black mb-2">
-                  HARDSKILL
-                </h2>
-                <ul className="text-white text-base font-archivo uppercase space-y-1">
-                  <li>FIGMA</li>
-                  <li>PHOTOSHOP</li>
-                  <li>REACT</li>
-                  <li>NEXTJS</li>
-                  <li>JAVA/C++</li>
-                  <li>PYTHON</li>
-                  <li>PHP</li>
-                </ul>
+              <div className="relative overflow-hidden h-full">
+                <div className="flex flex-col h-full transition-all duration-300 group-hover:opacity-0">
+                  <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                    HARDSKILL
+                  </h2>
+                  <ul className="text-white text-base font-archivo uppercase space-y-1">
+                    <li>FIGMA</li>
+                    <li>PHOTOSHOP</li>
+                    <li>REACT</li>
+                    <li>NEXTJS</li>
+                    <li>JAVA/C++</li>
+                    <li>PYTHON</li>
+                    <li>PHP</li>
+                  </ul>
+                </div>
+                
+                {/* Soft skills overlay (appears on hover) */}
+                <div className="absolute inset-0 flex flex-col h-full bg-red-500 opacity-0 transition-all duration-300 group-hover:opacity-100 p-5">
+                  <h2 className="font-archivo text-white text-4xl font-black mb-2">
+                    SOFTSKILL
+                  </h2>
+                  <ul className="text-white text-base font-archivo uppercase space-y-1">
+                    <li>DESIGN</li>
+                    <li>PROGRAMMING</li>
+                    <li>PAINTER</li>
+                    <li>CREATIVITY</li>
+                    <li>FLEXIBILITY</li>
+                    <li>TEAM-WORK</li>
+                    <li>COMMUNICATION</li>
+                  </ul>
+                </div>
               </div>
             </GridSection>
             
