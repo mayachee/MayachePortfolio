@@ -80,11 +80,11 @@ const Home = () => {
               <div className="flex flex-col h-full justify-between">
                 <div>
                   <h2 className="font-archivo text-black text-3xl font-black mb-1">
-                    EXPERIENCE
+                    UI/UX PRIVATE SCHOOL
                   </h2>
                   <h3 className="text-black text-base font-archivo mb-1">DESIGN AGENCY</h3>
                   <p className="text-black text-xs font-normal uppercase">
-                    Worked on various projects for clients in different industries. Designed and developed websites and applications.
+                    Looking for a clean and fast build for your design? I'm your man. Specialized in UI/UX design for private schools and educational platforms.
                   </p>
                 </div>
                 <div className="flex space-x-2 mt-auto justify-end">
@@ -194,7 +194,7 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Purple Block - UI/UX PRIVATE SCHOOL */}
+          {/* Purple Block - CREATE UI/UX */}
           <GridSection 
             background="bg-purple-600" 
             colSpan="col-span-1"
@@ -207,7 +207,7 @@ const Home = () => {
               </div>
               <div>
                 <h2 className="font-archivo text-white text-xl font-black mt-4">
-                  UI/UX PRIVATE SCHOOL
+                  CREATE UI/UX
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase">
                   Looking for a clean and fast build for your design? I'm your man.
