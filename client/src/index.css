@@ -341,14 +341,40 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-auto-flow: dense;
-    grid-auto-rows: auto;
-    gap: 0.125rem;
-    padding: 0.125rem;
+    grid-template-rows: auto;
+    gap: 2px;
+    padding: 2px;
     width: 100%;
     max-width: 1400px;
     min-height: 100vh;
+    height: 100vh;
     margin: 0 auto;
     background-color: #000;
+    overflow-y: auto;
+  }
+  
+  /* Better height control for grid items */
+  .grid-container > .col-span-1[id="about"] {
+    min-height: calc(100vh - 4px);
+    grid-row: span 12;
+  }
+  
+  /* Bottom row consistent heights */
+  .grid-container > .col-span-1[id="portfolio"],
+  .grid-container > .col-span-1:not([id]) {
+    min-height: 150px;
+    max-height: 200px;
+  }
+  
+  /* Specific heights for various sections */
+  .grid-container > div > [id="skills"] {
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  /* Middle column sections */
+  .grid-container > div:nth-child(2) > div:first-child {
+    min-height: 300px;
   }
 
   @media (max-width: 990px) {

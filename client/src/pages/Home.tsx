@@ -31,7 +31,6 @@ const Home = () => {
           <GridSection 
             background="bg-mayache-green" 
             colSpan="col-span-1" 
-            rowSpan="row-span-10"
             id="about"
           >
             <div className="flex flex-col h-full justify-between relative">
@@ -456,6 +455,7 @@ const Home = () => {
           <GridSection 
             background="bg-mayache-orange" 
             colSpan="col-span-1"
+            rowSpan="row-span-1"
             id="portfolio"
           >
             <div className="flex h-full flex-col justify-between relative overflow-hidden group">
@@ -491,6 +491,7 @@ const Home = () => {
           {/* React + Laravel Project - Purple Block */}
           <GridSection 
             colSpan="col-span-1"
+            rowSpan="row-span-1"
             background="bg-mayache-purple"
           >
             <div className="flex h-full flex-col justify-between relative overflow-hidden group">
@@ -533,6 +534,7 @@ const Home = () => {
           {/* Education section - Teal Block */}
           <GridSection 
             colSpan="col-span-1"
+            rowSpan="row-span-1"
             background="bg-mayache-teal"
           >
             <div className="flex h-full flex-col justify-between relative overflow-hidden group">
@@ -569,6 +571,7 @@ const Home = () => {
           {/* Transcendence Project - Green Block */}
           <GridSection 
             colSpan="col-span-1" 
+            rowSpan="row-span-1"
             background="bg-mayache-green"
           >
             <div className="flex h-full flex-col justify-between relative overflow-hidden group">
