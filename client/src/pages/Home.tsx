@@ -235,6 +235,12 @@ const Home = () => {
                       </span>
                       <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
                     </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
+                    </div>
                   </div>
                 </div>
                 
