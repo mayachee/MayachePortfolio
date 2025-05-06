@@ -65,7 +65,7 @@ const Home = () => {
               </div>
               <div>
                 <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
-                  I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites. This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.
+                  With over a decade of industry-leading web development expertise, I've mastered the complete digital creation process from strategy to launch. My holistic approach combines advanced storytelling techniques with premium branding, motion design, and behavioral psychology to craft immersive digital experiences that captivate audiences and deliver exceptional business results for elite global clients.
                 </p>
 
               </div>
@@ -97,7 +97,7 @@ const Home = () => {
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Focused on frontend development with modern frameworks including React and Next.js. Created responsive interfaces.
+                      Developed cutting-edge frontend applications for global clients. Mastered React, Next.js, and TypeScript to create award-winning digital experiences.
                     </p>
                   </div>
                   
@@ -109,7 +109,7 @@ const Home = () => {
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">UI/UX DESIGN</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Explored user experience design and interface prototyping. Created wireframes and conducted user testing.
+                      Led innovative UI/UX design projects for premium clients. Specialized in modern interactive interfaces with exceptional user engagement results.
                     </p>
                   </div>
                   
@@ -121,7 +121,7 @@ const Home = () => {
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">BACKEND DEV</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Specialized in server-side technologies and database optimization. Built secure APIs with best practices.
+                      Architected high-performance backend systems for enterprise clients. Developed scalable cloud infrastructure and optimized database solutions with exceptional security standards.
                     </p>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ const Home = () => {
                   </h2>
                   <h3 className="text-black text-base font-archivo mb-2 opacity-90">DESIGN ACADEMY</h3>
                   <p className="text-black text-xs font-normal uppercase tracking-wide leading-relaxed">
-                    Specialized in UI/UX design for educational platforms. Creating innovative digital experiences with modern interface design principles.
+                    Directed prestigious UI/UX design academy for elite clients. Pioneered revolutionary educational techniques that combine cutting-edge design principles with real-world applications.
                   </p>
                 </div>
 
@@ -460,7 +460,7 @@ const Home = () => {
                   <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  An elegantly designed portfolio collection featuring interactive animations and responsive layouts.
+                  Award-winning portfolio collection showcasing cutting-edge interactive animations and sophisticated responsive layouts for premium global brands.
                 </p>
 
               </div>
