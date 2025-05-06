@@ -395,7 +395,7 @@ const Home = () => {
           >
             <div className="flex h-full flex-col justify-between relative overflow-hidden group">
               {/* Corner decoration */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform duration-500"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10"></div>
               
               <div className="flex items-center relative z-10">
                 <div className="flex space-x-2">
