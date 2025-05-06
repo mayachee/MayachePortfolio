@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
-import MessageSentImg from "../assets/message-sent.png";
+
 import PortfolioBgImg from "../assets/portfolio-bg.jpg";
 import UxSchoolImg from "../assets/ux-school.webp";
 
@@ -109,18 +109,18 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Contact section */}
+            {/* WordPress section */}
             <GridSection 
-              background="bg-mayache-teal"
-              id="contact"
+              background="bg-mayache-blue"
+              id="wordpress"
             >
               <div className="section-content">
-                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                  WANNA<br />
-                  TALK?
+                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2020-2021</span>
+                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
+                  WORDPRESS SITES
                 </h2>
-                <p className="text-black text-xs font-normal uppercase mt-2">
-                  SEND ME A MESSAGE
+                <p className="text-white text-xs font-normal uppercase">
+                  DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.
                 </p>
               </div>
             </GridSection>
@@ -390,42 +390,19 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Wanna Talk Block */}
+            {/* Another Project */}
             <GridSection 
-              background="bg-mayache-blue"
-              rowSpan="row-span-2"
-              id="contact"
+              background="bg-mayache-teal"
+              id="project-3"
             >
-              <div className="flex flex-col h-full justify-center overflow-hidden relative">
-                {/* Background decoration */}
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-white bg-opacity-5 rounded-full transform translate-x-1/4 translate-y-1/4"></div>
-                <div className="absolute top-0 left-0 w-20 h-20 bg-white bg-opacity-5 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-                
-                <div className="text-center relative z-10">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-white bg-opacity-10 blur-xl rounded-full transform scale-125 animate-pulse-slow"></div>
-                    <img 
-                      src={MessageSentImg} 
-                      alt="Message sent illustration" 
-                      className="w-32 h-32 mx-auto object-contain relative z-10"
-                    />
-                    <div className="absolute -top-2 -right-2 bg-white text-mayache-blue text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md animate-bounce-gentle">
-                      <span>+1</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-4 leading-tight text-shadow-sm">
-                    <span className="opacity-90">WANNA</span><br/>
-                    <span className="opacity-95">TALK?</span><br/>
-                    <span className="opacity-100">SEND ME A</span><br/>
-                    <span className="relative inline-block">
-                      MESSAGE
-                      <span className="absolute bottom-0 left-0 w-full h-1 bg-white opacity-30"></span>
-                    </span>
-                  </h3>
-                  
-
-                </div>
+              <div className="section-content">
+                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">2020-2021</span>
+                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
+                  E-COMMERCE PLATFORM
+                </h2>
+                <p className="text-black text-xs font-normal uppercase">
+                  BUILT A COMPLETE E-COMMERCE PLATFORM WITH LARAVEL, INTEGRATING PAYMENT GATEWAYS AND INVENTORY MANAGEMENT.
+                </p>
               </div>
             </GridSection>
           </div>
