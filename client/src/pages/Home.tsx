@@ -62,40 +62,58 @@ const Home = () => {
             <GridSection 
               background="bg-mayache-purple" 
               id="experience"
-              className="transition-all"
+              rowSpan="row-span-1"
+              className="transition-all overflow-y-auto"
             >
-              <div className="section-content flex flex-col justify-between">
-                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">07/2021 – 12/2021</span>
-                <h2 className="font-archivo text-white text-3xl font-black mb-2 leading-tight">
+              <div className="section-content flex flex-col h-full">
+                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
                   PROFESSIONAL EXPERIENCE
                 </h2>
-                <h3 className="font-archivo text-white text-xl font-bold mb-1">
-                  Web Development Intern, ITT ONE
-                </h3>
-                <p className="text-white text-xs uppercase mb-2">
-                  Tetouan, Morocco
-                </p>
-                <ul className="text-white text-xs font-normal uppercase list-disc pl-4 space-y-2">
-                  <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
-                  <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
-                </ul>
-                <div className="flex space-x-2 mt-auto justify-end">
-                  <button 
-                    className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
-                    onClick={showPreviousInternship}
-                  >
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                  <button 
-                    className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
-                    onClick={showNextInternship}
-                  >
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
+                
+                <div className="mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="font-archivo text-white text-xl font-bold">
+                      Web Development Intern
+                    </h3>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded">
+                      07/2021 – 12/2021
+                    </span>
+                  </div>
+                  
+                  <div className="mb-2">
+                    <p className="text-white text-sm font-archivo uppercase">
+                      ITT ONE, Tetouan, Morocco
+                    </p>
+                  </div>
+                  
+                  <ul className="text-white text-xs font-normal uppercase list-disc pl-5 space-y-2">
+                    <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
+                    <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
+                  </ul>
+                </div>
+                
+                <div className="mt-auto self-end">
+                  <div className="flex space-x-2 items-center">
+                    <div className="text-white text-xs font-bold mr-1">More experiences</div>
+                    <button 
+                      className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
+                      onClick={showPreviousInternship}
+                      aria-label="Previous experience"
+                    >
+                      <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button 
+                      className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
+                      onClick={showNextInternship}
+                      aria-label="Next experience"
+                    >
+                      <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </GridSection>
