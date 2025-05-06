@@ -30,15 +30,14 @@ const Home = () => {
           {/* Left column - Green Block */}
           <GridSection 
             background="bg-mayache-green" 
-            colSpan="col-span-1" 
             id="about"
           >
-            <div className="flex flex-col h-full justify-between relative">
-              <div className="absolute top-4 right-4 p-1">
+            <div className="flex flex-col h-full justify-between relative p-4">
+              <div className="absolute top-4 right-4">
                 <span className="text-xs font-bold text-black">EST. 2020</span>
               </div>
               <div className="relative mt-16">
-                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight relative z-10">
+                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight">
                   I'M <span className="text-blue-400">MAYACHE</span>,
                   <br/>
                   A DESIGNER<br/>
@@ -48,75 +47,33 @@ const Home = () => {
                   BASED IN<br/>
                   MOROCCO.
                 </h2>
-
               </div>
               <div>
-                <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
+                <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide">
                   With over a decade of industry-leading web development expertise, I've mastered the complete digital creation process from strategy to launch. My holistic approach combines advanced storytelling techniques with premium branding, motion design, and behavioral psychology to craft immersive digital experiences that captivate audiences and deliver exceptional business results for elite global clients.
                 </p>
-
               </div>
             </div>
           </GridSection>
 
           {/* Middle column */}
-          <div className="col-span-1">
+          <div>
             {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
               id="internship"
             >
-              <div className="flex flex-col h-full justify-between relative overflow-hidden">
-                {/* Indicator dots */}
-                <div className="flex space-x-1 mb-2">
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 1 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 2 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 3 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
-                </div>
-                
-                {/* Content container with slider */}
-                <div className="relative overflow-hidden h-36">
-                  {/* EDUCATION 1 */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      STUDENT
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">1337 CODING SCHOOL</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
-                    </p>
-                  </div>
-                  
-                  {/* EDUCATION 2 */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2019-2021</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      DIPLOMA
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">OFPPT TETOUAN</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      SPECIALIZED TECHNICIAN IN TECHNIQUES OF IT DEVELOPMENT. GAINED COMPREHENSIVE KNOWLEDGE IN SOFTWARE DEVELOPMENT AND PROGRAMMING FUNDAMENTALS.
-                    </p>
-                  </div>
-                  
-                  {/* INTERNSHIP */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">07/2021-12/2021</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">ITT ONE</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      COLLABORATED ON WEB DEVELOPMENT PROJECTS, GAINING PRACTICAL EXPERIENCE IN FRONT-END AND BACK-END TECHNOLOGIES. CONTRIBUTED TO E-COMMERCE PLATFORMS AND INTERNAL TOOLS.
-                    </p>
-                  </div>
-                </div>
-                
-                {/* Navigation buttons */}
-                <div className="flex space-x-2 mt-auto justify-end">
+              <div className="flex flex-col h-full justify-between p-4">
+                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
+                <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
+                  1337 CODING SCHOOL
+                </h2>
+                <p className="text-white text-xs font-normal uppercase">
+                  STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). MASTERING ADVANCED NETWORK, PROGRAMMING WITH C AND WORKING ON INDIVIDUAL PROJECTS.
+                </p>
+                <div className="flex space-x-2 mt-4 justify-end">
                   <button 
-                    className="bg-white bg-opacity-20 backdrop-blur-sm w-8 h-8 flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-colors duration-200 rounded-full shadow-md"
+                    className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
                     onClick={showPreviousInternship}
                   >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +81,7 @@ const Home = () => {
                     </svg>
                   </button>
                   <button 
-                    className="bg-white bg-opacity-20 backdrop-blur-sm w-8 h-8 flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-colors duration-200 rounded-full shadow-md"
+                    className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
                     onClick={showNextInternship}
                   >
                     <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -135,34 +92,61 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* E-commerce Websites section */}
+            {/* Car Rental section */}
             <GridSection 
-              background="bg-mayache-yellow"
+              background="bg-mayache-orange"
             >
-              <div className="flex flex-col h-full justify-between hover-lift">
-                <div>
-                  <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">DURING INTERNSHIP</span>
-                  <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                    E-COMMERCE WEBSITES
-                  </h2>
-                  <h3 className="text-black text-base font-archivo mb-2 opacity-90">AJOUN.MA, SHOLEGOO.COM</h3>
-                  <p className="text-black text-xs font-normal uppercase tracking-wide leading-relaxed">
-                    BUILT E-COMMERCE WEBSITES USING WORDPRESS AT ITT ONE. IMPLEMENTED PAYMENT GATEWAYS AND CREATED USER-FRIENDLY INTERFACES.
-                  </p>
-                </div>
-
+              <div className="p-4">
+                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">2021-2022</span>
+                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
+                  CAR RENTAL APP
+                </h2>
+                <p className="text-white text-xs font-normal uppercase">
+                  BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND RESERVATION MANAGEMENT.
+                </p>
+              </div>
+            </GridSection>
+            
+            {/* Project Section */}
+            <GridSection 
+              background="bg-mayache-purple"
+            >
+              <div className="p-4">
+                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">DURING INTERNSHIP</span>
+                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
+                  REACT + LARAVEL PROJECT
+                </h2>
+                <p className="text-white text-xs font-normal uppercase">
+                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.
+                </p>
+              </div>
+            </GridSection>
+            
+            {/* Contact section */}
+            <GridSection 
+              background="bg-mayache-teal"
+              id="contact"
+            >
+              <div className="p-4">
+                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
+                  WANNA<br />
+                  TALK?
+                </h2>
+                <p className="text-black text-xs font-normal uppercase mt-2">
+                  SEND ME A MESSAGE
+                </p>
               </div>
             </GridSection>
           </div>
 
-          <div className="col-span-1">
-            {/* Right column top - Red Block with hover effect */}
+          <div>
+            {/* Right column top - Red Block */}
             <GridSection 
               background="bg-mayache-red"
               id="skills"
             >
-              <div className="flex flex-col h-full overflow-auto">
-                <h2 className="font-archivo text-white text-3xl md:text-4xl font-black mb-3 leading-tight">
+              <div className="p-4">
+                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight">
                   SKILLS
                 </h2>
                 

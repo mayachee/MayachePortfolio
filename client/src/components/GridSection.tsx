@@ -24,7 +24,7 @@ const GridSection = ({
   return (
     <motion.div
       id={id}
-      className={`${background} p-4 ${colSpan} ${rowSpan} flex flex-col relative overflow-hidden group h-full`}
+      className={`${background} p-4 ${colSpan} ${rowSpan} flex flex-col relative overflow-hidden group grid-section`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
