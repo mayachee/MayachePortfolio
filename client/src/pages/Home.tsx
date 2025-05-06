@@ -67,26 +67,7 @@ const Home = () => {
                 <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
                   I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites. This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.
                 </p>
-                <div className="mt-6 flex space-x-3">
-                  <a href="#contact" className="group relative inline-flex items-center px-5 py-3 bg-black text-white text-sm font-bold rounded hover:bg-gray-800 transition-all duration-300 overflow-hidden shadow-md">
-                    <span className="absolute -left-4 w-2 h-full bg-mayache-teal transform skew-x-[20deg] group-hover:translate-x-52 transition-transform duration-700"></span>
-                    <span className="mr-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </span>
-                    CONTACT ME
-                  </a>
-                  <a href="#portfolio" className="group relative inline-flex items-center px-5 py-3 border-2 border-black text-black text-sm font-bold rounded overflow-hidden transition-all duration-300 hover:bg-black hover:text-white shadow-md">
-                    <span className="absolute -left-4 w-2 h-full bg-mayache-orange transform skew-x-[20deg] opacity-50 group-hover:translate-x-52 transition-transform duration-700"></span>
-                    <span className="mr-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                      </svg>
-                    </span>
-                    VIEW WORK
-                  </a>
-                </div>
+
               </div>
             </div>
           </GridSection>
