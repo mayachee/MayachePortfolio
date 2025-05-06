@@ -1,13 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
-
-import PortfolioBgImg from "../assets/portfolio-bg.jpg";
-import UxSchoolImg from "../assets/ux-school.webp";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -207,12 +204,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
-                        <span className="text-white text-xs font-archivo">70%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">PYTHON</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">70%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '70%', animationDelay: '0.6s' }}
@@ -220,12 +217,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
-                        <span className="text-white text-xs font-archivo">65%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">SPRING BOOT</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">65%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '65%', animationDelay: '0.7s' }}
@@ -233,12 +230,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
-                        <span className="text-white text-xs font-archivo">75%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">DOCKER</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">75%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '75%', animationDelay: '0.8s' }}
@@ -246,12 +243,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">FIGMA</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '0.9s' }}
@@ -291,12 +288,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">85%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '1.2s' }}
@@ -304,12 +301,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
-                        <span className="text-white text-xs font-archivo">88%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">ADAPTABILITY</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">88%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '88%', animationDelay: '1.3s' }}
@@ -317,12 +314,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
-                        <span className="text-white text-xs font-archivo">92%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">CREATIVITY</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">92%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '92%', animationDelay: '1.4s' }}
@@ -330,12 +327,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">TIME MANAGEMENT</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '1.5s' }}
@@ -343,12 +340,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">MULTILINGUAL</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">85%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '1.6s' }}
@@ -389,26 +386,7 @@ const Home = () => {
                 </p>
               </div>
             </GridSection>
-            
-            {/* Another Project */}
-            <GridSection 
-              background="bg-mayache-teal"
-              id="project-3"
-            >
-              <div className="section-content">
-                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">2020-2021</span>
-                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                  E-COMMERCE PLATFORM
-                </h2>
-                <p className="text-black text-xs font-normal uppercase">
-                  BUILT A COMPLETE E-COMMERCE PLATFORM WITH LARAVEL, INTEGRATING PAYMENT GATEWAYS AND INVENTORY MANAGEMENT.
-                </p>
-              </div>
-            </GridSection>
           </div>
-
-
-
         </div>
       </main>
       

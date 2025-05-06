@@ -340,12 +340,13 @@
   .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 2px;
+    gap: 3px;
     width: 100%;
     min-height: 100vh;
     height: 100%;
     background-color: #000;
     overflow: hidden;
+    position: relative;
   }
 
   /* Left column */
@@ -358,7 +359,7 @@
   .grid-container > .column {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 3px;
     height: 100vh;
   }
 
@@ -368,6 +369,12 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-section:hover {
+    transform: scale(1.0025);
+    z-index: 2;
   }
 
   /* Content containers */
@@ -375,7 +382,23 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    padding: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Enhancing scrollbars */
+  .section-content::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .section-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .section-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
   }
 
   @media (max-width: 990px) {
