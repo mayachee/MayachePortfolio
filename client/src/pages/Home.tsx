@@ -355,6 +355,16 @@ const Home = () => {
                       1337 SCHOOL (42 NETWORK), UM6P
                     </p>
                   </div>
+                  
+                  <div>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">09/2019 – 07/2021</span>
+                    <h3 className="font-archivo text-white text-lg font-bold leading-tight">
+                      SPECIALIZED TECHNICIAN
+                    </h3>
+                    <p className="text-white text-xs uppercase">
+                      TECHNIQUES OF IT DEVELOPMENT
+                    </p>
+                  </div>
                 </div>
               </div>
             </GridSection>
