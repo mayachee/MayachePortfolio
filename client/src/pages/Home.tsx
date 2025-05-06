@@ -186,11 +186,7 @@ const Home = () => {
                     </div>
                     
                     <div className="flex items-center mb-2">
-                      <span className="inline-flex items-center px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded">
-                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
-                        FLIP ME
-                      </span>
-                      <div className="ml-auto rotate-180 text-white/30 text-xs">
+                      <div className="ml-auto text-white/30 text-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
@@ -204,25 +200,25 @@ const Home = () => {
                     
                     <div className="grid grid-cols-2 gap-3">
                       <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">C / C#</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">JAVA</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">JAVASCRIPT</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
@@ -230,25 +226,25 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">REACT.JS</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
                           <span className="text-white text-base font-archivo uppercase">DOCKER</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
@@ -271,10 +267,6 @@ const Home = () => {
                     </div>
                   
                     <div className="flex items-center mb-2">
-                      <span className="inline-flex items-center px-2 py-1 bg-mayache-red text-white text-xs font-bold rounded">
-                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
-                        FLIP BACK
-                      </span>
                       <div className="ml-auto text-mayache-red/30 text-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -289,25 +281,25 @@ const Home = () => {
                     
                     <div className="grid grid-cols-2 gap-3">
                       <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">TEAM COMMUNICATION</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">SELF-DIRECTED</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
@@ -315,25 +307,25 @@ const Home = () => {
                         </div>
                       </div>
                       <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">MULTILINGUAL</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">ADAPTABILITY</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
                         </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                        <div className="flex items-center">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
@@ -360,7 +352,7 @@ const Home = () => {
               background="bg-mayache-blue"
               id="contact"
             >
-              <div className="flex flex-col h-full justify-center hover-scale overflow-hidden relative">
+              <div className="flex flex-col h-full justify-center overflow-hidden relative">
                 {/* Background decoration */}
                 <div className="absolute bottom-0 right-0 w-40 h-40 bg-white bg-opacity-5 rounded-full transform translate-x-1/4 translate-y-1/4"></div>
                 <div className="absolute top-0 left-0 w-20 h-20 bg-white bg-opacity-5 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
@@ -371,7 +363,7 @@ const Home = () => {
                     <img 
                       src={MessageSentImg} 
                       alt="Message sent illustration" 
-                      className="w-32 h-32 mx-auto object-contain transition-transform duration-300 hover:scale-110 relative z-10"
+                      className="w-32 h-32 mx-auto object-contain relative z-10"
                     />
                     <div className="absolute -top-2 -right-2 bg-white text-mayache-blue text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md animate-bounce-gentle">
                       <span>+1</span>
@@ -401,7 +393,7 @@ const Home = () => {
             colSpan="col-span-1"
             id="portfolio"
           >
-            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
+            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
               {/* Corner decoration */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform duration-500"></div>
               
@@ -436,7 +428,7 @@ const Home = () => {
             colSpan="col-span-1"
             background="bg-mayache-teal"
           >
-            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
+            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="grid grid-cols-3 h-full w-full">
