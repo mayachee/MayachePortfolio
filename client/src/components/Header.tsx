@@ -43,12 +43,12 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${isScrolled ? 'bg-white shadow-md' : 'bg-white'} py-4 px-6 flex justify-between items-center sticky top-0 z-50 transition-all duration-300`}>
+      <header className={`${isScrolled ? 'bg-white shadow-md' : 'bg-white'} py-3 md:py-4 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 transition-all duration-300`}>
         <div className="flex items-center">
           <div className="logo relative group">
             <div className="absolute -top-2 -left-2 w-10 h-10 bg-gradient-to-br from-mayache-teal to-mayache-blue rounded-full opacity-20 group-hover:scale-110 transition-transform duration-500"></div>
             <div className="absolute top-0 left-0 w-8 h-8 bg-gradient-to-br from-mayache-red to-mayache-orange rounded-full opacity-10 group-hover:scale-110 transition-transform duration-700 delay-100"></div>
-            <h1 className="font-archivo text-black text-4xl font-black relative z-10">
+            <h1 className="font-archivo text-black text-3xl md:text-4xl font-black relative z-10">
               <span className="relative inline-block group-hover:tracking-wider transition-all duration-300">
                 M<span className="text-mayache-red">A</span>Y<span className="text-mayache-blue">A</span>CHE
                 <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-mayache-red to-mayache-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
@@ -97,21 +97,21 @@ const Header = () => {
           </div>
           
           <div className="text-right flex items-center group">
-            <h2 className="font-archivo text-black text-4xl font-black tracking-tight relative">
+            <h2 className="font-archivo text-black text-3xl md:text-4xl font-black tracking-tight relative">
               <span className="inline-block relative">
                 <span className="group-hover:opacity-80 transition-opacity duration-300">PORT</span><span className="text-mayache-teal group-hover:text-black transition-colors duration-300">FOLIO</span>
                 <div className="absolute -right-2 -top-2 bg-gradient-to-br from-mayache-yellow to-mayache-orange w-5 h-5 rounded-full border-2 border-white shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
               </span>
             </h2>
             <button 
-              className="ml-4 md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="ml-4 md:hidden p-2.5 hover:bg-gray-100 rounded-full transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <div className="flex flex-col space-y-1.5 w-5">
-                <span className="block w-5 h-0.5 bg-black"></span>
-                <span className="block w-3 h-0.5 bg-black"></span>
-                <span className="block w-4 h-0.5 bg-black ml-auto"></span>
+              <div className="flex flex-col space-y-1.5 w-6">
+                <span className="block w-6 h-0.5 bg-black"></span>
+                <span className="block w-4 h-0.5 bg-black"></span>
+                <span className="block w-5 h-0.5 bg-black ml-auto"></span>
               </div>
             </button>
           </div>
