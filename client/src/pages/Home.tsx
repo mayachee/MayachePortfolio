@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
 import { FaGithub } from "react-icons/fa";
-import { SiWordpress, SiFigma } from "react-icons/si";
+import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
 import MessageSentImg from "../assets/message-sent.png";
 import PortfolioBgImg from "../assets/portfolio-bg.jpg";
 import UxSchoolImg from "../assets/ux-school.webp";
@@ -414,17 +414,17 @@ const Home = () => {
                     <SiFigma className="h-5 w-5 text-white" />
                   </div>
                 </div>
-                <span className="ml-auto inline-block px-2 py-0.5 bg-white bg-opacity-20 text-white text-xs font-bold rounded">2023</span>
+                <span className="ml-auto inline-block px-2 py-0.5 bg-white bg-opacity-20 text-white text-xs font-bold rounded">2021-2022</span>
               </div>
               
               <div className="relative z-10">
                 <span className="inline-block w-10 h-1 bg-white mb-2"></span>
                 <h2 className="font-archivo text-white text-xl font-black leading-tight">
-                  BOOKING-APP
-                  <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(MERN)</span>
+                  CAR RENTAL APP
+                  <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(Next.js/Django)</span>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  A modern reservation system built using the MERN stack with real-time availability updates.
+                  DESIGNED AND DEVELOPED A FULL-STACK CAR RENTAL MANAGEMENT APPLICATION USING NEXT.JS AND DJANGO, IMPLEMENTING ADVANCED FEATURES FOR VEHICLE TRACKING AND BOOKING MANAGEMENT.
                 </p>
 
               </div>
@@ -448,19 +448,19 @@ const Home = () => {
               
               <div className="flex items-center justify-between relative z-10">
                 <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                  <SiWordpress className="h-5 w-5 text-white" />
+                  <SiReact className="h-5 w-5 text-white" />
                 </div>
-                <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">NEW</span>
+                <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">2022-PRESENT</span>
               </div>
               
               <div className="relative z-10">
                 <span className="inline-block w-10 h-1 bg-white mb-2"></span>
                 <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
-                  PORTFOLIO SHOWCASE
+                  1337 CODING SCHOOL
                   <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  Award-winning portfolio collection showcasing cutting-edge interactive animations and sophisticated responsive layouts for premium global brands.
+                  SOFTWARE DEVELOPER AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE PRESTIGIOUS 42 NETWORK. MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
                 </p>
 
               </div>
