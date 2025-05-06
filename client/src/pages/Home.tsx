@@ -175,175 +175,114 @@ const Home = () => {
               colSpan=""
               id="skills"
             >
-              <div className="relative overflow-hidden h-full group" style={{ perspective: '1500px' }}>
-                <div className="h-full w-full transition-all duration-700 ease-out transform-gpu preserve-3d hover:rotate-y-180 cursor-pointer relative">
-                  {/* Front side - HARDSKILL */}
-                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 backface-hidden">
-                    <div className="absolute top-4 right-4 flex space-x-1">
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
+              <div className="flex flex-col h-full p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 overflow-auto">
+                <div className="absolute top-4 right-4 flex space-x-1">
+                  <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
+                  <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
+                  <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
+                </div>
+                
+                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight text-shadow-sm relative">
+                  SKILLS
+                  <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
+                </h2>
+                
+                {/* Hard Skills */}
+                <div className="mb-4">
+                  <h3 className="font-archivo text-white text-xl font-bold mb-2">HARD SKILLS</h3>
+                  <div className="grid grid-cols-2 gap-x-2 gap-y-2">
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">C / C#</span>
                     </div>
-                    
-                    <div className="flex items-center mb-2">
-                      <div className="ml-auto text-white/30 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                      </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">REACT.JS</span>
                     </div>
-                    
-                    <h2 className="font-archivo text-white text-4xl font-black mb-6 leading-tight text-shadow-sm relative">
-                      HARD<br/>SKILLS
-                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
-                    </h2>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">C / C#</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">JAVA</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">JAVASCRIPT</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">HTML/CSS</span>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">REACT.JS</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">DOCKER</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">FIGMA/PS</span>
-                        </div>
-                      </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
                     </div>
-                    
-                    {/* Decorative circles */}
-                    <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
-                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black bg-opacity-5 rounded-full"></div>
-                  </div>
-                  
-                  {/* Back side - SOFTSKILL */}
-                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-white rotate-y-180 backface-hidden">
-                    <div className="absolute top-4 right-4 flex space-x-1">
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-60"></span>
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-80"></span>
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full"></span>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
                     </div>
-                  
-                    <div className="flex items-center mb-2">
-                      <div className="ml-auto text-mayache-red/30 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                      </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">NEXT.JS</span>
                     </div>
-                    
-                    <h2 className="font-archivo text-mayache-red text-4xl font-black mb-4 leading-tight relative">
-                      SOFT<br/>SKILLS
-                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-mayache-red opacity-30"></div>
-                    </h2>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">TEAM COMMUNICATION</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">SELF-DIRECTED</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">LEARNING</span>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">MULTILINGUAL</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">ADAPTABILITY</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">TIME MANAGEMENT</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Decorative pattern */}
-                    <div className="absolute right-0 bottom-0 w-1/3 h-1/3 opacity-5">
-                      <div className="grid grid-cols-3 h-full w-full">
-                        {[...Array(9)].map((_, index) => (
-                          <div key={index} className="border border-mayache-red"></div>
-                        ))}
-                      </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
                     </div>
                   </div>
                 </div>
+                
+                {/* Soft Skills */}
+                <div>
+                  <h3 className="font-archivo text-white text-xl font-bold mb-2">SOFT SKILLS</h3>
+                  <div className="grid grid-cols-2 gap-x-2 gap-y-2">
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
+                    </div>
+
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative circles */}
+                <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
+                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black bg-opacity-5 rounded-full"></div>
               </div>
             </GridSection>
             
