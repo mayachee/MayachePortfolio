@@ -68,11 +68,12 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Middle column - Purple Block */}
-          <div className="col-span-1 grid grid-rows-2 gap-2">
-            {/* INTERNSHIP Section with Slider */}
+          {/* Middle column */}
+          <div className="col-span-1 grid grid-rows-4 gap-0.5">
+            {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
+              rowSpan="row-span-2"
               id="internship"
             >
               <div className="flex flex-col h-full justify-between relative overflow-hidden">
@@ -164,7 +165,7 @@ const Home = () => {
             </GridSection>
           </div>
 
-          <div className="col-span-1 grid grid-rows-2 gap-2">
+          <div className="col-span-1 grid grid-rows-4 gap-0.5">
             {/* Right column top - Red Block with hover effect */}
             <GridSection 
               background="bg-mayache-red" 
@@ -413,6 +414,7 @@ const Home = () => {
             {/* Wanna Talk Block */}
             <GridSection 
               background="bg-mayache-blue"
+              rowSpan="row-span-2"
               id="contact"
             >
               <div className="flex flex-col h-full justify-center overflow-hidden relative">
