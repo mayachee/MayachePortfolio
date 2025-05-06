@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
+import ProjectSwapper from "@/components/ProjectSwapper";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
 
@@ -61,6 +62,7 @@ const Home = () => {
             <GridSection 
               background="bg-mayache-purple" 
               id="internship"
+              className="transition-all"
             >
               <div className="section-content flex flex-col justify-between">
                 <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
@@ -91,36 +93,10 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Car Rental section */}
-            <GridSection 
-              background="bg-mayache-orange"
-            >
-              <div className="section-content">
-                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">2021-2022</span>
-                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
-                  CAR RENTAL APP
-                </h2>
-                <p className="text-white text-xs font-normal uppercase">
-                  BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND RESERVATION MANAGEMENT.
-                </p>
-              </div>
-            </GridSection>
-            
-            {/* WordPress section */}
-            <GridSection 
-              background="bg-mayache-blue"
-              id="wordpress"
-            >
-              <div className="section-content">
-                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2020-2021</span>
-                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
-                  WORDPRESS SITES
-                </h2>
-                <p className="text-white text-xs font-normal uppercase">
-                  DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.
-                </p>
-              </div>
-            </GridSection>
+            {/* Projects Grid with Swapping Feature */}
+            <div className="row-span-2">
+              <ProjectSwapper />
+            </div>
           </div>
 
           {/* Right column */}
@@ -357,33 +333,46 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* React project */}  
+            {/* Education Section */}
             <GridSection 
-              background="bg-mayache-purple"
+              background="bg-mayache-teal"
+              className="col-span-1 row-span-2"
             >
               <div className="section-content">
-                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022</span>
-                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
-                  REACT + LARAVEL PROJECT
+                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight">
+                  EDUCATION
                 </h2>
-                <p className="text-white text-xs font-normal uppercase">
-                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.
-                </p>
-              </div>
-            </GridSection>
-            
-            {/* FT_TRANSCENDENCE */}
-            <GridSection 
-              background="bg-mayache-yellow"
-            >
-              <div className="section-content">
-                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">1337 SCHOOL</span>
-                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                  FT_TRANSCENDENCE
-                </h2>
-                <p className="text-black text-xs font-normal uppercase">
-                  DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS.
-                </p>
+                <div className="space-y-4">
+                  <div>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">2020-PRESENT</span>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight">
+                      COMPUTER SCIENCE
+                    </h3>
+                    <p className="text-white text-xs uppercase">
+                      1337 SCHOOL (42 NETWORK), UM6P
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">2018-2020</span>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight">
+                      WEB DEVELOPMENT
+                    </h3>
+                    <p className="text-white text-xs uppercase">
+                      SPECIALIZED CERTIFICATE, ONLINE LEARNING
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">2016-2018</span>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight">
+                      GRAPHIC DESIGN
+                    </h3>
+                    <p className="text-white text-xs uppercase">
+                      PROFESSIONAL CERTIFICATION, DESIGN ACADEMY
+                    </p>
+                  </div>
+                </div>
               </div>
             </GridSection>
           </div>
