@@ -43,7 +43,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white shadow-xl z-50 md:hidden overflow-auto"
+            className="fixed top-0 right-0 h-full w-5/6 max-w-xs bg-white shadow-xl z-50 md:hidden overflow-auto"
           >
             <div className="p-6">
               {/* Close button */}
@@ -68,7 +68,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   >
                     <button
                       onClick={() => handleLinkClick("about")}
-                      className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-yellow hover:bg-opacity-10 rounded-lg transition-colors"
+                      className="w-full text-left flex items-center py-4 px-4 text-gray-800 font-bold hover:bg-mayache-yellow hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-yellow rounded-full mr-3"></span>
                       <span className="uppercase text-sm tracking-wide">{t("nav.about")}</span>
@@ -81,7 +81,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   >
                     <button
                       onClick={() => handleLinkClick("skills")}
-                      className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-red hover:bg-opacity-10 rounded-lg transition-colors"
+                      className="w-full text-left flex items-center py-4 px-4 text-gray-800 font-bold hover:bg-mayache-red hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-red rounded-full mr-3"></span>
                       <span className="uppercase text-sm tracking-wide">{t("nav.skills")}</span>
@@ -94,7 +94,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   >
                     <button
                       onClick={() => handleLinkClick("internship")}
-                      className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-purple hover:bg-opacity-10 rounded-lg transition-colors"
+                      className="w-full text-left flex items-center py-4 px-4 text-gray-800 font-bold hover:bg-mayache-purple hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-purple rounded-full mr-3"></span>
                       <span className="uppercase text-sm tracking-wide">{t("nav.internship")}</span>
@@ -107,7 +107,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   >
                     <button
                       onClick={() => handleLinkClick("portfolio")}
-                      className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-orange hover:bg-opacity-10 rounded-lg transition-colors"
+                      className="w-full text-left flex items-center py-4 px-4 text-gray-800 font-bold hover:bg-mayache-orange hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-orange rounded-full mr-3"></span>
                       <span className="uppercase text-sm tracking-wide">{t("nav.portfolio")}</span>
