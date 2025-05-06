@@ -61,18 +61,25 @@ const Home = () => {
             {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
-              id="internship"
+              id="experience"
               className="transition-all"
             >
               <div className="section-content flex flex-col justify-between">
-                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
-                <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                  1337 CODING SCHOOL
+                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">07/2021 – 12/2021</span>
+                <h2 className="font-archivo text-white text-3xl font-black mb-2 leading-tight">
+                  PROFESSIONAL EXPERIENCE
                 </h2>
-                <p className="text-white text-xs font-normal uppercase">
-                  STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). MASTERING ADVANCED NETWORK, PROGRAMMING WITH C AND WORKING ON INDIVIDUAL PROJECTS.
+                <h3 className="font-archivo text-white text-xl font-bold mb-1">
+                  Web Development Intern, ITT ONE
+                </h3>
+                <p className="text-white text-xs uppercase mb-2">
+                  Tetouan, Morocco
                 </p>
-                <div className="flex space-x-2 mt-4 justify-end">
+                <ul className="text-white text-xs font-normal uppercase list-disc pl-4 space-y-2">
+                  <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
+                  <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
+                </ul>
+                <div className="flex space-x-2 mt-auto justify-end">
                   <button 
                     className="bg-white bg-opacity-20 w-8 h-8 flex items-center justify-center rounded-full"
                     onClick={showPreviousInternship}
