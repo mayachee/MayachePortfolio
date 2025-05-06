@@ -60,11 +60,10 @@ const Home = () => {
           </GridSection>
 
           {/* Middle column */}
-          <div className="col-span-1 grid grid-rows-6 gap-0.125rem">
+          <div className="col-span-1">
             {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
-              rowSpan="row-span-2"
               id="internship"
             >
               <div className="flex flex-col h-full justify-between relative overflow-hidden">
@@ -156,24 +155,15 @@ const Home = () => {
             </GridSection>
           </div>
 
-          <div className="col-span-1 grid grid-rows-6 gap-0.125rem">
+          <div className="col-span-1">
             {/* Right column top - Red Block with hover effect */}
             <GridSection 
-              background="bg-mayache-red" 
-              colSpan="col-span-1"
-              rowSpan="row-span-2"
+              background="bg-mayache-red"
               id="skills"
             >
-              <div className="flex flex-col h-full p-4 md:p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 overflow-auto">
-                <div className="absolute top-3 right-3 md:top-4 md:right-4 flex space-x-1">
-                  <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
-                  <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
-                  <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
-                </div>
-                
-                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-2 md:mb-3 leading-tight text-shadow-sm relative">
+              <div className="flex flex-col h-full overflow-auto">
+                <h2 className="font-archivo text-white text-3xl md:text-4xl font-black mb-3 leading-tight">
                   SKILLS
-                  <div className="absolute bottom-0 left-0 w-10 md:w-14 h-1 bg-white opacity-30"></div>
                 </h2>
                 
                 {/* Hard Skills */}
