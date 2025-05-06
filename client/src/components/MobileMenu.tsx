@@ -120,7 +120,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   >
                     <button
                       onClick={() => handleLinkClick("contact")}
-                      className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-blue hover:bg-opacity-10 rounded-lg transition-colors"
+                      className="w-full text-left flex items-center py-4 px-4 text-gray-800 font-bold hover:bg-mayache-blue hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-blue rounded-full mr-3"></span>
                       <span className="uppercase text-sm tracking-wide">{t("nav.messages")}</span>
@@ -134,28 +134,28 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 <div className="flex space-x-3">
                   <button 
                     onClick={() => changeLanguage('en')}
-                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'en' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'en' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                     aria-label="English"
                   >
                     EN
                   </button>
                   <button 
                     onClick={() => changeLanguage('de')}
-                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'de' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'de' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                     aria-label="German"
                   >
                     DE
                   </button>
                   <button 
                     onClick={() => changeLanguage('fr')}
-                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'fr' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'fr' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                     aria-label="French"
                   >
                     FR
                   </button>
                   <button 
                     onClick={() => changeLanguage('es')}
-                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'es' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+                    className={`w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full transition-colors ${i18n.language === 'es' ? 'bg-black text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
                     aria-label="Spanish"
                   >
                     ES
@@ -171,7 +171,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     href="https://github.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
+                    className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition-colors"
                   >
                     <SiGithub className="h-5 w-5 text-black" />
                   </a>
@@ -179,7 +179,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     href="https://figma.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
+                    className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition-colors"
                   >
                     <SiFigma className="h-5 w-5 text-black" />
                   </a>
@@ -187,7 +187,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     href="https://linkedin.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
+                    className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 transition-colors"
                   >
                     <SiLinkedin className="h-5 w-5 text-black" />
                   </a>
