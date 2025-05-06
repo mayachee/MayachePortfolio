@@ -97,7 +97,7 @@ const Home = () => {
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">1337 CODING SCHOOL</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE 42 NETWORK. SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
+                      STUDYING SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE 42 NETWORK. SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
                     </p>
                   </div>
                   
@@ -460,7 +460,7 @@ const Home = () => {
                   <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  SOFTWARE DEVELOPER AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE PRESTIGIOUS 42 NETWORK. MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
+                  STUDYING SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE PRESTIGIOUS 42 NETWORK. MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
                 </p>
 
               </div>
