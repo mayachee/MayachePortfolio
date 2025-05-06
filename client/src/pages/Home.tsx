@@ -57,11 +57,7 @@ const Home = () => {
                   BASED IN<br/>
                   MOROCCO.
                 </h2>
-                <div className="flex space-x-2 mt-2">
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">React</span>
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Next.js</span>
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Figma</span>
-                </div>
+
               </div>
               <div>
                 <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
