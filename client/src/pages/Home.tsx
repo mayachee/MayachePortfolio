@@ -186,13 +186,13 @@ const Home = () => {
                 {/* Hard Skills */}
                 <div className="mb-5">
                   <h3 className="font-archivo text-white text-lg md:text-xl font-bold mb-2">HARD SKILLS</h3>
-                  <div className="space-y-2">
-                    <div className="space-y-1">
+                  <div className="space-y-1.5">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">C / C#</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">C / C#</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">85%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '0.1s' }}
@@ -200,12 +200,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">JAVA</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">JAVA</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '0.2s' }}
@@ -213,12 +213,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
-                        <span className="text-white text-xs font-archivo">90%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">JAVASCRIPT</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">90%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '90%', animationDelay: '0.3s' }}

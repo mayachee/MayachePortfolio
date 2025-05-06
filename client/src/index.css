@@ -341,7 +341,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
-    grid-auto-rows: minmax(120px, auto);
+    grid-auto-rows: minmax(120px, 1fr);
     gap: 0.5rem;
     padding: 0.5rem;
     width: 100%;
@@ -410,8 +410,9 @@
     }
     
     /* Ensure mobile card heights are adequate */
-    .grid-auto-rows {
-      grid-auto-rows: minmax(100px, auto) !important;
+    .grid-container {
+      grid-auto-rows: minmax(auto, 1fr) !important;
+      min-height: 0 !important;
     }
     
     /* Better touch targets for mobile */
