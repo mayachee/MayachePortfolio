@@ -30,8 +30,8 @@ const Home = () => {
           {/* Left column - Green Block */}
           <GridSection 
             background="bg-mayache-green" 
-            colSpan="col-span-2" 
-            rowSpan="row-span-2"
+            colSpan="col-span-1" 
+            rowSpan="row-span-6"
             id="about"
           >
             <div className="flex flex-col h-full justify-between relative">
@@ -168,7 +168,8 @@ const Home = () => {
             {/* Right column top - Red Block with hover effect */}
             <GridSection 
               background="bg-mayache-red" 
-              colSpan=""
+              colSpan="col-span-1"
+              rowSpan="row-span-2"
               id="skills"
             >
               <div className="flex flex-col h-full p-4 md:p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 overflow-auto">
@@ -239,12 +240,12 @@ const Home = () => {
                       </div>
                     </div>
                     
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
-                        <span className="text-white text-xs font-archivo">75%</span>
+                        <span className="text-white text-xs md:text-sm font-archivo uppercase">LARAVEL</span>
+                        <span className="text-white text-[10px] md:text-xs font-archivo">75%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-1.5 md:h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
                           className="h-full bg-white rounded-full animate-skill-fill" 
                           style={{ width: '75%', animationDelay: '0.5s' }}
