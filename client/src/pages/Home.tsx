@@ -28,42 +28,44 @@ const Home = () => {
       <main className="flex-grow">
         <div className="grid-container">
           {/* Left column - Green Block */}
-          <GridSection 
-            background="bg-mayache-green" 
-            id="about"
-          >
-            <div className="flex flex-col h-full justify-between relative p-4">
-              <div className="absolute top-4 right-4">
-                <span className="text-xs font-bold text-black">EST. 2020</span>
+          <div className="left-column">
+            <GridSection 
+              background="bg-mayache-green" 
+              id="about"
+            >
+              <div className="section-content flex flex-col justify-between">
+                <div className="absolute top-4 right-4">
+                  <span className="text-xs font-bold text-black">EST. 2020</span>
+                </div>
+                <div className="relative mt-16">
+                  <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight">
+                    I'M <span className="text-blue-400">MAYACHE</span>,
+                    <br/>
+                    A DESIGNER<br/>
+                    AND<br/>
+                    SOFTWARE<br/>
+                    DEVELOPER<br/>
+                    BASED IN<br/>
+                    MOROCCO.
+                  </h2>
+                </div>
+                <div>
+                  <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide">
+                    With over a decade of industry-leading web development expertise, I've mastered the complete digital creation process from strategy to launch. My holistic approach combines advanced storytelling techniques with premium branding, motion design, and behavioral psychology to craft immersive digital experiences that captivate audiences and deliver exceptional business results for elite global clients.
+                  </p>
+                </div>
               </div>
-              <div className="relative mt-16">
-                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight">
-                  I'M <span className="text-blue-400">MAYACHE</span>,
-                  <br/>
-                  A DESIGNER<br/>
-                  AND<br/>
-                  SOFTWARE<br/>
-                  DEVELOPER<br/>
-                  BASED IN<br/>
-                  MOROCCO.
-                </h2>
-              </div>
-              <div>
-                <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide">
-                  With over a decade of industry-leading web development expertise, I've mastered the complete digital creation process from strategy to launch. My holistic approach combines advanced storytelling techniques with premium branding, motion design, and behavioral psychology to craft immersive digital experiences that captivate audiences and deliver exceptional business results for elite global clients.
-                </p>
-              </div>
-            </div>
-          </GridSection>
+            </GridSection>
+          </div>
 
           {/* Middle column */}
-          <div>
+          <div className="column">
             {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
               id="internship"
             >
-              <div className="flex flex-col h-full justify-between p-4">
+              <div className="section-content flex flex-col justify-between">
                 <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
                 <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
                   1337 CODING SCHOOL
@@ -96,7 +98,7 @@ const Home = () => {
             <GridSection 
               background="bg-mayache-orange"
             >
-              <div className="p-4">
+              <div className="section-content">
                 <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">2021-2022</span>
                 <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
                   CAR RENTAL APP
@@ -107,27 +109,12 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Project Section */}
-            <GridSection 
-              background="bg-mayache-purple"
-            >
-              <div className="p-4">
-                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">DURING INTERNSHIP</span>
-                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
-                  REACT + LARAVEL PROJECT
-                </h2>
-                <p className="text-white text-xs font-normal uppercase">
-                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.
-                </p>
-              </div>
-            </GridSection>
-            
             {/* Contact section */}
             <GridSection 
               background="bg-mayache-teal"
               id="contact"
             >
-              <div className="p-4">
+              <div className="section-content">
                 <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
                   WANNA<br />
                   TALK?
@@ -139,13 +126,14 @@ const Home = () => {
             </GridSection>
           </div>
 
-          <div>
-            {/* Right column top - Red Block */}
+          {/* Right column */}
+          <div className="column">
+            {/* Skills - Red Block */}
             <GridSection 
               background="bg-mayache-red"
               id="skills"
             >
-              <div className="p-4">
+              <div className="section-content">
                 <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight">
                   SKILLS
                 </h2>
@@ -369,10 +357,36 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                
-                {/* Decorative circles */}
-                <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
-                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black bg-opacity-5 rounded-full"></div>
+              </div>
+            </GridSection>
+            
+            {/* React project */}  
+            <GridSection 
+              background="bg-mayache-purple"
+            >
+              <div className="section-content">
+                <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022</span>
+                <h2 className="font-archivo text-white text-3xl font-black mb-1 leading-tight">
+                  REACT + LARAVEL PROJECT
+                </h2>
+                <p className="text-white text-xs font-normal uppercase">
+                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.
+                </p>
+              </div>
+            </GridSection>
+            
+            {/* FT_TRANSCENDENCE */}
+            <GridSection 
+              background="bg-mayache-yellow"
+            >
+              <div className="section-content">
+                <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">1337 SCHOOL</span>
+                <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
+                  FT_TRANSCENDENCE
+                </h2>
+                <p className="text-black text-xs font-normal uppercase">
+                  DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS.
+                </p>
               </div>
             </GridSection>
             
@@ -416,164 +430,7 @@ const Home = () => {
             </GridSection>
           </div>
 
-          {/* Bottom Row - Project Cards */}
-          {/* Project 1 - Orange Block */}
-          <GridSection 
-            background="bg-mayache-orange" 
-            colSpan="col-span-1"
-            rowSpan="row-span-1"
-            id="portfolio"
-          >
-            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
-              {/* Corner decoration */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10"></div>
-              
-              <div className="flex items-center relative z-10">
-                <div className="flex space-x-2">
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <FaGithub className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <SiFigma className="h-5 w-5 text-white" />
-                  </div>
-                </div>
-                <span className="ml-auto inline-block px-2 py-0.5 bg-white bg-opacity-20 text-white text-xs font-bold rounded">2021-2022</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
-                <h2 className="font-archivo text-white text-xl font-black leading-tight">
-                  CAR RENTAL APP
-                  <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(Next.js/Django)</span>
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND BOOKING MANAGEMENT FEATURES.
-                </p>
 
-              </div>
-            </div>
-          </GridSection>
-
-          {/* React + Laravel Project - Purple Block */}
-          <GridSection 
-            colSpan="col-span-1"
-            rowSpan="row-span-1"
-            background="bg-mayache-purple"
-          >
-            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-3 h-full w-full">
-                  {[...Array(9)].map((_, index) => (
-                    <div key={index} className="border border-white border-opacity-20"></div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between relative z-10">
-                <div className="flex space-x-2">
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <FaGithub className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <SiReact className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <FaGithub className="h-5 w-5 text-white" />
-                  </div>
-                </div>
-                <span className="inline-block px-2 py-0.5 bg-white text-mayache-purple text-xs font-bold rounded shadow-sm">DURING INTERNSHIP</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
-                <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
-                  REACT + LARAVEL PROJECT
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND. IMPLEMENTED API INTEGRATION, USER AUTHENTICATION, AND RESPONSIVE UI FEATURES.
-                </p>
-              </div>
-            </div>
-          </GridSection>
-
-          {/* Education section - Teal Block */}
-          <GridSection 
-            colSpan="col-span-1"
-            rowSpan="row-span-1"
-            background="bg-mayache-teal"
-          >
-            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-3 h-full w-full">
-                  {[...Array(9)].map((_, index) => (
-                    <div key={index} className="border border-white border-opacity-20"></div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between relative z-10">
-                <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                  <FaGithub className="h-5 w-5 text-white" />
-                </div>
-                <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">2022-PRESENT</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
-                <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
-                  1337 CODING SCHOOL
-                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
-                </p>
-
-              </div>
-            </div>
-          </GridSection>
-
-          {/* Transcendence Project - Green Block */}
-          <GridSection 
-            colSpan="col-span-1" 
-            rowSpan="row-span-1"
-            background="bg-mayache-green"
-          >
-            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-3 h-full w-full">
-                  {[...Array(9)].map((_, index) => (
-                    <div key={index} className="border border-black border-opacity-20"></div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between relative z-10">
-                <div className="flex space-x-2">
-                  <div className="bg-black bg-opacity-10 p-1.5 rounded">
-                    <FaGithub className="h-5 w-5 text-black" />
-                  </div>
-                  <div className="bg-black bg-opacity-10 p-1.5 rounded">
-                    <SiReact className="h-5 w-5 text-black" />
-                  </div>
-                </div>
-                <span className="inline-block px-2 py-0.5 bg-black text-mayache-green text-xs font-bold rounded shadow-sm">1337 PROJECT</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-black mb-2"></span>
-                <h2 className="font-archivo text-black text-xl font-black leading-tight relative">
-                  FT_TRANSCENDENCE
-                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-black rounded-full animate-pulse"></div>
-                </h2>
-                <p className="text-black text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS. IMPLEMENTED USER AUTHENTICATION, CHAT FUNCTIONALITY, AND COMPETITIVE GAMEPLAY FEATURES.
-                </p>
-              </div>
-            </div>
-          </GridSection>
 
         </div>
       </main>
