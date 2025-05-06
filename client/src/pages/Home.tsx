@@ -436,6 +436,45 @@ const Home = () => {
             </div>
           </GridSection>
 
+          {/* Transcendence Project - Green Block */}
+          <GridSection 
+            colSpan="col-span-1" 
+            background="bg-mayache-green"
+          >
+            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
+              {/* Background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="grid grid-cols-3 h-full w-full">
+                  {[...Array(9)].map((_, index) => (
+                    <div key={index} className="border border-black border-opacity-20"></div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between relative z-10">
+                <div className="flex space-x-2">
+                  <div className="bg-black bg-opacity-10 p-1.5 rounded">
+                    <FaGithub className="h-5 w-5 text-black" />
+                  </div>
+                  <div className="bg-black bg-opacity-10 p-1.5 rounded">
+                    <SiReact className="h-5 w-5 text-black" />
+                  </div>
+                </div>
+                <span className="inline-block px-2 py-0.5 bg-black text-mayache-green text-xs font-bold rounded shadow-sm">1337 PROJECT</span>
+              </div>
+              
+              <div className="relative z-10">
+                <span className="inline-block w-10 h-1 bg-black mb-2"></span>
+                <h2 className="font-archivo text-black text-xl font-black leading-tight relative">
+                  FT_TRANSCENDENCE
+                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                </h2>
+                <p className="text-black text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
+                  DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS. IMPLEMENTED USER AUTHENTICATION, CHAT FUNCTIONALITY, AND COMPETITIVE GAMEPLAY FEATURES.
+                </p>
+              </div>
+            </div>
+          </GridSection>
 
         </div>
       </main>
