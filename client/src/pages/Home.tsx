@@ -31,7 +31,7 @@ const Home = () => {
           <GridSection 
             background="bg-mayache-green" 
             colSpan="col-span-1" 
-            rowSpan="row-span-6"
+            rowSpan="row-span-10"
             id="about"
           >
             <div className="flex flex-col h-full justify-between relative">
@@ -69,7 +69,7 @@ const Home = () => {
           </GridSection>
 
           {/* Middle column */}
-          <div className="col-span-1 grid grid-rows-4 gap-0.5">
+          <div className="col-span-1 grid grid-rows-6 gap-0.125rem">
             {/* INTERNSHIP Section with Slider - Purple Block */}
             <GridSection 
               background="bg-mayache-purple" 
@@ -165,7 +165,7 @@ const Home = () => {
             </GridSection>
           </div>
 
-          <div className="col-span-1 grid grid-rows-4 gap-0.5">
+          <div className="col-span-1 grid grid-rows-6 gap-0.125rem">
             {/* Right column top - Red Block with hover effect */}
             <GridSection 
               background="bg-mayache-red" 
