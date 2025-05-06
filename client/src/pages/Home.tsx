@@ -62,37 +62,27 @@ const Home = () => {
             <GridSection 
               background="bg-mayache-purple" 
               id="experience"
-              rowSpan="row-span-1"
-              className="transition-all overflow-y-auto"
+              className="transition-all"
             >
-              <div className="section-content flex flex-col h-full">
-                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
+              <div className="section-content">
+                <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
                   PROFESSIONAL EXPERIENCE
                 </h2>
-                
-                <div className="mb-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-archivo text-white text-xl font-bold">
-                      Web Development Intern
+                <div className="space-y-4">
+                  <div>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">07/2021 – 12/2021</span>
+                    <h3 className="font-archivo text-white text-lg font-bold leading-tight">
+                      WEB DEVELOPMENT INTERN
                     </h3>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded">
-                      07/2021 – 12/2021
-                    </span>
-                  </div>
-                  
-                  <div className="mb-2">
-                    <p className="text-white text-sm font-archivo uppercase">
-                      ITT ONE, Tetouan, Morocco
+                    <p className="text-white text-xs uppercase">
+                      ITT ONE, TETOUAN, MOROCCO
                     </p>
+                    <ul className="text-white text-xs uppercase mt-2 space-y-1 list-disc pl-4">
+                      <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
+                      <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
+                    </ul>
                   </div>
-                  
-                  <ul className="text-white text-xs font-normal uppercase list-disc pl-5 space-y-2">
-                    <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
-                    <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
-                  </ul>
                 </div>
-                
-
               </div>
             </GridSection>
             
