@@ -197,7 +197,7 @@ const Home = () => {
                       <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
                         <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
                       </span>
-                      <span className="text-white text-sm font-archivo uppercase">REACT.JS</span>
+                      <span className="text-white text-sm font-archivo uppercase">JAVA</span>
                     </div>
                     <div className="flex items-center">
                       <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
@@ -215,7 +215,19 @@ const Home = () => {
                       <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
                         <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
                       </span>
-                      <span className="text-white text-sm font-archivo uppercase">NEXT.JS</span>
+                      <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
+                      </span>
+                      <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
                     </div>
                     <div className="flex items-center">
                       <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
