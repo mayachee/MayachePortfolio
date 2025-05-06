@@ -89,39 +89,39 @@ const Home = () => {
                 
                 {/* Content container with slider */}
                 <div className="relative overflow-hidden h-36">
-                  {/* INTERNSHIP 1 */}
+                  {/* EDUCATION 1 */}
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-2023</span>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-PRESENT</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
+                      STUDENT
                     </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
+                    <h3 className="text-white text-base font-archivo mb-2">1337 CODING SCHOOL</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Developed cutting-edge frontend applications for global clients. Mastered React, Next.js, and TypeScript to create award-winning digital experiences.
+                      SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE 42 NETWORK. SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
                     </p>
                   </div>
                   
-                  {/* INTERNSHIP 2 */}
+                  {/* EDUCATION 2 */}
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2023-2024</span>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2019-2021</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
+                      DIPLOMA
                     </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">UI/UX DESIGN</h3>
+                    <h3 className="text-white text-base font-archivo mb-2">OFPPT TETOUAN</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Led innovative UI/UX design projects for premium clients. Specialized in modern interactive interfaces with exceptional user engagement results.
+                      SPECIALIZED TECHNICIAN IN TECHNIQUES OF IT DEVELOPMENT. GAINED COMPREHENSIVE KNOWLEDGE IN SOFTWARE DEVELOPMENT AND PROGRAMMING FUNDAMENTALS.
                     </p>
                   </div>
                   
-                  {/* INTERNSHIP 3 */}
+                  {/* INTERNSHIP */}
                   <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2024-2025</span>
+                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">07/2021-12/2021</span>
                     <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
                       INTERNSHIP
                     </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">BACKEND DEV</h3>
+                    <h3 className="text-white text-base font-archivo mb-2">ITT ONE</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Architected high-performance backend systems for enterprise clients. Developed scalable cloud infrastructure and optimized database solutions with exceptional security standards.
+                      COLLABORATED ON WEB DEVELOPMENT PROJECTS, GAINING PRACTICAL EXPERIENCE IN FRONT-END AND BACK-END TECHNOLOGIES. CONTRIBUTED TO E-COMMERCE PLATFORMS AND INTERNAL TOOLS.
                     </p>
                   </div>
                 </div>
@@ -148,19 +148,19 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* UI/UX Private School section */}
+            {/* E-commerce Websites section */}
             <GridSection 
               background="bg-mayache-yellow"
             >
               <div className="flex flex-col h-full justify-between hover-lift">
                 <div>
-                  <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">FEATURED</span>
+                  <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">DURING INTERNSHIP</span>
                   <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                    UI/UX PRIVATE SCHOOL
+                    E-COMMERCE WEBSITES
                   </h2>
-                  <h3 className="text-black text-base font-archivo mb-2 opacity-90">DESIGN ACADEMY</h3>
+                  <h3 className="text-black text-base font-archivo mb-2 opacity-90">AJOUN.MA, SHOLEGOO.COM</h3>
                   <p className="text-black text-xs font-normal uppercase tracking-wide leading-relaxed">
-                    Directed prestigious UI/UX design academy for elite clients. Pioneered revolutionary educational techniques that combine cutting-edge design principles with real-world applications.
+                    BUILT PROFESSIONAL E-COMMERCE PLATFORMS USING WORDPRESS DURING MY INTERNSHIP AT ITT ONE. IMPLEMENTED PAYMENT GATEWAYS AND DEVELOPED USER-FRIENDLY INTERFACES FOR ENHANCED CUSTOMER EXPERIENCE.
                   </p>
                 </div>
 
@@ -208,25 +208,25 @@ const Home = () => {
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">FIGMA</span>
+                          <span className="text-white text-base font-archivo uppercase">C / C#</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">PHOTOSHOP</span>
+                          <span className="text-white text-base font-archivo uppercase">JAVA</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">REACT</span>
+                          <span className="text-white text-base font-archivo uppercase">JAVASCRIPT</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
+                          <span className="text-white text-base font-archivo uppercase">HTML/CSS</span>
                         </div>
                       </div>
                       <div className="space-y-3">
@@ -234,25 +234,25 @@ const Home = () => {
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">JAVA/C++</span>
+                          <span className="text-white text-base font-archivo uppercase">REACT.JS</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">PYTHON</span>
+                          <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">PHP</span>
+                          <span className="text-white text-base font-archivo uppercase">DOCKER</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                           </span>
-                          <span className="text-white text-base font-archivo uppercase">TYPESCRIPT</span>
+                          <span className="text-white text-base font-archivo uppercase">FIGMA/PS</span>
                         </div>
                       </div>
                     </div>
@@ -293,28 +293,34 @@ const Home = () => {
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">TEAM PLAYER</span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">COMMUNICATION</span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">TEAM COMMUNICATION</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">LEADERSHIP</span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">SELF-DIRECTED</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">LEARNING</span>
                         </div>
                       </div>
                       <div className="space-y-3">
+                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
+                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
+                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
+                          </span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">MULTILINGUAL</span>
+                        </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
@@ -325,19 +331,13 @@ const Home = () => {
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
+                          <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
                         </div>
                         <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
                           <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
                             <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
                           </span>
                           <span className="text-mayache-red text-base font-archivo uppercase">TIME MANAGEMENT</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">DETAIL-ORIENTED</span>
                         </div>
                       </div>
                     </div>
@@ -448,7 +448,7 @@ const Home = () => {
               
               <div className="flex items-center justify-between relative z-10">
                 <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                  <SiReact className="h-5 w-5 text-white" />
+                  <FaGithub className="h-5 w-5 text-white" />
                 </div>
                 <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">2022-PRESENT</span>
               </div>
