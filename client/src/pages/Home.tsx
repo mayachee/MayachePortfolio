@@ -171,125 +171,234 @@ const Home = () => {
               colSpan=""
               id="skills"
             >
-              <div className="flex flex-col h-full p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 overflow-auto">
-                <div className="absolute top-4 right-4 flex space-x-1">
+              <div className="flex flex-col h-full p-4 md:p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 overflow-auto">
+                <div className="absolute top-3 right-3 md:top-4 md:right-4 flex space-x-1">
                   <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
                   <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
                   <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
                 </div>
                 
-                <h2 className="font-archivo text-white text-3xl font-black mb-3 leading-tight text-shadow-sm relative">
+                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-2 md:mb-3 leading-tight text-shadow-sm relative">
                   SKILLS
-                  <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
+                  <div className="absolute bottom-0 left-0 w-10 md:w-14 h-1 bg-white opacity-30"></div>
                 </h2>
                 
                 {/* Hard Skills */}
-                <div className="mb-4">
-                  <h3 className="font-archivo text-white text-xl font-bold mb-2">HARD SKILLS</h3>
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-2">
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">C / C#</span>
+                <div className="mb-5">
+                  <h3 className="font-archivo text-white text-lg md:text-xl font-bold mb-2">HARD SKILLS</h3>
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">C / C#</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '0.1s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">JAVA</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">JAVA</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '0.2s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
+                        <span className="text-white text-xs font-archivo">90%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '90%', animationDelay: '0.3s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
+                        <span className="text-white text-xs font-archivo">95%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '95%', animationDelay: '0.4s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
+                        <span className="text-white text-xs font-archivo">75%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '75%', animationDelay: '0.5s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
+                        <span className="text-white text-xs font-archivo">70%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '70%', animationDelay: '0.6s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
+                        <span className="text-white text-xs font-archivo">65%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '65%', animationDelay: '0.7s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
+                        <span className="text-white text-xs font-archivo">75%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '75%', animationDelay: '0.8s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '0.9s' }}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Soft Skills */}
                 <div>
-                  <h3 className="font-archivo text-white text-xl font-bold mb-2">SOFT SKILLS</h3>
-                  <div className="grid grid-cols-2 gap-x-2 gap-y-2">
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
+                  <h3 className="font-archivo text-white text-lg md:text-xl font-bold mb-2">SOFT SKILLS</h3>
+                  <div className="space-y-2">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
+                        <span className="text-white text-xs font-archivo">95%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '95%', animationDelay: '1.0s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
+                        <span className="text-white text-xs font-archivo">90%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '90%', animationDelay: '1.1s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.2s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
+                        <span className="text-white text-xs font-archivo">88%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '88%', animationDelay: '1.3s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
+                        <span className="text-white text-xs font-archivo">92%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '92%', animationDelay: '1.4s' }}
+                        ></div>
+                      </div>
                     </div>
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '1.5s' }}
+                        ></div>
+                      </div>
                     </div>
-
-                    <div className="flex items-center">
-                      <span className="flex items-center justify-center w-4 h-4 bg-white bg-opacity-10 rounded-full mr-2">
-                        <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-                      </span>
-                      <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.6s' }}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -299,6 +299,26 @@
     }
   }
   
+  /* Skill bar fill animation */
+  .animate-skill-fill {
+    animation: skill-fill 1.5s ease-out forwards;
+    width: 0;
+  }
+  
+  @keyframes skill-fill {
+    0% {
+      width: 0;
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      width: var(--width, 100%);
+      opacity: 1;
+    }
+  }
+  
   .blur-xl {
     filter: blur(16px);
   }
