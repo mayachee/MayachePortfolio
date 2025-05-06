@@ -123,7 +123,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                       className="w-full text-left flex items-center py-3 px-4 text-gray-800 font-bold hover:bg-mayache-blue hover:bg-opacity-10 rounded-lg transition-colors"
                     >
                       <span className="w-1.5 h-1.5 bg-mayache-blue rounded-full mr-3"></span>
-                      <span className="uppercase text-sm tracking-wide">{t("nav.contact")}</span>
+                      <span className="uppercase text-sm tracking-wide">{t("nav.messages")}</span>
                     </button>
                   </motion.li>
                 </ul>
@@ -194,12 +194,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 </div>
               </div>
               
-              {/* Contact info */}
-              <div className="mt-8 pt-8 border-t border-gray-100">
-                <p className="text-sm text-gray-500">
-                  mayacheyassine2000@gmail.com
-                </p>
-              </div>
+
             </div>
           </motion.div>
         </>
