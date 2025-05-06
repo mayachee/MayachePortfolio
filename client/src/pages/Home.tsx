@@ -97,7 +97,7 @@ const Home = () => {
                     </h2>
                     <h3 className="text-white text-base font-archivo mb-2">1337 CODING SCHOOL</h3>
                     <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      STUDYING SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE 42 NETWORK. SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
+                      STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). SUCCESSFULLY COMPLETED THE PISCINE, DEMONSTRATING STRONG PROBLEM-SOLVING AND CODING SKILLS.
                     </p>
                   </div>
                   
@@ -160,7 +160,7 @@ const Home = () => {
                   </h2>
                   <h3 className="text-black text-base font-archivo mb-2 opacity-90">AJOUN.MA, SHOLEGOO.COM</h3>
                   <p className="text-black text-xs font-normal uppercase tracking-wide leading-relaxed">
-                    BUILT PROFESSIONAL E-COMMERCE PLATFORMS USING WORDPRESS DURING MY INTERNSHIP AT ITT ONE. IMPLEMENTED PAYMENT GATEWAYS AND DEVELOPED USER-FRIENDLY INTERFACES FOR ENHANCED CUSTOMER EXPERIENCE.
+                    BUILT E-COMMERCE WEBSITES USING WORDPRESS AT ITT ONE. IMPLEMENTED PAYMENT GATEWAYS AND CREATED USER-FRIENDLY INTERFACES.
                   </p>
                 </div>
 
@@ -424,7 +424,7 @@ const Home = () => {
                   <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(Next.js/Django)</span>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  DESIGNED AND DEVELOPED A FULL-STACK CAR RENTAL MANAGEMENT APPLICATION USING NEXT.JS AND DJANGO, IMPLEMENTING ADVANCED FEATURES FOR VEHICLE TRACKING AND BOOKING MANAGEMENT.
+                  BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND BOOKING MANAGEMENT FEATURES.
                 </p>
 
               </div>
@@ -460,7 +460,7 @@ const Home = () => {
                   <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
                 </h2>
                 <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  STUDYING SOFTWARE DEVELOPMENT AT MOHAMMED VI POLYTECHNIC UNIVERSITY (UM6P), PART OF THE PRESTIGIOUS 42 NETWORK. MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
+                  STUDYING SOFTWARE DEVELOPMENT AT UM6P (42 NETWORK). MASTERING ADVANCED PROGRAMMING WITH C AND WORKING ON INNOVATIVE PROJECTS.
                 </p>
 
               </div>
