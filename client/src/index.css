@@ -433,4 +433,23 @@
       margin: 0.75rem !important;
     }
   }
+  
+  /* Optimize animations for mobile devices */
+  @media (max-width: 640px) {
+    .animate-bounce-gentle,
+    .animate-float,
+    .animate-pulse-slow {
+      animation-duration: 2.5s;
+    }
+    
+    .hover\:scale-110:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Smoother touch interactions */
+    a, button {
+      transition: all 0.2s ease-out;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
 }
