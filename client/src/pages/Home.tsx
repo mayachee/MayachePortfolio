@@ -34,20 +34,12 @@ const Home = () => {
             id="about"
           >
             <div className="flex flex-col h-full justify-between relative">
-              <div className="absolute top-0 right-0 bg-black bg-opacity-10 p-2 rounded-bl-lg">
-                <span className="text-xs font-bold text-black opacity-70">EST. 2020</span>
+              <div className="absolute top-4 right-4 p-1">
+                <span className="text-xs font-bold text-black">EST. 2020</span>
               </div>
-              <div className="relative">
-                <div className="absolute -left-2 top-0 w-1 h-32 bg-black bg-opacity-20 rounded"></div>
-                <span className="inline-block px-3 py-1 bg-black text-white text-sm font-bold rounded mb-4 hover-scale shadow-md">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
-                  CREATIVE DEVELOPER
-                </span>
-                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tighter text-shadow-sm relative z-10">
-                  <span className="relative inline-block">
-                    I'M <span className="gradient-text bg-clip-text">MAYACHE</span>,
-                    <span className="absolute -right-2 -top-2 bg-mayache-teal text-white text-xs px-1 rounded-full font-bold transform rotate-12">PRO</span>
-                  </span>
+              <div className="relative mt-16">
+                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight relative z-10">
+                  I'M <span className="text-blue-400">MAYACHE</span>,
                   <br/>
                   A DESIGNER<br/>
                   AND<br/>
