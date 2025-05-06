@@ -423,7 +423,49 @@ const Home = () => {
             </div>
           </GridSection>
 
-          {/* Portfolio showcase section - Teal Block */}
+          {/* React + Laravel Project - Purple Block */}
+          <GridSection 
+            colSpan="col-span-1"
+            background="bg-mayache-purple"
+          >
+            <div className="flex h-full flex-col justify-between relative overflow-hidden group">
+              {/* Background pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="grid grid-cols-3 h-full w-full">
+                  {[...Array(9)].map((_, index) => (
+                    <div key={index} className="border border-white border-opacity-20"></div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between relative z-10">
+                <div className="flex space-x-2">
+                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                    <FaGithub className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                    <SiReact className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
+                    <FaGithub className="h-5 w-5 text-white" />
+                  </div>
+                </div>
+                <span className="inline-block px-2 py-0.5 bg-white text-mayache-purple text-xs font-bold rounded shadow-sm">DURING INTERNSHIP</span>
+              </div>
+              
+              <div className="relative z-10">
+                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
+                <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
+                  REACT + LARAVEL PROJECT
+                </h2>
+                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
+                  DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND. IMPLEMENTED API INTEGRATION, USER AUTHENTICATION, AND RESPONSIVE UI FEATURES.
+                </p>
+              </div>
+            </div>
+          </GridSection>
+
+          {/* Education section - Teal Block */}
           <GridSection 
             colSpan="col-span-1"
             background="bg-mayache-teal"
