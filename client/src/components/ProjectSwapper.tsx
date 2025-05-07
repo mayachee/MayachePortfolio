@@ -72,8 +72,8 @@ const projects: Project[] = [
     title: 'WORDPRESS SITES',
     description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
     year: '2020-2021',
-    background: 'bg-gradient-to-br from-blue-600 to-blue-900',
-    yearTagBackground: 'bg-blue-500',
+    background: 'bg-gradient-to-br from-purple-700 to-purple-900',
+    yearTagBackground: 'bg-purple-600',
     yearTagTextColor: 'text-white'
   },
   {
@@ -165,7 +165,7 @@ const ProjectSwapper = () => {
                 variants={contentVariants}
                 className={`${
                   activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
-                  activeProject.id === 'wordpress' ? 'text-blue-100 font-medium' : 
+                  activeProject.id === 'wordpress' ? 'text-purple-100 font-medium' : 
                   'text-white'
                 } text-xs uppercase`}
               >
@@ -194,7 +194,7 @@ const ProjectSwapper = () => {
                   <button 
                     className={`${
                       activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
-                      activeProject.id === 'wordpress' ? 'bg-blue-500 text-white' : 
+                      activeProject.id === 'wordpress' ? 'bg-purple-600 text-white' : 
                       'bg-white bg-opacity-20 text-white'
                     } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={prevProject}
@@ -207,7 +207,7 @@ const ProjectSwapper = () => {
                   <button 
                     className={`${
                       activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
-                      activeProject.id === 'wordpress' ? 'bg-blue-500 text-white' : 
+                      activeProject.id === 'wordpress' ? 'bg-purple-600 text-white' : 
                       'bg-white bg-opacity-20 text-white'
                     } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={nextProject}
