@@ -149,7 +149,7 @@ const projects: Project[] = [
   {
     id: 'car-rental',
     title: 'CAR RENTAL APP',
-    description: 'BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND RESERVATION MANAGEMENT.',
+    description: 'BUILT A FULL-STACK CAR RENTAL APPLICATION WITH NEXT.JS AND DJANGO. IMPLEMENTED REAL-TIME VEHICLE TRACKING, ADVANCED RESERVATION MANAGEMENT, AND SECURE PAYMENT INTEGRATION. FEATURED RESPONSIVE UI WITH TAILWIND CSS AND MATERIAL DESIGN COMPONENTS.',
     year: '2021-2022',
     background: 'bg-mayache-blue',
     yearTagBackground: 'bg-white bg-opacity-20',
@@ -158,7 +158,7 @@ const projects: Project[] = [
   {
     id: 'wordpress',
     title: 'WORDPRESS SITES',
-    description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
+    description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR OVER 10 CLIENT WEBSITES. CREATED RESPONSIVE DESIGNS WITH ADVANCED CUSTOMIZATION OPTIONS. IMPLEMENTED WEB ANALYTICS, SEO OPTIMIZATION, AND E-COMMERCE FUNCTIONALITY. MAINTAINED PERFORMANCE AND SECURITY ACROSS ALL SITES.',
     year: '2020-2021',
     background: 'bg-mayache-purple',
     yearTagBackground: 'bg-white bg-opacity-20',
@@ -167,7 +167,7 @@ const projects: Project[] = [
   {
     id: 'inception',
     title: 'INCEPTION',
-    description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES.',
+    description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES. IMPLEMENTED SECURE CONFIGURATION WITH TLS CERTIFICATES, OPTIMIZED CACHING, AND AUTOMATED DEPLOYMENT. DESIGNED FOR HIGH AVAILABILITY AND SCALABILITY IN PRODUCTION ENVIRONMENTS.',
     year: '1337 SCHOOL',
     background: 'bg-mayache-teal',
     yearTagBackground: 'bg-white bg-opacity-20',
@@ -176,7 +176,7 @@ const projects: Project[] = [
   {
     id: 'react-laravel',
     title: 'REACT + LARAVEL PROJECT',
-    description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.',
+    description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND. IMPLEMENTED AUTHENTICATION WITH JWT, REAL-TIME NOTIFICATIONS USING PUSHER, AND INTEGRATED RESTFUL API SERVICES. FEATURED DATA VISUALIZATION DASHBOARDS AND COMPREHENSIVE ADMIN FUNCTIONALITY.',
     year: '2022',
     background: 'bg-mayache-green',
     yearTagBackground: 'bg-white bg-opacity-20',
@@ -185,7 +185,7 @@ const projects: Project[] = [
   {
     id: 'ft-transcendence',
     title: 'FT_TRANSCENDENCE',
-    description: 'DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS.',
+    description: 'DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS. IMPLEMENTED USER AUTHENTICATION WITH OAUTH 2.0, LIVE CHAT FUNCTIONALITY, FRIEND SYSTEM, AND TOURNAMENT LEADERBOARDS. DESIGNED RESPONSIVE UI WITH CUSTOM ANIMATIONS AND GAME PHYSICS.',
     year: '1337 SCHOOL',
     background: 'bg-mayache-yellow',
     yearTagBackground: 'bg-black',
@@ -276,7 +276,7 @@ const ProjectSwapper = () => {
                     activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
                     activeProject.id === 'wordpress' ? 'text-white' : 
                     'text-white'
-                  } text-xs uppercase`}
+                  } text-xs uppercase max-h-[210px] overflow-y-auto pr-1 leading-relaxed`}
                 >
                   {activeProject.description.split(' ').map((word, index) => (
                     <motion.span

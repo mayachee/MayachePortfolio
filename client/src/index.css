@@ -456,6 +456,38 @@
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
   }
+  
+  /* Custom scrollbar for project descriptions */
+  .max-h-\[200px\]::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .max-h-\[200px\]::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .max-h-\[200px\]::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+  
+  .max-h-\[200px\]::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* For yellow background */
+  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
 
   @media (max-width: 990px) {
     .grid-container {
