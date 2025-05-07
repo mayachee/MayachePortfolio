@@ -8,7 +8,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(true); // Open by default
   
   // Handle scrolling effect
   useEffect(() => {
@@ -81,18 +81,18 @@ const Header = () => {
           {/* Language dropdown */}
           <div className="relative ml-4 lang-button">
             <button 
-              className="flex items-center justify-center bg-mayache-dark hover:bg-mayache-teal transition-colors duration-300 rounded-full h-8 w-8 text-white shadow-lg hover:shadow-mayache-teal/30"
+              className="flex items-center justify-center bg-mayache-teal hover:bg-mayache-green transition-colors duration-300 rounded-full h-9 w-9 text-black shadow-lg hover:shadow-mayache-teal/50 border-2 border-white"
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
               aria-label="Change language"
             >
               <span className="uppercase text-xs font-bold">{currentLanguage.slice(0, 2)}</span>
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full"></span>
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
             </button>
             
             {isLangMenuOpen && (
               <div className="absolute top-full left-0 mt-1 lang-menu">
                 <motion.div 
-                  className="bg-black border border-gray-700 rounded-lg shadow-lg p-1 min-w-[120px] backdrop-blur-lg"
+                  className="bg-black border border-mayache-teal rounded-lg shadow-lg p-1 min-w-[120px] backdrop-blur-lg lang-menu-highlight"
                   initial={{ opacity: 0, y: -5, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.3, type: "spring", stiffness: 500, damping: 30 }}
