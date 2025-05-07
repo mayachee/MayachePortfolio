@@ -315,7 +315,7 @@ const ProjectSwapper = () => {
                     activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
                     activeProject.id === 'wordpress' ? 'text-white' : 
                     'text-white'
-                  } text-xs uppercase max-h-[210px] overflow-y-auto pr-1 leading-relaxed`}
+                  } text-xs uppercase max-h-[200px] md:max-h-[210px] overflow-y-auto pr-1 leading-relaxed`}
                 >
                   {activeProject.description.split(' ').map((word: string, index: number) => (
                     <motion.span

@@ -118,99 +118,29 @@
     font-family: 'Archivo', sans-serif;
   }
   
-  /* Advanced text styling */
-  .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-shadow-md {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .text-shadow-lg {
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Card and container effects */
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .inner-shadow {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .border-gradient {
-    border: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, hsl(287, 50%, 17%), hsl(190, 88%, 24%)); /* Dark purple #3C1642 to Teal blue #086375 */
-  }
-  
-  /* 3D card flip effect */
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-  
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-  
-  .rotate-y-0 {
-    transform: rotateY(0deg);
-  }
-  
-  .transform-gpu {
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-  }
-
-  .bg-mayache-green,
-  .bg-green-400 {
+  /* Color utility classes */
+  .bg-mayache-green {
     background-color: hsl(84, 97%, 62%); /* Bright lime #AFFC41 */
   }
 
-  .bg-mayache-purple,
-  .bg-purple-600 {
+  .bg-mayache-purple {
     background-color: hsl(287, 50%, 17%); /* Dark purple #3C1642 */
-  }
-
-  .bg-mayache-pink,
-  .bg-pink-500 {
-    background-color: hsl(335, 60%, 45%); /* Keeping corporate pink */
-  }
-
-  .bg-mayache-coral,
-  .bg-red-500 {
-    background-color: hsl(350, 65%, 45%); /* Renamed to coral */
-  }
-
-  .bg-mayache-yellow,
-  .bg-yellow-400 {
-    background-color: hsl(103, 100%, 81%); /* Light lime #B2FF9E */
   }
 
   .bg-mayache-blue {
     background-color: hsl(190, 88%, 24%); /* Teal blue #086375 */
   }
   
-  .bg-mayache-brown {
-    background-color: hsl(28, 50%, 35%); /* Keeping executive brown */
-  }
-  
-  .bg-mayache-orange {
-    background-color: hsl(24, 65%, 50%); /* Keeping professional orange */
-  }
-  
   .bg-mayache-teal {
     background-color: hsl(167, 77%, 47%); /* Bright teal #1DD3B0 */
   }
 
-  .bg-mayache-dark {
-    background-color: hsl(287, 50%, 12%); /* Darker purple for background */
+  .bg-mayache-yellow {
+    background-color: hsl(103, 100%, 81%); /* Light lime #B2FF9E */
+  }
+
+  .bg-mayache-orange {
+    background-color: hsl(24, 65% 50%); /* Professional orange */
   }
 
   .text-mayache-green {
@@ -221,202 +151,68 @@
     color: hsl(287, 50%, 17%); /* Dark purple #3C1642 */
   }
 
-  .text-mayache-pink {
-    color: hsl(335, 60%, 45%); /* Keeping corporate pink */
-  }
-
-  .text-mayache-red {
-    color: hsl(350, 65%, 45%); /* Business-friendly red */
-  }
-
-  .text-mayache-yellow {
-    color: hsl(103, 100%, 81%); /* Light lime #B2FF9E */
-  }
-
   .text-mayache-blue {
     color: hsl(190, 88%, 24%); /* Teal blue #086375 */
-  }
-  
-  .text-mayache-brown {
-    color: hsl(28, 50%, 35%); /* Keeping executive brown */
-  }
-  
-  .text-mayache-orange {
-    color: hsl(24, 65%, 50%); /* Keeping professional orange */
   }
   
   .text-mayache-teal {
     color: hsl(167, 77%, 47%); /* Bright teal #1DD3B0 */
   }
 
-  .text-mayache-dark {
-    color: hsl(287, 50%, 12%); /* Darker purple for text */
-  }
-
-  /* Advanced hover and animation effects */
-  .hover-lift {
-    @apply transition-all duration-300 ease-in-out;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hover-lift:hover {
-    @apply transform -translate-y-1 shadow-lg;
-  }
-  
-  .hover-scale {
-    @apply transition-all duration-300 ease-in-out;
-  }
-  
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-  
-  .hover-bright {
-    @apply transition-all duration-300 ease-in-out;
-    filter: brightness(0.95);
-  }
-  
-  .hover-bright:hover {
-    filter: brightness(1.05);
-  }
-  
-  .pulse-animation {
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
-    }
-    
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-    }
-    
-    100% {
-      transform: scale(0.95);
-      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  
-  .animate-bounce-gentle {
-    animation: bounce-gentle 2s ease-in-out infinite;
-  }
-  
-  @keyframes bounce-gentle {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-3px);
-    }
-  }
-  
-  .animate-pulse-slow {
-    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-  
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(1.05);
-    }
-  }
-  
-  /* Skill bar fill animation */
-  .animate-skill-fill {
-    animation: skill-fill 1.5s ease-out forwards;
-    width: 0;
-    background-color: hsl(84, 97%, 62%); /* Bright lime #AFFC41 */
-  }
-  
-  @keyframes skill-fill {
-    0% {
-      width: 0;
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      width: var(--width, 100%);
-      opacity: 1;
-    }
-  }
-  
-  .skill-bar-bg {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  .blur-xl {
-    filter: blur(16px);
-  }
-  
-  .bg-grid {
-    background-size: 20px 20px;
-    background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  }
-  
-  .gradient-text {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(90deg, hsl(167, 77%, 47%), hsl(190, 88%, 24%)); /* Bright teal #1DD3B0 to Teal blue #086375 */
-  }
-
+  /* Grid layout */
   .grid-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3px;
     width: 100%;
     min-height: 100vh;
-    height: 100%;
-    background-color: hsl(287, 50%, 12%); /* Dark purple background to match new palette */
+    background-color: hsl(287, 50%, 12%); /* Dark purple background */
     overflow: hidden;
     position: relative;
   }
 
+  /* Mobile-first grid layout */
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
   /* Left column */
   .grid-container > .left-column {
-    grid-column: 1;
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1024px) {
+    .grid-container > .left-column {
+      grid-column: 1;
+      height: 100vh;
+    }
   }
 
   /* Middle and right columns */
   .grid-container > .column {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3px;
-    height: 100vh;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container > .column {
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-container > .column {
+      height: 100vh;
+    }
   }
 
   /* Individual sections */
@@ -424,8 +220,15 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100%;
+    min-height: 300px;
     transition: transform 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .grid-section {
+      height: 100%;
+      min-height: auto;
+    }
   }
 
   .grid-section:hover {
@@ -438,9 +241,15 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+  }
+  
+  @media (min-width: 768px) {
+    .section-content {
+      padding: 1.5rem;
+    }
   }
   
   /* Enhancing scrollbars */
@@ -456,84 +265,13 @@
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
   }
-  
-  /* Custom scrollbar for project descriptions */
-  .max-h-\[200px\]::-webkit-scrollbar {
-    width: 4px;
-  }
-  
-  .max-h-\[200px\]::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-  }
-  
-  .max-h-\[200px\]::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-  }
-  
-  .max-h-\[200px\]::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-  }
-  
-  /* For yellow background */
-  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-  }
-  
-  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-  }
-  
-  .bg-mayache-yellow .max-h-\[200px\]::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Pulse animation for language button */
-  @keyframes highlight-pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(29, 211, 176, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 0 10px rgba(29, 211, 176, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(29, 211, 176, 0);
-    }
-  }
-  
-  .lang-menu-highlight {
-    animation: highlight-pulse 2s infinite;
+
+  /* Skill bar styles */
+  .skill-bar-bg {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
-  @media (max-width: 990px) {
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    /* Adjust left column on tablets */
-    .grid-container > .left-column {
-      grid-column: 1 / 3;
-      height: auto;
-      min-height: 400px;
-    }
-    
-    /* Reposition columns after the first one */
-    .grid-container > .column:nth-of-type(2) {
-      grid-column: 1;
-    }
-    
-    .grid-container > .column:nth-of-type(3) {
-      grid-column: 2;
-    }
-    
-    /* Adjust row heights for better spacing */
-    .grid-container > .column {
-      grid-template-rows: auto auto auto;
-      height: auto;
-    }
-  }
-
+  /* Mobile optimizations */
   @media (max-width: 767px) {
     .grid-container {
       grid-template-columns: 1fr;
@@ -541,14 +279,6 @@
       gap: 0.75rem;
       height: auto;
       overflow: visible;
-    }
-    
-    /* Full width for all columns on mobile */
-    .grid-container > .left-column,
-    .grid-container > .column {
-      grid-column: 1;
-      height: auto;
-      width: 100%;
     }
     
     /* Stack sections vertically */
@@ -559,256 +289,20 @@
       height: auto;
     }
     
-    /* Fix row with ProjectSwapper */
-    .row-span-2 {
-      min-height: 500px;
-      height: auto !important;
-    }
-    
-    /* Set proper heights for grid sections */
     .grid-section {
       min-height: 350px;
-      max-height: none;
-      height: auto !important;
       margin-bottom: 0.75rem;
     }
     
-    /* Ensure proper column spans on mobile */
-    [class*="col-span-"] {
-      grid-column: span 1 !important;
-    }
-    
-    /* Ensure proper row spans on mobile */
-    [class*="row-span-"] {
-      grid-row: span 1 !important;
-    }
-    
-    h1, h2 {
-      font-size: 1.75rem !important;
-    }
-    
-    .text-5xl {
-      font-size: 2.25rem !important;
-      line-height: 1.2 !important;
-    }
-    
-    .text-4xl {
-      font-size: 1.75rem !important;
-      line-height: 1.1 !important;
-    }
-    
-    .text-3xl {
-      font-size: 1.5rem !important;
-      line-height: 1.1 !important;
-    }
-    
+    /* Improve mobile spacing */
     .p-6 {
       padding: 0.875rem !important;
-    }
-    
-    .p-5 {
-      padding: 0.75rem !important;
-    }
-    
-    /* Improve mobile spacing */
-    .mb-6 {
-      margin-bottom: 1rem !important;
-    }
-    
-    .mt-6 {
-      margin-top: 1rem !important;
     }
     
     /* Better touch targets for mobile */
     button, a {
       min-height: 44px;
       min-width: 44px;
-    }
-    
-    /* Improve mobile scrolling experience */
-    .section-content {
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    /* Fix the project swapper on mobile */
-    .project-swapper-container {
-      height: auto !important;
-      min-height: 500px;
-    }
-    
-    /* Improve mobile navigation experience */
-    .header-mobile-nav {
-      padding: 0.5rem;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-  }
-  
-  /* Extra small screens */
-  @media (max-width: 480px) {
-    .grid-container {
-      padding: 0.5rem;
-      gap: 0.75rem;
-    }
-    
-    /* Adjust section heights for better mobile display */
-    .grid-section {
-      min-height: 300px;
-      margin-bottom: 0.75rem;
-    }
-    
-    /* Adjust row with ProjectSwapper for smaller screens */
-    .row-span-2 {
-      min-height: 450px;
-    }
-    
-    /* Reduce text sizes but keep them readable */
-    h1, h2 {
-      font-size: 1.625rem !important;
-    }
-    
-    .text-5xl {
-      font-size: 2rem !important;
-      line-height: 1.15 !important;
-    }
-    
-    .text-4xl {
-      font-size: 1.625rem !important;
-      line-height: 1.1 !important;
-    }
-    
-    .text-3xl {
-      font-size: 1.375rem !important;
-      line-height: 1.1 !important;
-    }
-    
-    .text-2xl {
-      font-size: 1.25rem !important;
-    }
-    
-    .text-xl {
-      font-size: 1.125rem !important;
-    }
-    
-    /* Optimize padding for small screens while keeping content accessible */
-    .p-6, .p-5, .p-4 {
-      padding: 1rem !important;
-    }
-    
-    /* Optimize margin for very small screens */
-    .m-6, .m-5, .m-4 {
-      margin: 0.75rem !important;
-    }
-    
-    /* Optimize section content for mobile */
-    .section-content {
-      padding: 1.25rem;
-    }
-    
-    /* Adjust skills section on mobile */
-    .skill-bar-bg {
-      height: 8px !important;
-    }
-    
-    .skill-bar-bg > div {
-      height: 8px !important;
-    }
-    
-    /* Better spacing for mobile cards */
-    .space-y-3 {
-      margin-top: 0.75rem;
-    }
-    
-    /* Ensure proper mobile header */
-    .header-container {
-      padding: 0.75rem 1rem !important;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(0, 0, 0, 0.95);
-      backdrop-filter: blur(10px);
-    }
-    
-    /* Improve mobile project display */
-    .project-description {
-      max-height: 180px !important;
-      overflow-y: auto;
-    }
-    
-    /* Enhance mobile skill section */
-    #skills.grid-section {
-      min-height: 400px;
-    }
-    
-    /* Fix language switcher on mobile */
-    .language-switcher-mobile {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .language-switcher-mobile button {
-      min-width: 36px;
-      min-height: 36px;
-      border-radius: 9999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  
-  /* Specific adjustments for very small screens */
-  @media (max-width: 360px) {
-    .grid-container {
-      padding: 0.375rem;
-      gap: 0.375rem;
-    }
-    
-    .grid-section {
-      min-height: 250px;
-      margin-bottom: 0.375rem;
-    }
-    
-    .section-content {
-      padding: 1rem;
-    }
-    
-    h1, h2 {
-      font-size: 1.5rem !important;
-    }
-    
-    .text-5xl {
-      font-size: 1.75rem !important;
-    }
-    
-    /* Adjust project swapper for very small screens */
-    .row-span-2 {
-      min-height: 380px;
-    }
-    
-    /* Improve scrollability on tiny screens */
-    .overflow-y-auto {
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-    }
-  }
-  
-  /* Optimize animations for mobile devices */
-  @media (max-width: 640px) {
-    .animate-bounce-gentle,
-    .animate-float,
-    .animate-pulse-slow {
-      animation-duration: 2.5s;
-    }
-    
-    .hover\:scale-110:hover {
-      transform: scale(1.05);
-    }
-    
-    /* Smoother touch interactions */
-    a, button {
-      transition: all 0.2s ease-out;
-      -webkit-tap-highlight-color: transparent;
     }
   }
 }
