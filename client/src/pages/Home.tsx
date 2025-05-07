@@ -27,21 +27,21 @@ const Home = () => {
         
         <main className="flex-grow">
           <div className="grid-container">
-          {/* Left column - Green Block */}
+          {/* Left column - Teal Block */}
           <div className="left-column">
             <GridSection 
-              background="bg-mayache-green" 
+              background="bg-mayache-teal" 
               id="about"
               delay={0.1}
               index={0}
             >
               <div className="section-content flex flex-col justify-between">
                 <div className="absolute top-4 right-4">
-                  <span className="text-xs font-bold text-black">EST. 2020</span>
+                  <span className="text-xs font-bold text-white">EST. 2020</span>
                 </div>
                 <div className="relative mt-16">
-                  <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight">
-                    I'M <span className="text-mayache-teal">MAYACHE</span>,
+                  <h2 className="font-archivo text-white text-5xl font-extrabold leading-tight tracking-tight">
+                    I'M <span className="text-mayache-green">MAYACHE</span>,
                     <br/>
                     A DESIGNER<br/>
                     AND<br/>
@@ -52,7 +52,7 @@ const Home = () => {
                   </h2>
                 </div>
                 <div>
-                  <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide">
+                  <p className="text-white text-sm mt-6 font-normal uppercase tracking-wide">
                     A dedicated and self-taught Full-Stack Developer and Designer with a strong foundation in software engineering, specializing in creating and designing innovative websites, applications, and digital solutions. Currently pursuing advanced studies at 1337 Coding School (part of Mohammed VI Polytechnic University and 42 Network), I bring hands-on experience in web development, UI/UX design, and modern frameworks. With fluent German skills (B2 level) and a strong motivation to relocate to an English-speaking country, I am eager to contribute to the global tech industry as a Software Developer and work on innovative projects.
                   </p>
                 </div>
@@ -62,9 +62,9 @@ const Home = () => {
 
           {/* Middle column */}
           <div className="column">
-            {/* INTERNSHIP Section with Slider - Purple Block */}
+            {/* INTERNSHIP Section with Slider - Blue Block */}
             <GridSection 
-              background="bg-mayache-purple" 
+              background="bg-mayache-blue" 
               id="experience"
               className="transition-all"
               delay={0.15}
@@ -100,9 +100,9 @@ const Home = () => {
 
           {/* Right column */}
           <div className="column">
-            {/* Skills - Red Block */}
+            {/* Skills - Purple Block */}
             <GridSection 
-              background="bg-mayache-red"
+              background="bg-mayache-purple"
               id="skills"
               rowSpan="row-span-2" 
               className="overflow-y-auto"
@@ -110,7 +110,7 @@ const Home = () => {
               index={2}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-3xl font-black mb-4 leading-tight sticky top-0 z-10 bg-mayache-red py-2">
+                <h2 className="font-archivo text-white text-3xl font-black mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
                   SKILLS
                 </h2>
                 
@@ -338,7 +338,7 @@ const Home = () => {
             
             {/* Education Section */}
             <GridSection 
-              background="bg-mayache-teal"
+              background="bg-mayache-green"
               className="col-span-1"
               id="education"
               delay={0.25}

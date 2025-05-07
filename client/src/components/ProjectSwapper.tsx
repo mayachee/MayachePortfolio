@@ -63,8 +63,8 @@ const projects: Project[] = [
     title: 'CAR RENTAL APP',
     description: 'BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND RESERVATION MANAGEMENT.',
     year: '2021-2022',
-    background: 'bg-mayache-orange',
-    yearTagBackground: 'bg-black',
+    background: 'bg-mayache-blue',
+    yearTagBackground: 'bg-white bg-opacity-20',
     yearTagTextColor: 'text-white'
   },
   {
@@ -72,7 +72,7 @@ const projects: Project[] = [
     title: 'WORDPRESS SITES',
     description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
     year: '2020-2021',
-    background: 'bg-mayache-blue',
+    background: 'bg-mayache-purple',
     yearTagBackground: 'bg-white bg-opacity-20',
     yearTagTextColor: 'text-white'
   },
@@ -90,7 +90,7 @@ const projects: Project[] = [
     title: 'REACT + LARAVEL PROJECT',
     description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.',
     year: '2022',
-    background: 'bg-mayache-purple',
+    background: 'bg-mayache-green',
     yearTagBackground: 'bg-white bg-opacity-20',
     yearTagTextColor: 'text-white'
   },
