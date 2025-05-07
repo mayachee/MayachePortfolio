@@ -41,7 +41,7 @@ const Home = () => {
                 <div className="absolute top-4 right-4 hidden sm:block">
                   <span className="text-xs font-bold text-white">EST. 2020</span>
                 </div>
-                <div className="flex items-center sm:items-start sm:block absolute top-4 left-4 sm:relative sm:top-0 sm:left-0">
+                <div className="flex items-center sm:items-start sm:block absolute top-3 left-3 sm:relative sm:top-0 sm:left-0">
                   <span className="sm:hidden px-2 py-1 bg-black bg-opacity-30 text-white text-xs rounded-md font-bold">EST. 2020</span>
                 </div>
                 <div className="relative mt-2 sm:mt-8 md:mt-16">
