@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import GridSection from './GridSection';
 import { useTranslation } from 'react-i18next';
@@ -48,189 +48,188 @@ const projectVariants = {
     transition: {
       x: { duration: 0.4 },
       opacity: { duration: 0.3 },
-      scale: { duration: 0.3 },
+      scale: { duration: 0.4 },
       filter: { duration: 0.2 },
     }
   })
 };
 
-// General content variants (fallback)
-const contentVariants = {
-  hidden: { 
-    opacity: 0,
-    y: 20
-  },
-  visible: { 
+const titleVariants: Variants = {
+  initial: { y: 35, opacity: 0 },
+  animate: { 
+    y: 0, 
     opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.2, 0.65, 0.3, 0.9]
+    transition: { 
+      delay: 0.2, 
+      duration: 0.5, 
+      ease: [0.33, 1, 0.68, 1] 
+    }
+  },
+  exit: { 
+    y: -35, 
+    opacity: 0, 
+    transition: { 
+      duration: 0.3, 
+      ease: "easeInOut" 
     }
   }
 };
 
-// Create separate variants for each text element type
-const yearTagVariants = {
-  hidden: { 
-    opacity: 0,
-    y: 15,
-    x: -10,
-    scale: 0.9
+const descriptionVariants: Variants = {
+  initial: { y: 20, opacity: 0 },
+  animate: { 
+    y: 0, 
+    opacity: 0.9, 
+    transition: { 
+      delay: 0.3, 
+      duration: 0.6, 
+      ease: [0.33, 1, 0.68, 1] 
+    }
   },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    x: 0,
-    scale: 1,
-    transition: {
-      duration: 0.45,
-      ease: [0.2, 0.65, 0.3, 0.9],
+  exit: { 
+    y: -20, 
+    opacity: 0, 
+    transition: { 
+      duration: 0.3, 
+      ease: "easeInOut" 
     }
   }
 };
 
-const titleVariants = {
-  hidden: { 
-    opacity: 0,
-    y: 20,
-    scale: 0.97
-  },
-  visible: { 
+const yearTagVariants: Variants = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { 
     opacity: 1, 
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 30,
-      duration: 0.6,
-      ease: [0.2, 0.65, 0.3, 0.9]
+    scale: 1, 
+    transition: { 
+      delay: 0.1, 
+      duration: 0.4, 
+      ease: "backOut" 
+    }
+  },
+  exit: { 
+    opacity: 0, 
+    scale: 0.8, 
+    transition: { 
+      duration: 0.25, 
+      ease: "easeInOut" 
     }
   }
 };
 
-const descriptionVariants = {
-  hidden: { 
-    opacity: 0,
-    y: 25,
-    clipPath: "inset(0% 10% 0% 10%)"
-  },
-  visible: { 
+const controlsVariants: Variants = {
+  initial: { y: 20, opacity: 0 },
+  animate: { 
+    y: 0, 
     opacity: 1, 
-    y: 0,
-    clipPath: "inset(0% 0% 0% 0%)",
-    transition: {
-      duration: 0.6,
-      delay: 0.1,
-      ease: [0.2, 0.65, 0.3, 0.9]
+    transition: { 
+      delay: 0.35, 
+      duration: 0.5, 
+      ease: "easeOut" 
     }
-  }
-};
-
-const controlsVariants = {
-  hidden: { 
-    opacity: 0,
-    y: 15
   },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.2,
-      ease: [0.2, 0.65, 0.3, 0.9]
+  exit: { 
+    y: 10, 
+    opacity: 0, 
+    transition: { 
+      duration: 0.3, 
+      ease: "easeInOut" 
     }
   }
-};
-
-const getProjects = (t: any): Project[] => {
-  const projectColors = [
-    { background: 'bg-mayache-blue', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
-    { background: 'bg-mayache-purple', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
-    { background: 'bg-mayache-teal', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
-    { background: 'bg-mayache-green', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
-    { background: 'bg-mayache-yellow', yearTagBackground: 'bg-black', yearTagTextColor: 'text-white' }
-  ];
-  
-  const years = ['2021-2022', '2020-2021', '1337 SCHOOL', '2022', '1337 SCHOOL'];
-  const ids = ['car-rental', 'wordpress', 'inception', 'react-laravel', 'ft-transcendence'];
-  
-  // Default projects if translations are not available
-  const defaultProjects = [
-    {
-      id: 'car-rental',
-      title: 'CAR RENTAL APP',
-      description: 'BUILT A FULL-STACK CAR RENTAL APPLICATION WITH NEXT.JS AND DJANGO. IMPLEMENTED REAL-TIME VEHICLE TRACKING, ADVANCED RESERVATION MANAGEMENT, AND SECURE PAYMENT INTEGRATION. FEATURED RESPONSIVE UI WITH TAILWIND CSS AND MATERIAL DESIGN COMPONENTS.',
-      year: '2021-2022',
-      background: 'bg-mayache-blue',
-      yearTagBackground: 'bg-white bg-opacity-20',
-      yearTagTextColor: 'text-white'
-    },
-    {
-      id: 'wordpress',
-      title: 'WORDPRESS SITES',
-      description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR OVER 10 CLIENT WEBSITES. CREATED RESPONSIVE DESIGNS WITH ADVANCED CUSTOMIZATION OPTIONS. IMPLEMENTED WEB ANALYTICS, SEO OPTIMIZATION, AND E-COMMERCE FUNCTIONALITY. MAINTAINED PERFORMANCE AND SECURITY ACROSS ALL SITES.',
-      year: '2020-2021',
-      background: 'bg-mayache-purple',
-      yearTagBackground: 'bg-white bg-opacity-20',
-      yearTagTextColor: 'text-white'
-    },
-    {
-      id: 'inception',
-      title: 'INCEPTION',
-      description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES. IMPLEMENTED SECURE CONFIGURATION WITH TLS CERTIFICATES, OPTIMIZED CACHING, AND AUTOMATED DEPLOYMENT. DESIGNED FOR HIGH AVAILABILITY AND SCALABILITY IN PRODUCTION ENVIRONMENTS.',
-      year: '1337 SCHOOL',
-      background: 'bg-mayache-teal',
-      yearTagBackground: 'bg-white bg-opacity-20',
-      yearTagTextColor: 'text-white'
-    },
-    {
-      id: 'react-laravel',
-      title: 'REACT + LARAVEL PROJECT',
-      description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND. IMPLEMENTED AUTHENTICATION WITH JWT, REAL-TIME NOTIFICATIONS USING PUSHER, AND INTEGRATED RESTFUL API SERVICES. FEATURED DATA VISUALIZATION DASHBOARDS AND COMPREHENSIVE ADMIN FUNCTIONALITY.',
-      year: '2022',
-      background: 'bg-mayache-green',
-      yearTagBackground: 'bg-white bg-opacity-20',
-      yearTagTextColor: 'text-white'
-    },
-    {
-      id: 'ft-transcendence',
-      title: 'FT_TRANSCENDENCE',
-      description: 'DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS. IMPLEMENTED USER AUTHENTICATION WITH OAUTH 2.0, LIVE CHAT FUNCTIONALITY, FRIEND SYSTEM, AND TOURNAMENT LEADERBOARDS. DESIGNED RESPONSIVE UI WITH CUSTOM ANIMATIONS AND GAME PHYSICS.',
-      year: '1337 SCHOOL',
-      background: 'bg-mayache-yellow',
-      yearTagBackground: 'bg-black',
-      yearTagTextColor: 'text-white'
-    }
-  ];
-  
-  // Try to get translated projects
-  const translatedProjects = t('projects.items', null);
-  
-  // If no translations available, use default projects
-  if (!translatedProjects || !Array.isArray(translatedProjects)) {
-    return defaultProjects;
-  }
-  
-  // Map translated projects to Project objects
-  return translatedProjects.map((item: any, index: number) => ({
-    id: ids[index] || `project-${index}`,
-    title: item.title || defaultProjects[index]?.title || `Project ${index + 1}`,
-    description: item.description || defaultProjects[index]?.description || '',
-    year: years[index] || '2022',
-    background: projectColors[index]?.background || 'bg-mayache-blue',
-    yearTagBackground: projectColors[index]?.yearTagBackground || 'bg-white bg-opacity-20',
-    yearTagTextColor: projectColors[index]?.yearTagTextColor || 'text-white'
-  }));
 };
 
 const ProjectSwapper = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const projects = getProjects(t);
-  const activeProject = projects[activeProjectIndex];
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const years = ['2021-2022', '2020-2021', '1337 SCHOOL', '2022', '1337 SCHOOL'];
+    const ids = ['car-rental', 'wordpress', 'inception', 'react-laravel', 'ft-transcendence'];
+    const projectColors = [
+      { background: 'bg-mayache-blue', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
+      { background: 'bg-mayache-purple', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
+      { background: 'bg-mayache-teal', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
+      { background: 'bg-mayache-green', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
+      { background: 'bg-mayache-yellow', yearTagBackground: 'bg-black', yearTagTextColor: 'text-white' }
+    ];
+
+    // Get projects from translations
+    try {
+      const translatedProjects = [];
+      
+      // Hard-coded value approach - safer and more reliable
+      const projectItems = 5;
+      
+      for (let i = 0; i < projectItems; i++) {
+        translatedProjects.push({
+          id: ids[i] || `project-${i}`,
+          title: t(`projects.items.${i}.title`),
+          description: t(`projects.items.${i}.description`),
+          year: years[i] || '2022',
+          background: projectColors[i]?.background || 'bg-mayache-blue',
+          yearTagBackground: projectColors[i]?.yearTagBackground || 'bg-white bg-opacity-20',
+          yearTagTextColor: projectColors[i]?.yearTagTextColor || 'text-white'
+        });
+      }
+      
+      setProjects(translatedProjects);
+    } catch (error) {
+      console.error('Error loading project translations:', error);
+      
+      // Fallback to default projects in case of error
+      const defaultProjects = [
+        {
+          id: 'car-rental',
+          title: 'CAR RENTAL APP',
+          description: 'BUILT A FULL-STACK CAR RENTAL APPLICATION WITH NEXT.JS AND DJANGO. IMPLEMENTED REAL-TIME VEHICLE TRACKING, ADVANCED RESERVATION MANAGEMENT, AND SECURE PAYMENT INTEGRATION. FEATURED RESPONSIVE UI WITH TAILWIND CSS AND MATERIAL DESIGN COMPONENTS.',
+          year: '2021-2022',
+          background: 'bg-mayache-blue',
+          yearTagBackground: 'bg-white bg-opacity-20',
+          yearTagTextColor: 'text-white'
+        },
+        {
+          id: 'wordpress',
+          title: 'WORDPRESS SITES',
+          description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR OVER 10 CLIENT WEBSITES. CREATED RESPONSIVE DESIGNS WITH ADVANCED CUSTOMIZATION OPTIONS. IMPLEMENTED WEB ANALYTICS, SEO OPTIMIZATION, AND E-COMMERCE FUNCTIONALITY. MAINTAINED PERFORMANCE AND SECURITY ACROSS ALL SITES.',
+          year: '2020-2021',
+          background: 'bg-mayache-purple',
+          yearTagBackground: 'bg-white bg-opacity-20',
+          yearTagTextColor: 'text-white'
+        },
+        {
+          id: 'inception',
+          title: 'INCEPTION',
+          description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES. IMPLEMENTED SECURE CONFIGURATION WITH TLS CERTIFICATES, OPTIMIZED CACHING, AND AUTOMATED DEPLOYMENT. DESIGNED FOR HIGH AVAILABILITY AND SCALABILITY IN PRODUCTION ENVIRONMENTS.',
+          year: '1337 SCHOOL',
+          background: 'bg-mayache-teal',
+          yearTagBackground: 'bg-white bg-opacity-20',
+          yearTagTextColor: 'text-white'
+        },
+        {
+          id: 'react-laravel',
+          title: 'REACT + LARAVEL PROJECT',
+          description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND. IMPLEMENTED AUTHENTICATION WITH JWT, REAL-TIME NOTIFICATIONS USING PUSHER, AND INTEGRATED RESTFUL API SERVICES. FEATURED DATA VISUALIZATION DASHBOARDS AND COMPREHENSIVE ADMIN FUNCTIONALITY.',
+          year: '2022',
+          background: 'bg-mayache-green',
+          yearTagBackground: 'bg-white bg-opacity-20',
+          yearTagTextColor: 'text-white'
+        },
+        {
+          id: 'ft-transcendence',
+          title: 'FT_TRANSCENDENCE',
+          description: 'DEVELOPED A REAL-TIME MULTIPLAYER PONG GAME WITH REACTJS, NESTJS, AND WEBSOCKETS. IMPLEMENTED USER AUTHENTICATION WITH OAUTH 2.0, LIVE CHAT FUNCTIONALITY, FRIEND SYSTEM, AND TOURNAMENT LEADERBOARDS. DESIGNED RESPONSIVE UI WITH CUSTOM ANIMATIONS AND GAME PHYSICS.',
+          year: '1337 SCHOOL',
+          background: 'bg-mayache-yellow',
+          yearTagBackground: 'bg-black',
+          yearTagTextColor: 'text-white'
+        }
+      ];
+      
+      setProjects(defaultProjects);
+    }
+  }, [t, i18n.language]); // Update when language changes
 
   const nextProject = () => {
     setDirection(1);
@@ -246,6 +245,12 @@ const ProjectSwapper = () => {
     setDirection(index > activeProjectIndex ? 1 : -1);
     setActiveProjectIndex(index);
   };
+
+  // Safety check - ensure we have projects and valid activeProjectIndex
+  if (projects.length === 0) return null;
+  
+  const activeProject = projects[activeProjectIndex] || projects[0];
+  if (!activeProject) return null;
 
   return (
     <div className="relative h-full">
