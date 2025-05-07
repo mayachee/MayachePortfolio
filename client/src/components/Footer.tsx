@@ -14,6 +14,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
               aria-label="GitHub"
+              onClick={() => window.open("https://github.com/mayachee", "_blank")}
             >
               <SiGithub className="h-5 w-5" />
             </a>
@@ -23,6 +24,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
               aria-label="Figma"
+              onClick={() => window.open("https://www.figma.com/@mayache", "_blank")}
             >
               <SiFigma className="h-5 w-5" />
             </a>
@@ -32,6 +34,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
               aria-label="LinkedIn"
+              onClick={() => window.open("https://www.linkedin.com/in/mayachee", "_blank")}
             >
               <SiLinkedin className="h-5 w-5" />
             </a>
