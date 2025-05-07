@@ -4,17 +4,25 @@ export default {
     skills: "FÄHIGKEITEN",
     portfolio: "PORTFOLIO",
     contact: "KONTAKT",
+    experience: "BERUFSERFAHRUNG",
+    education: "AUSBILDUNG",
+    projects: "PROJEKTE",
+  },
+  header: {
+    jobTitle: "Kreativer Entwickler",
   },
   intro: {
-    title: "ICH BIN MAYACHE,\nDESIGNER\nUND\nFULLSTACK\nENTWICKLER\nAUS\nMAROKKO.",
-    description: "Ich entwickle seit mehr als 10 Jahren Webseiten. Ich dachte immer, dass es nicht viel Spaß macht, sich nur auf einen Bereich zu konzentrieren, also habe ich den gesamten Prozess gelernt: Planung, Entwicklung und Veröffentlichung von Webseiten. Das ermöglichte es mir, mich auf Storytelling zu spezialisieren und Fähigkeiten wie Branding, Design und Animation zu nutzen, um die Aufmerksamkeit der Nutzer auf die richtigen Stellen zu lenken und ansprechendere und einprägsamere Erlebnisse zu schaffen.",
+    title: "ICH BIN MAYACHE,\nDESIGNER\nUND\nSOFTWARE\nENTWICKLER\nAUS\nMAROKKO.",
+    description: "Ein engagierter und autodidaktischer Full-Stack-Entwickler und Designer mit einer soliden Grundlage in Softwareentwicklung, spezialisiert auf die Erstellung und Gestaltung innovativer Websites, Anwendungen und digitaler Lösungen. Derzeit absolviere ich ein fortgeschrittenes Studium an der 1337 Coding School (Teil der Mohammed VI Polytechnic University und des 42 Network) und bringe praktische Erfahrung in Webentwicklung, UI/UX-Design und modernen Frameworks mit. Mit fließenden Deutschkenntnissen (B2-Niveau) und einer starken Motivation, in ein englischsprachiges Land zu ziehen, bin ich bestrebt, als Softwareentwickler zur globalen Technologiebranche beizutragen und an innovativen Projekten zu arbeiten.",
   },
-  internship: {
-    title: "PRAKTIKUM",
-    description: "Tag schöne Ergänzung schreckliche vernünftige Güte zwei Verachtung. Abend für verheiratete seine Kontolöschung. Schätzbare mich zur Verfügung stellen von Mondlicht herzliche Neugier. Verzögerung schnelle Freude teilen lassen Alter Herrenhaus sechs. Ging warum weit sah viele wussten. Exquisiter hervorragender Sohn Gentleman ihre Schärfe. Ist Stimme Gesamtleistung Herr ye könnte immer noch rund sein.",
+  experience: {
+    title: "WEB-ENTWICKLUNGSPRAKTIKANT",
+    company: "ITT ONE, TETOUAN, MAROKKO",
+    duties: "Mitarbeit an Webentwicklungsprojekten und Sammlung praktischer Erfahrungen in Front-End- und Back-End-Technologien.\nBeitrag zur Entwicklung von E-Commerce-Plattformen und internen Tools zur Steigerung der Teamproduktivität.",
   },
   skills: {
-    title: "FÄHIGKEITEN",
+    title: "HARD SKILLS",
+    softTitle: "SOFT SKILLS",
     list: [
       "FIGMA",
       "PHOTOSHOP",
@@ -24,6 +32,12 @@ export default {
       "PYTHON",
       "PHP",
     ],
+  },
+  education: {
+    degree1: "INFORMATIK",
+    school1: "1337 SCHOOL (42 NETWORK), UM6P",
+    degree2: "FACHINFORMATIKER",
+    school2: "TECHNIKEN DER IT-ENTWICKLUNG",
   },
   portfolio: {
     webflow: {

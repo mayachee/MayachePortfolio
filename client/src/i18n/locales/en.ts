@@ -4,17 +4,25 @@ export default {
     skills: "SKILLS",
     portfolio: "PORTFOLIO",
     contact: "CONTACT",
+    experience: "PROFESSIONAL EXPERIENCE",
+    education: "EDUCATION",
+    projects: "PROJECTS",
+  },
+  header: {
+    jobTitle: "Creative Developer",
   },
   intro: {
-    title: "I'M MAYACHE,\nA DESIGNER\nAND\nFULLSTACK\nDEVELOPER\nBASED IN\nMOROCCO.",
-    description: "I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites. This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.",
+    title: "I'M MAYACHE,\nA DESIGNER\nAND\nSOFTWARE\nDEVELOPER\nBASED IN\nMOROCCO.",
+    description: "A dedicated and self-taught Full-Stack Developer and Designer with a strong foundation in software engineering, specializing in creating and designing innovative websites, applications, and digital solutions. Currently pursuing advanced studies at 1337 Coding School (part of Mohammed VI Polytechnic University and 42 Network), I bring hands-on experience in web development, UI/UX design, and modern frameworks. With fluent German skills (B2 level) and a strong motivation to relocate to an English-speaking country, I am eager to contribute to the global tech industry as a Software Developer and work on innovative projects.",
   },
-  internship: {
-    title: "INTERNSHIP",
-    description: "Day handsome addition horrible sensible goodness two contempt. Evening for married his account removal. Estimable me disposing of be moonlight cordial curiosity. Delay rapid joy share allow age manor six. Went why far saw many knew. Exquisite excellent son gentleman acuteness her. Do is voice total power mr ye might round still.",
+  experience: {
+    title: "WEB DEVELOPMENT INTERN",
+    company: "ITT ONE, TETOUAN, MOROCCO",
+    duties: "Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.\nContributed to the development of e-commerce platforms and internal tools, enhancing team productivity.",
   },
   skills: {
-    title: "HARDSKILL",
+    title: "HARD SKILLS",
+    softTitle: "SOFT SKILLS",
     list: [
       "FIGMA",
       "PHOTOSHOP",
@@ -24,6 +32,12 @@ export default {
       "PYTHON",
       "PHP",
     ],
+  },
+  education: {
+    degree1: "COMPUTER SCIENCE",
+    school1: "1337 SCHOOL (42 NETWORK), UM6P",
+    degree2: "SPECIALIZED TECHNICIAN",
+    school2: "TECHNIQUES OF IT DEVELOPMENT",
   },
   portfolio: {
     webflow: {

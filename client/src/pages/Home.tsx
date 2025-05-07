@@ -83,14 +83,15 @@ const Home = () => {
                   <div>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">07/2021 – 12/2021</span>
                     <h3 className="font-archivo text-white text-lg font-bold leading-tight">
-                      WEB DEVELOPMENT INTERN
+                      {t('experience.title')}
                     </h3>
                     <p className="text-white text-xs uppercase">
-                      ITT ONE, TETOUAN, MOROCCO
+                      {t('experience.company')}
                     </p>
                     <ul className="text-white text-xs uppercase mt-2 space-y-1 list-disc pl-4">
-                      <li>Collaborated on web development projects, gaining practical experience in front-end and back-end technologies.</li>
-                      <li>Contributed to the development of e-commerce platforms and internal tools, enhancing team productivity.</li>
+                      {t('experience.duties').split('\n').map((duty, index) => (
+                        <li key={index}>{duty}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -121,7 +122,7 @@ const Home = () => {
                 
                 {/* Hard Skills */}
                 <div className="mb-6">
-                  <h3 className="font-archivo text-white text-xl font-bold mb-3">HARD SKILLS</h3>
+                  <h3 className="font-archivo text-white text-xl font-bold mb-3">{t('skills.title')}</h3>
                   <div className="space-y-3">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
@@ -283,7 +284,7 @@ const Home = () => {
                 
                 {/* Soft Skills */}
                 <div>
-                  <h3 className="font-archivo text-white text-xl font-bold mb-3">SOFT SKILLS</h3>
+                  <h3 className="font-archivo text-white text-xl font-bold mb-3">{t('skills.softTitle')}</h3>
                   <div className="space-y-3">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
@@ -390,26 +391,26 @@ const Home = () => {
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
-                  EDUCATION
+                  {t('nav.education')}
                 </h2>
                 <div className="space-y-4">
                   <div>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">2020-PRESENT</span>
                     <h3 className="font-archivo text-white text-lg font-bold leading-tight">
-                      COMPUTER SCIENCE
+                      {t('education.degree1')}
                     </h3>
                     <p className="text-white text-xs uppercase">
-                      1337 SCHOOL (42 NETWORK), UM6P
+                      {t('education.school1')}
                     </p>
                   </div>
                   
                   <div>
                     <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">09/2019 – 07/2021</span>
                     <h3 className="font-archivo text-white text-lg font-bold leading-tight">
-                      SPECIALIZED TECHNICIAN
+                      {t('education.degree2')}
                     </h3>
                     <p className="text-white text-xs uppercase">
-                      TECHNIQUES OF IT DEVELOPMENT
+                      {t('education.school2')}
                     </p>
                   </div>
                 </div>
