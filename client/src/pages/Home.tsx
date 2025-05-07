@@ -90,9 +90,52 @@ const Home = () => {
               </div>
             </GridSection>
             
+            {/* Projects Overview */}
+            <GridSection 
+              background="bg-mayache-brown" 
+              id="projects-overview"
+              delay={0.25}
+            >
+              <div className="section-content">
+                <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
+                  MY PROJECTS
+                </h2>
+                <p className="text-white text-sm uppercase mb-3">
+                  A selection of my most significant development work showcasing various technologies and solutions.
+                </p>
+                <div className="grid grid-cols-1 gap-3 mt-4">
+                  <div className="flex items-center gap-2 text-white">
+                    <div className="bg-white bg-opacity-20 p-2 rounded-full">
+                      <SiReact className="h-4 w-4" />
+                    </div>
+                    <span className="text-xs uppercase">Full-stack Projects: React, Laravel, Django</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white">
+                    <div className="bg-white bg-opacity-20 p-2 rounded-full">
+                      <SiWordpress className="h-4 w-4" />
+                    </div>
+                    <span className="text-xs uppercase">WordPress Theme & Plugin Development</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-white">
+                    <div className="bg-white bg-opacity-20 p-2 rounded-full">
+                      <FaGithub className="h-4 w-4" />
+                    </div>
+                    <span className="text-xs uppercase">Docker & System Architecture</span>
+                  </div>
+                </div>
+              </div>
+            </GridSection>
+            
             {/* Projects Grid with Swapping Feature */}
             <div className="row-span-2">
-              <ProjectSwapper />
+              <div className="h-full flex flex-col">
+                <div className="bg-black text-white px-4 py-3">
+                  <h3 className="font-archivo text-white text-xl font-bold">PROJECT SHOWCASE</h3>
+                </div>
+                <div className="flex-grow">
+                  <ProjectSwapper />
+                </div>
+              </div>
             </div>
           </div>
 
