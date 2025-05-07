@@ -72,8 +72,8 @@ const projects: Project[] = [
     title: 'WORDPRESS SITES',
     description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
     year: '2020-2021',
-    background: 'bg-gradient-to-br from-purple-700 to-purple-900',
-    yearTagBackground: 'bg-purple-600',
+    background: 'bg-mayache-purple',
+    yearTagBackground: 'bg-white bg-opacity-20',
     yearTagTextColor: 'text-white'
   },
   {
@@ -154,7 +154,7 @@ const ProjectSwapper = () => {
                 variants={contentVariants}
                 className={`font-archivo ${
                   activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
-                  activeProject.id === 'wordpress' ? 'text-white text-shadow-sm' : 
+                  activeProject.id === 'wordpress' ? 'text-white' : 
                   'text-white'
                 } text-3xl font-black mb-1 leading-tight`}
               >
@@ -165,7 +165,7 @@ const ProjectSwapper = () => {
                 variants={contentVariants}
                 className={`${
                   activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
-                  activeProject.id === 'wordpress' ? 'text-purple-100 font-medium' : 
+                  activeProject.id === 'wordpress' ? 'text-white' : 
                   'text-white'
                 } text-xs uppercase`}
               >
@@ -192,11 +192,7 @@ const ProjectSwapper = () => {
                 </div>
                 <div className="flex space-x-2">
                   <button 
-                    className={`${
-                      activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
-                      activeProject.id === 'wordpress' ? 'bg-purple-600 text-white' : 
-                      'bg-white bg-opacity-20 text-white'
-                    } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                   >
@@ -205,11 +201,7 @@ const ProjectSwapper = () => {
                     </svg>
                   </button>
                   <button 
-                    className={`${
-                      activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
-                      activeProject.id === 'wordpress' ? 'bg-purple-600 text-white' : 
-                      'bg-white bg-opacity-20 text-white'
-                    } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                   >

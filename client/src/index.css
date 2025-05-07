@@ -71,16 +71,16 @@
   --ring: 142 77% 73%;
   --radius: 0.5rem;
 
-  /* Custom colors - Updated palette without red/blue in MAYACHE */
+  /* Custom colors - Coolors.co Palette: https://coolors.co/palette/3c1642-086375-1dd3b0-affc41-b2ff9e */
   --mayache-purple: 287 50% 17%;   /* Dark purple #3C1642 */
-  --mayache-teal-dark: 190 88% 24%;/* Deep teal #086375 (renamed from blue) */
+  --mayache-blue: 190 88% 24%;     /* Teal blue #086375 */
   --mayache-teal: 167 77% 47%;     /* Bright teal #1DD3B0 */
   --mayache-green: 84 97% 62%;     /* Bright lime #AFFC41 */
   --mayache-light-green: 103 100% 81%; /* Light lime #B2FF9E */
   
   /* Additional complementary colors to maintain variety */
   --mayache-pink: 335 60% 45%;     /* Corporate pink */
-  --mayache-coral: 350 65% 45%;    /* Business-friendly coral (renamed from red) */
+  --mayache-red: 350 65% 45%;      /* Business-friendly red */
   --mayache-orange: 24 65% 50%;    /* Professional orange */
   --mayache-yellow: 43 70% 55%;    /* Professional gold accent */
   --mayache-dark: 287 50% 12%;     /* Dark purple background */
@@ -193,8 +193,8 @@
     background-color: hsl(103, 100%, 81%); /* Light lime #B2FF9E */
   }
 
-  .bg-mayache-teal-dark {
-    background-color: hsl(190, 88%, 24%); /* Deep teal #086375 (renamed from blue) */
+  .bg-mayache-blue {
+    background-color: hsl(190, 88%, 24%); /* Teal blue #086375 */
   }
   
   .bg-mayache-brown {
@@ -225,16 +225,16 @@
     color: hsl(335, 60%, 45%); /* Keeping corporate pink */
   }
 
-  .text-mayache-coral {
-    color: hsl(350, 65%, 45%); /* Renamed from red */
+  .text-mayache-red {
+    color: hsl(350, 65%, 45%); /* Business-friendly red */
   }
 
   .text-mayache-yellow {
     color: hsl(103, 100%, 81%); /* Light lime #B2FF9E */
   }
 
-  .text-mayache-teal-dark {
-    color: hsl(190, 88%, 24%); /* Deep teal #086375 (renamed from blue) */
+  .text-mayache-blue {
+    color: hsl(190, 88%, 24%); /* Teal blue #086375 */
   }
   
   .text-mayache-brown {
