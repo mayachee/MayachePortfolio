@@ -234,6 +234,45 @@ const Home = () => {
                         ></div>
                       </div>
                     </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">MERN STACK</span>
+                        <span className="text-white text-xs font-archivo">88%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '88%', animationDelay: '1.0s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">NEXT.JS</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.1s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">DJANGO</span>
+                        <span className="text-white text-xs font-archivo">78%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '78%', animationDelay: '1.2s' }}
+                        ></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -249,7 +288,7 @@ const Home = () => {
                       <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '95%', animationDelay: '1.0s' }}
+                          style={{ width: '95%', animationDelay: '1.3s' }}
                         ></div>
                       </div>
                     </div>
@@ -262,7 +301,7 @@ const Home = () => {
                       <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '90%', animationDelay: '1.1s' }}
+                          style={{ width: '90%', animationDelay: '1.4s' }}
                         ></div>
                       </div>
                     </div>
@@ -275,7 +314,7 @@ const Home = () => {
                       <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '85%', animationDelay: '1.2s' }}
+                          style={{ width: '85%', animationDelay: '1.5s' }}
                         ></div>
                       </div>
                     </div>
@@ -288,7 +327,7 @@ const Home = () => {
                       <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '88%', animationDelay: '1.3s' }}
+                          style={{ width: '88%', animationDelay: '1.6s' }}
                         ></div>
                       </div>
                     </div>
@@ -301,7 +340,7 @@ const Home = () => {
                       <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '92%', animationDelay: '1.4s' }}
+                          style={{ width: '92%', animationDelay: '1.7s' }}
                         ></div>
                       </div>
                     </div>
