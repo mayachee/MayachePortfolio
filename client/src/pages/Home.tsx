@@ -373,7 +373,7 @@ const Home = () => {
       
       <Footer />
     </div>
-    </PageTransition>
+  </PageTransition>
   );
 };
 
