@@ -33,6 +33,7 @@ const Home = () => {
               background="bg-mayache-green" 
               id="about"
               delay={0.1}
+              index={0}
             >
               <div className="section-content flex flex-col justify-between">
                 <div className="absolute top-4 right-4">
@@ -66,7 +67,8 @@ const Home = () => {
               background="bg-mayache-purple" 
               id="experience"
               className="transition-all"
-              delay={0.2}
+              delay={0.15}
+              index={1}
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
@@ -104,7 +106,8 @@ const Home = () => {
               id="skills"
               rowSpan="row-span-2" 
               className="overflow-y-auto"
-              delay={0.3}
+              delay={0.2}
+              index={2}
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-3xl font-black mb-4 leading-tight sticky top-0 z-10 bg-mayache-red py-2">
@@ -338,7 +341,8 @@ const Home = () => {
               background="bg-mayache-teal"
               className="col-span-1"
               id="education"
-              delay={0.4}
+              delay={0.25}
+              index={3}
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">

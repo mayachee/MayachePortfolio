@@ -12,6 +12,51 @@ type Project = {
   yearTagTextColor?: string;
 };
 
+// Enhanced project carousel animation variants
+const projectVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 100 : -100,
+    opacity: 0,
+    scale: 0.95,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 1, 0.5, 1],
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    }
+  },
+  exit: (direction: number) => ({
+    x: direction < 0 ? 100 : -100,
+    opacity: 0,
+    scale: 0.95,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 1, 0.5, 1],
+    }
+  })
+};
+
+// Animation variants for project content elements
+const contentVariants = {
+  hidden: { 
+    opacity: 0,
+    y: 15 
+  },
+  visible: { 
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 1, 0.5, 1],
+    }
+  }
+};
+
 const projects: Project[] = [
   {
     id: 'car-rental',
@@ -62,60 +107,84 @@ const projects: Project[] = [
 
 const ProjectSwapper = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
   const activeProject = projects[activeProjectIndex];
 
   const nextProject = () => {
+    setDirection(1);
     setActiveProjectIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
   };
 
   const prevProject = () => {
+    setDirection(-1);
     setActiveProjectIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+  };
+
+  const selectProject = (index: number) => {
+    setDirection(index > activeProjectIndex ? 1 : -1);
+    setActiveProjectIndex(index);
   };
 
   return (
     <div className="relative h-full">
-      <AnimatePresence mode="wait">
+      <AnimatePresence custom={direction} mode="wait">
         <motion.div
           key={activeProject.id}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ 
-            duration: 0.5,
-            ease: [0.22, 1, 0.36, 1]
-          }}
+          custom={direction}
+          variants={projectVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
           className="h-full"
         >
-          <GridSection background={activeProject.background}>
+          <GridSection 
+            background={activeProject.background} 
+            index={2}
+            delay={0.2}
+          >
             <div className="section-content">
-              <span className={`inline-block px-2 py-1 ${activeProject.yearTagBackground || 'bg-black'} ${activeProject.yearTagTextColor || 'text-white'} text-xs font-bold rounded mb-2`}>
+              <motion.span 
+                variants={contentVariants}
+                className={`inline-block px-2 py-1 ${activeProject.yearTagBackground || 'bg-black'} ${activeProject.yearTagTextColor || 'text-white'} text-xs font-bold rounded mb-2`}
+              >
                 {activeProject.year}
-              </span>
-              <h2 className={`font-archivo ${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-3xl font-black mb-1 leading-tight`}>
-                {activeProject.title}
-              </h2>
-              <p className={`${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-xs font-normal uppercase`}>
-                {activeProject.description}
-              </p>
+              </motion.span>
               
-              <div className="mt-auto pt-4 flex justify-between items-center">
+              <motion.h2 
+                variants={contentVariants}
+                className={`font-archivo ${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-3xl font-black mb-1 leading-tight`}
+              >
+                {activeProject.title}
+              </motion.h2>
+              
+              <motion.p 
+                variants={contentVariants}
+                className={`${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-xs font-normal uppercase`}
+              >
+                {activeProject.description}
+              </motion.p>
+              
+              <motion.div 
+                variants={contentVariants}
+                className="mt-auto pt-4 flex justify-between items-center"
+              >
                 <div className="flex space-x-1">
                   {projects.map((_, idx) => (
                     <button
                       key={idx}
-                      className={`w-2 h-2 rounded-full ${
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
                         idx === activeProjectIndex 
-                          ? 'bg-white opacity-90' 
+                          ? 'bg-white opacity-90 scale-125' 
                           : 'bg-white opacity-30'
                       }`}
-                      onClick={() => setActiveProjectIndex(idx)}
+                      onClick={() => selectProject(idx)}
                       aria-label={`Go to project ${idx + 1}`}
                     />
                   ))}
                 </div>
                 <div className="flex space-x-2">
                   <button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                   >
@@ -124,7 +193,7 @@ const ProjectSwapper = () => {
                     </svg>
                   </button>
                   <button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                   >
@@ -133,7 +202,7 @@ const ProjectSwapper = () => {
                     </svg>
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </GridSection>
         </motion.div>
