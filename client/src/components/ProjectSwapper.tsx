@@ -32,6 +32,15 @@ const projects: Project[] = [
     yearTagTextColor: 'text-white'
   },
   {
+    id: 'inception',
+    title: 'INCEPTION',
+    description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES.',
+    year: '1337 SCHOOL',
+    background: 'bg-mayache-teal',
+    yearTagBackground: 'bg-white bg-opacity-20',
+    yearTagTextColor: 'text-white'
+  },
+  {
     id: 'react-laravel',
     title: 'REACT + LARAVEL PROJECT',
     description: 'DEVELOPED A MODERN WEB APPLICATION WITH REACT FRONTEND AND LARAVEL BACKEND.',
