@@ -103,7 +103,7 @@ const Home = () => {
                 <div className="space-y-5">
                   <div className="experience-item">
                     <div className="flex flex-col sm:flex-row sm:items-center mb-2 space-y-2 sm:space-y-0 sm:space-x-3">
-                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">07/2025 – 12/2025</span>
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">FREELANCE</span>
                       <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-50"></div>
                       <span className="text-white text-sm uppercase opacity-75">{t('experience.company')}</span>
                     </div>
