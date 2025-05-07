@@ -4,17 +4,25 @@ export default {
     skills: "COMPÉTENCES",
     portfolio: "PORTFOLIO",
     contact: "CONTACT",
+    experience: "EXPÉRIENCE PROFESSIONNELLE",
+    education: "ÉDUCATION",
+    projects: "PROJETS",
+  },
+  header: {
+    jobTitle: "Développeur Créatif",
   },
   intro: {
-    title: "JE SUIS MAYACHE,\nDESIGNER\nET\nDÉVELOPPEUR\nFULLSTACK\nBASÉ AU\nMAROC.",
-    description: "Je développe des sites web depuis plus de 10 ans. J'ai toujours pensé que se concentrer sur un seul domaine n'était pas très amusant, alors j'ai appris l'ensemble du processus : planification, construction et lancement de sites web. Cela m'a permis de me spécialiser dans le storytelling, en utilisant des compétences comme le branding, le design et le motion, pour attirer l'attention de l'utilisateur vers les bons endroits et créer des expériences plus engageantes et mémorables.",
+    title: "JE SUIS MAYACHE,\nDESIGNER\nET\nDÉVELOPPEUR\nSOFTWARE\nBASÉ AU\nMAROC.",
+    description: "Un développeur Full-Stack et designer dévoué et autodidacte avec une solide base en génie logiciel, spécialisé dans la création et la conception de sites Web, d'applications et de solutions numériques innovants. Actuellement en études avancées à l'école de codage 1337 (partie de l'Université Polytechnique Mohammed VI et du réseau 42), j'apporte une expérience pratique en développement web, design UI/UX et frameworks modernes. Avec des compétences en allemand (niveau B2) et une forte motivation pour m'installer dans un pays anglophone, je suis désireux de contribuer à l'industrie technologique mondiale en tant que développeur de logiciels et de travailler sur des projets innovants.",
   },
-  internship: {
-    title: "STAGE",
-    description: "Jour bel ajout horrible bonté sensible deux mépris. Soir pour son compte marié suppression. Estimable moi disposant d'être clair de lune cordial curiosité. Retard joie rapide partage permettre âge manoir six. Allé pourquoi loin vu beaucoup savaient. Exquis excellent fils gentleman acuité elle. Est-ce que la voix puissance totale mr vous pourriez arrondir encore.",
+  experience: {
+    title: "STAGIAIRE EN DÉVELOPPEMENT WEB",
+    company: "ITT ONE, TÉTOUAN, MAROC",
+    duties: "Collaboration sur des projets de développement web, acquérant une expérience pratique dans les technologies front-end et back-end.\nContribution au développement de plateformes de commerce électronique et d'outils internes, améliorant la productivité de l'équipe.",
   },
   skills: {
-    title: "COMPÉTENCES",
+    title: "COMPÉTENCES TECHNIQUES",
+    softTitle: "COMPÉTENCES PERSONNELLES",
     list: [
       "FIGMA",
       "PHOTOSHOP",
@@ -24,6 +32,12 @@ export default {
       "PYTHON",
       "PHP",
     ],
+  },
+  education: {
+    degree1: "INFORMATIQUE",
+    school1: "1337 SCHOOL (RÉSEAU 42), UM6P",
+    degree2: "TECHNICIEN SPÉCIALISÉ",
+    school2: "TECHNIQUES DE DÉVELOPPEMENT IT",
   },
   portfolio: {
     webflow: {

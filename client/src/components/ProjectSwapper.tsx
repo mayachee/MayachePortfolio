@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GridSection from './GridSection';
+import { useTranslation } from 'react-i18next';
 
 type Project = {
   id: string;
@@ -93,14 +94,12 @@ const titleVariants = {
   hidden: { 
     opacity: 0,
     y: 20,
-    scale: 0.97,
-    letterSpacing: "0.05em"
+    scale: 0.97
   },
   visible: { 
     opacity: 1, 
     y: 0,
     scale: 1,
-    letterSpacing: "0em",
     transition: {
       type: "spring",
       stiffness: 400,
@@ -194,6 +193,7 @@ const projects: Project[] = [
 ];
 
 const ProjectSwapper = () => {
+  const { t } = useTranslation();
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const activeProject = projects[activeProjectIndex];

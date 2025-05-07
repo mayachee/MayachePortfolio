@@ -4,17 +4,25 @@ export default {
     skills: "HABILIDADES",
     portfolio: "PORTAFOLIO",
     contact: "CONTACTO",
+    experience: "EXPERIENCIA PROFESIONAL",
+    education: "EDUCACIÓN",
+    projects: "PROYECTOS",
+  },
+  header: {
+    jobTitle: "Desarrollador Creativo",
   },
   intro: {
-    title: "SOY MAYACHE,\nDISEÑADOR\nY\nDESARROLLADOR\nFULLSTACK\nBASADO EN\nMARRUECOS.",
-    description: "He estado construyendo sitios web durante más de 10 años. Siempre pensé que centrarse en una sola área no era muy divertido, así que aprendí todo el proceso: planificación, construcción y lanzamiento de sitios web. Esto me permitió especializarme en storytelling, utilizando habilidades como branding, diseño y movimiento, para dirigir la atención del usuario a los lugares correctos y crear experiencias más atractivas y memorables.",
+    title: "SOY MAYACHE,\nDISEÑADOR\nY\nDESARROLLADOR\nDE SOFTWARE\nBASADO EN\nMARRUECOS.",
+    description: "Un desarrollador Full-Stack y diseñador dedicado y autodidacta con una sólida base en ingeniería de software, especializado en la creación y diseño de sitios web, aplicaciones y soluciones digitales innovadoras. Actualmente cursando estudios avanzados en 1337 Coding School (parte de la Universidad Politécnica Mohammed VI y la Red 42), aporto experiencia práctica en desarrollo web, diseño UI/UX y frameworks modernos. Con habilidades fluidas en alemán (nivel B2) y una fuerte motivación para trasladarme a un país de habla inglesa, estoy deseoso de contribuir a la industria tecnológica global como desarrollador de software y trabajar en proyectos innovadores.",
   },
-  internship: {
-    title: "PRÁCTICAS",
-    description: "Día hermosa adición horrible bondad sensata dos desprecio. Noche para casado su eliminación de cuenta. Estimable yo disponer de ser claro de luna cordial curiosidad. Retraso alegría rápida compartir permitir edad mansión seis. Fue por qué lejos vio muchos sabían. Exquisito excelente hijo caballero agudeza ella. Es voz poder total señor ye podría redondear todavía.",
+  experience: {
+    title: "PRACTICANTE EN DESARROLLO WEB",
+    company: "ITT ONE, TETUÁN, MARRUECOS",
+    duties: "Colaboración en proyectos de desarrollo web, adquiriendo experiencia práctica en tecnologías front-end y back-end.\nContribución al desarrollo de plataformas de comercio electrónico y herramientas internas, mejorando la productividad del equipo.",
   },
   skills: {
-    title: "HABILIDADES",
+    title: "HABILIDADES TÉCNICAS",
+    softTitle: "HABILIDADES PERSONALES",
     list: [
       "FIGMA",
       "PHOTOSHOP",
@@ -24,6 +32,12 @@ export default {
       "PYTHON",
       "PHP",
     ],
+  },
+  education: {
+    degree1: "INFORMÁTICA",
+    school1: "1337 SCHOOL (RED 42), UM6P",
+    degree2: "TÉCNICO ESPECIALIZADO",
+    school2: "TÉCNICAS DE DESARROLLO IT",
   },
   portfolio: {
     webflow: {
