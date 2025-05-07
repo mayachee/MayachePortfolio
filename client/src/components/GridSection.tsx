@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation, Variants } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface GridSectionProps {
   children: ReactNode;
@@ -9,7 +11,24 @@ interface GridSectionProps {
   rowSpan?: string;
   colSpan?: string;
   className?: string;
+  delay?: number;
 }
+
+// Animation variants for grid sections
+const gridVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 15 
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1]
+    }
+  }
+};
 
 const GridSection = ({
   children,
@@ -19,16 +38,28 @@ const GridSection = ({
   rowSpan,
   colSpan,
   className = "",
+  delay = 0
 }: GridSectionProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const controls = useAnimation();
+  
+  if (isInView) {
+    controls.start("visible");
+  }
+  
   return (
     <motion.div
+      ref={ref}
       id={id}
       className={`${background} ${rowSpan || ""} ${colSpan || ""} ${className} relative grid-section`}
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
+      variants={gridVariants}
+      initial="hidden"
+      animate={controls}
       transition={{ 
+        delay: delay,
         duration: 0.5, 
-        ease: [0.25, 0.1, 0.25, 1.0] 
+        ease: [0.22, 1, 0.36, 1] 
       }}
       style={backgroundImage ? {
         backgroundImage: `url(${backgroundImage})`,
