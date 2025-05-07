@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-4 md:space-x-5 mb-6 md:mb-0">
             <a 
-              href="https://github.com" 
+              href="https://github.com/mayachee" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
@@ -18,7 +18,7 @@ const Footer = () => {
               <SiGithub className="h-5 w-5" />
             </a>
             <a 
-              href="https://figma.com" 
+              href="https://www.figma.com/@mayache" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
@@ -27,7 +27,7 @@ const Footer = () => {
               <SiFigma className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/mayachee" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
