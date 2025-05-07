@@ -15,46 +15,68 @@ interface GridSectionProps {
   index?: number; // Added index for staggered animations
 }
 
-// Enhanced animation variants for grid sections
+// Enhanced animation variants for grid sections with advanced physics
 const gridVariants: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 30,
-    scale: 0.97
+    y: 40,
+    scale: 0.95,
+    filter: "blur(4px)"
   },
   visible: { 
     opacity: 1, 
     y: 0,
     scale: 1,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.7,
-      ease: [0.25, 1, 0.5, 1],
-      staggerChildren: 0.1,
-      delayChildren: 0.05
+      y: {
+        type: "spring",
+        stiffness: 350,
+        damping: 25, 
+        duration: 0.8
+      },
+      opacity: { duration: 0.6 },
+      scale: { duration: 0.6 },
+      filter: { duration: 0.5 },
+      staggerChildren: 0.12,
+      delayChildren: 0.07
     }
   },
   exit: {
     opacity: 0,
     y: -20,
+    scale: 0.98,
+    filter: "blur(4px)",
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       ease: [0.33, 1, 0.68, 1]
     }
   }
 };
 
-// Child animation variants for elements inside grid sections
+// Child animation variants for elements inside grid sections with enhanced animations
 const childVariants: Variants = {
   hidden: { 
     opacity: 0, 
-    y: 20
+    y: 25,
+    scale: 0.97,
+    filter: "blur(2px)"
   },
   visible: { 
     opacity: 1, 
     y: 0,
+    scale: 1,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.5,
-      ease: [0.25, 1, 0.5, 1]
+      duration: 0.6,
+      y: {
+        type: "spring",
+        damping: 20, 
+        stiffness: 350
+      },
+      opacity: { duration: 0.5 },
+      filter: { duration: 0.4 },
+      ease: [0.2, 0.65, 0.3, 0.9] // Matching cubic bezier from ProjectSwapper
     }
   }
 };
@@ -92,8 +114,8 @@ const GridSection = ({
       exit="exit"
       transition={{ 
         delay: staggerDelay,
-        duration: 0.6, 
-        ease: [0.25, 1, 0.5, 1] 
+        duration: 0.7, 
+        ease: [0.2, 0.65, 0.3, 0.9] // Match cubic bezier from other components
       }}
       style={backgroundImage ? {
         backgroundImage: `url(${backgroundImage})`,
