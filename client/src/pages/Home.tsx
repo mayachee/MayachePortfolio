@@ -36,11 +36,11 @@ const Home = () => {
               index={0}
             >
               <div className="section-content flex flex-col justify-between">
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 hidden sm:block">
                   <span className="text-xs font-bold text-white">EST. 2020</span>
                 </div>
-                <div className="relative mt-16">
-                  <h2 className="font-archivo text-white text-5xl font-extrabold leading-tight tracking-tight">
+                <div className="relative mt-8 md:mt-16">
+                  <h2 className="font-archivo text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
                     {t('intro.title').split('\n').map((line, i) => (
                       <span key={i}>
                         {i === 0 ? (
@@ -57,7 +57,7 @@ const Home = () => {
                   </h2>
                 </div>
                 <div>
-                  <p className="text-white text-sm mt-6 font-normal uppercase tracking-wide">
+                  <p className="text-white text-sm mt-4 md:mt-6 font-normal uppercase tracking-wide">
                     {t('intro.description')}
                   </p>
                 </div>
@@ -116,14 +116,14 @@ const Home = () => {
               index={2}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-3xl font-black mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
+                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-3 md:mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
                   {t('nav.skills')}
                 </h2>
                 
                 {/* Hard Skills */}
-                <div className="mb-6">
-                  <h3 className="font-archivo text-white text-xl font-bold mb-3">{t('skills.title')}</h3>
-                  <div className="space-y-3">
+                <div className="mb-4 md:mb-6">
+                  <h3 className="font-archivo text-white text-lg md:text-xl font-bold mb-2 md:mb-3">{t('skills.title')}</h3>
+                  <div className="space-y-2 md:space-y-3">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="text-white text-sm font-archivo uppercase">C / C#</span>
