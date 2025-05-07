@@ -72,8 +72,8 @@ const projects: Project[] = [
     title: 'WORDPRESS SITES',
     description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
     year: '2020-2021',
-    background: 'bg-mayache-purple',
-    yearTagBackground: 'bg-white bg-opacity-20',
+    background: 'bg-gradient-to-br from-blue-600 to-blue-900',
+    yearTagBackground: 'bg-blue-500',
     yearTagTextColor: 'text-white'
   },
   {
@@ -152,14 +152,22 @@ const ProjectSwapper = () => {
               
               <motion.h2 
                 variants={contentVariants}
-                className={`font-archivo ${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-3xl font-black mb-1 leading-tight`}
+                className={`font-archivo ${
+                  activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
+                  activeProject.id === 'wordpress' ? 'text-white text-shadow-sm' : 
+                  'text-white'
+                } text-3xl font-black mb-1 leading-tight`}
               >
                 {activeProject.title}
               </motion.h2>
               
               <motion.p 
                 variants={contentVariants}
-                className={`${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-xs font-normal uppercase`}
+                className={`${
+                  activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
+                  activeProject.id === 'wordpress' ? 'text-blue-100 font-medium' : 
+                  'text-white'
+                } text-xs uppercase`}
               >
                 {activeProject.description}
               </motion.p>
@@ -184,7 +192,11 @@ const ProjectSwapper = () => {
                 </div>
                 <div className="flex space-x-2">
                   <button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
+                    className={`${
+                      activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
+                      activeProject.id === 'wordpress' ? 'bg-blue-500 text-white' : 
+                      'bg-white bg-opacity-20 text-white'
+                    } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                   >
@@ -193,7 +205,11 @@ const ProjectSwapper = () => {
                     </svg>
                   </button>
                   <button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
+                    className={`${
+                      activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 
+                      activeProject.id === 'wordpress' ? 'bg-blue-500 text-white' : 
+                      'bg-white bg-opacity-20 text-white'
+                    } w-8 h-8 flex items-center justify-center rounded-full transition-transform hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                   >

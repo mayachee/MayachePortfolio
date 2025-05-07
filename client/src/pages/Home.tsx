@@ -285,9 +285,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
                         <span className="text-white text-xs font-archivo">88%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '88%', animationDelay: '1.3s' }}
                         ></div>
                       </div>
@@ -298,9 +298,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
                         <span className="text-white text-xs font-archivo">92%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '92%', animationDelay: '1.4s' }}
                         ></div>
                       </div>
@@ -311,9 +311,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
                         <span className="text-white text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '1.5s' }}
                         ></div>
                       </div>
@@ -324,9 +324,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
                         <span className="text-white text-xs font-archivo">85%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '1.6s' }}
                         ></div>
                       </div>
