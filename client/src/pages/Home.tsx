@@ -41,19 +41,24 @@ const Home = () => {
                 </div>
                 <div className="relative mt-16">
                   <h2 className="font-archivo text-white text-5xl font-extrabold leading-tight tracking-tight">
-                    I'M <span className="text-mayache-green">MAYACHE</span>,
-                    <br/>
-                    A DESIGNER<br/>
-                    AND<br/>
-                    SOFTWARE<br/>
-                    DEVELOPER<br/>
-                    BASED IN<br/>
-                    MOROCCO.
+                    {t('intro.title').split('\n').map((line, i) => (
+                      <span key={i}>
+                        {i === 0 ? (
+                          <>
+                            {line.replace('MAYACHE', '')} 
+                            <span className="text-mayache-green">MAYACHE</span>
+                          </>
+                        ) : (
+                          line
+                        )}
+                        <br/>
+                      </span>
+                    ))}
                   </h2>
                 </div>
                 <div>
                   <p className="text-white text-sm mt-6 font-normal uppercase tracking-wide">
-                    A dedicated and self-taught Full-Stack Developer and Designer with a strong foundation in software engineering, specializing in creating and designing innovative websites, applications, and digital solutions. Currently pursuing advanced studies at 1337 Coding School (part of Mohammed VI Polytechnic University and 42 Network), I bring hands-on experience in web development, UI/UX design, and modern frameworks. With fluent German skills (B2 level) and a strong motivation to relocate to an English-speaking country, I am eager to contribute to the global tech industry as a Software Developer and work on innovative projects.
+                    {t('intro.description')}
                   </p>
                 </div>
               </div>
@@ -72,7 +77,7 @@ const Home = () => {
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
-                  PROFESSIONAL EXPERIENCE
+                  {t('nav.experience')}
                 </h2>
                 <div className="space-y-4">
                   <div>
@@ -111,7 +116,7 @@ const Home = () => {
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-3xl font-black mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
-                  SKILLS
+                  {t('nav.skills')}
                 </h2>
                 
                 {/* Hard Skills */}

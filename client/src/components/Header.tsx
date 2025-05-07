@@ -65,7 +65,7 @@ const Header = () => {
       <div className="flex items-center absolute top-[82px] left-4 z-50">
         <div className="flex items-center bg-black text-white px-3 py-1 rounded-full">
           <span className="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-          <span className="text-xs uppercase tracking-wider font-bold">Creative Developer</span>
+          <span className="text-xs uppercase tracking-wider font-bold">{t('header.jobTitle')}</span>
         </div>
       </div>
       <header className="bg-black text-white py-3 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 relative">
