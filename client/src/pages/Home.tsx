@@ -188,9 +188,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
                         <span className="text-white text-xs font-archivo">70%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '70%', animationDelay: '0.6s' }}
                         ></div>
                       </div>
@@ -201,9 +201,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
                         <span className="text-white text-xs font-archivo">65%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '65%', animationDelay: '0.7s' }}
                         ></div>
                       </div>
@@ -214,9 +214,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
                         <span className="text-white text-xs font-archivo">75%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '75%', animationDelay: '0.8s' }}
                         ></div>
                       </div>
@@ -227,9 +227,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
                         <span className="text-white text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '0.9s' }}
                         ></div>
                       </div>
@@ -246,9 +246,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
                         <span className="text-white text-xs font-archivo">95%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '95%', animationDelay: '1.0s' }}
                         ></div>
                       </div>
@@ -259,9 +259,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
                         <span className="text-white text-xs font-archivo">90%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '90%', animationDelay: '1.1s' }}
                         ></div>
                       </div>
@@ -272,9 +272,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
                         <span className="text-white text-xs font-archivo">85%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '1.2s' }}
                         ></div>
                       </div>
