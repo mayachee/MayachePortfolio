@@ -341,10 +341,10 @@ const ProjectSwapper = () => {
               
               <motion.div 
                 variants={controlsVariants}
-                className="mt-auto pt-4 flex justify-between items-center"
+                className="mt-auto pt-4 flex justify-between items-center space-x-2 md:space-x-3"
               >
                 <motion.div 
-                  className="flex space-x-2"
+                  className="flex space-x-4 md:space-x-3 lg:space-x-2"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ 
                     opacity: 1, 
@@ -359,15 +359,16 @@ const ProjectSwapper = () => {
                   {projects.map((_: Project, idx: number) => (
                     <motion.button
                       key={idx}
-                      className={`w-3 h-3 md:w-2 md:h-2 rounded-full ${
+                      className={`w-4 h-4 md:w-3 md:h-3 lg:w-2 lg:h-2 rounded-full ${
                         idx === activeProjectIndex 
                           ? 'bg-white' 
                           : 'bg-white opacity-30'
-                      }`}
+                      } ${idx === activeProjectIndex ? 'shadow-lg' : ''}`}
                       initial={{ scale: 0.6, opacity: 0 }}
                       animate={{ 
                         scale: idx === activeProjectIndex ? 1.25 : 1,
                         opacity: idx === activeProjectIndex ? 0.9 : 0.3,
+                        boxShadow: idx === activeProjectIndex ? '0 0 10px rgba(255, 255, 255, 0.5)' : 'none',
                         transition: { 
                           delay: 0.45 + (idx * 0.05),
                           type: "spring",
@@ -388,7 +389,7 @@ const ProjectSwapper = () => {
                 </motion.div>
                 <div className="flex space-x-3">
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-12 h-12 md:w-10 md:h-10 lg:w-8 lg:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -405,12 +406,12 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-6 h-6 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-7 h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-12 h-12 md:w-10 md:h-10 lg:w-8 lg:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -427,7 +428,7 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-6 h-6 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-7 h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>
