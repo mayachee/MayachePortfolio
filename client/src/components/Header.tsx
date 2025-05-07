@@ -62,16 +62,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex items-center absolute top-[82px] left-4 z-50">
+      <div className="flex items-center absolute top-[82px] left-4 z-40 hidden sm:flex">
         <div className="flex items-center bg-black text-white px-3 py-1 rounded-full">
           <span className="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
           <span className="text-xs uppercase tracking-wider font-bold">{t('header.jobTitle')}</span>
         </div>
       </div>
-      <header className="bg-black text-white py-3 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 relative">
+      <header className="bg-black text-white py-3 px-4 md:px-6 flex justify-between items-center sticky top-0 z-50 header-container">
         <div className="flex items-center">
           <div className="logo">
-            <h1 className="font-archivo text-white text-2xl md:text-3xl font-black">
+            <h1 className="font-archivo text-white text-xl sm:text-2xl md:text-3xl font-black">
               <span className="relative inline-block">
                 M<span className="text-mayache-green">A</span>Y<span className="text-mayache-teal">A</span>CHE
               </span>
@@ -79,9 +79,9 @@ const Header = () => {
           </div>
           
           {/* Language dropdown */}
-          <div className="relative ml-4 lang-button">
+          <div className="relative ml-2 md:ml-4 lang-button">
             <button 
-              className="flex items-center justify-center bg-mayache-teal hover:bg-mayache-green transition-colors duration-300 rounded-full h-9 w-9 text-black shadow-lg hover:shadow-mayache-teal/50 border-2 border-white"
+              className="flex items-center justify-center bg-mayache-teal hover:bg-mayache-green transition-colors duration-300 rounded-full h-8 w-8 md:h-9 md:w-9 text-black shadow-lg hover:shadow-mayache-teal/50 border-2 border-white"
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
               aria-label="Change language"
             >
@@ -92,7 +92,7 @@ const Header = () => {
             {isLangMenuOpen && (
               <div className="absolute top-full left-0 mt-1 lang-menu">
                 <motion.div 
-                  className="bg-black border border-mayache-teal rounded-lg shadow-lg p-1 min-w-[120px] backdrop-blur-lg lang-menu-highlight"
+                  className="bg-black border border-mayache-teal rounded-lg shadow-lg p-1 min-w-[120px] backdrop-blur-lg lang-menu-highlight z-50"
                   initial={{ opacity: 0, y: -5, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.3, type: "spring", stiffness: 500, damping: 30 }}
@@ -141,6 +141,14 @@ const Header = () => {
               </div>
             )}
           </div>
+
+          {/* Mobile job title - displayed inline for small screens */}
+          <div className="flex items-center ml-2 sm:hidden">
+            <div className="flex items-center bg-black text-white px-2 py-0.5 rounded-full border border-gray-800">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-1"></span>
+              <span className="text-[10px] uppercase tracking-wider font-bold">{t('header.jobTitle')}</span>
+            </div>
+          </div>
         </div>
         
         <div className="flex items-center">
@@ -152,20 +160,20 @@ const Header = () => {
           </div>
           
           <div className="text-right flex items-center">
-            <h2 className="font-archivo text-white text-2xl md:text-3xl font-black tracking-tight">
+            <h2 className="font-archivo text-white text-xl sm:text-2xl md:text-3xl font-black tracking-tight">
               <span className="inline-block">
                 PORT<span className="text-mayache-teal">FOLIO</span>
               </span>
             </h2>
             <button 
-              className="ml-4 md:hidden p-2"
+              className="ml-3 md:ml-4 md:hidden p-1 bg-black rounded-md"
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="Open menu"
             >
-              <div className="flex flex-col space-y-1.5 w-6">
-                <span className="block w-6 h-0.5 bg-white"></span>
-                <span className="block w-4 h-0.5 bg-white"></span>
-                <span className="block w-5 h-0.5 bg-white ml-auto"></span>
+              <div className="flex flex-col space-y-1.5 w-5">
+                <span className="block w-5 h-0.5 bg-white"></span>
+                <span className="block w-3.5 h-0.5 bg-white"></span>
+                <span className="block w-4 h-0.5 bg-white ml-auto"></span>
               </div>
             </button>
           </div>

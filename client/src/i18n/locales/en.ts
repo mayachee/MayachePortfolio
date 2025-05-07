@@ -7,6 +7,11 @@ export default {
     experience: "PROFESSIONAL EXPERIENCE",
     education: "EDUCATION",
     projects: "PROJECTS",
+    language: "LANGUAGE",
+    sections: "NAVIGATION",
+    connect: "CONNECT",
+    messages: "CONTACT",
+    internship: "EXPERIENCE",
   },
   header: {
     jobTitle: "Creative Developer",

@@ -253,7 +253,7 @@ const ProjectSwapper = () => {
   if (!activeProject) return null;
 
   return (
-    <div className="relative h-full">
+    <div className="relative h-full project-swapper-container">
       <AnimatePresence custom={direction} mode="wait">
         <motion.div
           key={activeProject.id}
@@ -284,7 +284,7 @@ const ProjectSwapper = () => {
                     activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
                     activeProject.id === 'wordpress' ? 'text-white' : 
                     'text-white'
-                  } text-3xl font-black mb-1 leading-tight`}
+                  } text-3xl font-black mb-2 leading-tight`}
                 >
                   {activeProject.title.split('').map((char: string, index: number) => (
                     <motion.span
@@ -311,7 +311,7 @@ const ProjectSwapper = () => {
               <div className="overflow-hidden">
                 <motion.p 
                   variants={descriptionVariants}
-                  className={`${
+                  className={`project-description ${
                     activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 
                     activeProject.id === 'wordpress' ? 'text-white' : 
                     'text-white'
@@ -344,7 +344,7 @@ const ProjectSwapper = () => {
                 className="mt-auto pt-4 flex justify-between items-center"
               >
                 <motion.div 
-                  className="flex space-x-1"
+                  className="flex space-x-2"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ 
                     opacity: 1, 
@@ -359,7 +359,7 @@ const ProjectSwapper = () => {
                   {projects.map((_: Project, idx: number) => (
                     <motion.button
                       key={idx}
-                      className={`w-2 h-2 rounded-full ${
+                      className={`w-3 h-3 md:w-2 md:h-2 rounded-full ${
                         idx === activeProjectIndex 
                           ? 'bg-white' 
                           : 'bg-white opacity-30'
@@ -386,9 +386,9 @@ const ProjectSwapper = () => {
                     />
                   ))}
                 </motion.div>
-                <div className="flex space-x-2">
+                <div className="flex space-x-3">
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -405,12 +405,12 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-6 h-6 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -427,7 +427,7 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-6 h-6 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>
