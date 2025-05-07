@@ -15,7 +15,7 @@ type Project = {
 const projects: Project[] = [
   {
     id: 'car-rental',
-    title: 'CAR RENTAL SYSTEM MANAGMENT',
+    title: 'CAR RENTAL APP',
     description: 'BUILT A CAR RENTAL APP WITH NEXT.JS AND DJANGO. IMPLEMENTED VEHICLE TRACKING AND RESERVATION MANAGEMENT.',
     year: '2021-2022',
     background: 'bg-mayache-orange',
@@ -28,15 +28,6 @@ const projects: Project[] = [
     description: 'DEVELOPED CUSTOM WORDPRESS THEMES AND PLUGINS FOR VARIOUS CLIENT WEBSITES.',
     year: '2020-2021',
     background: 'bg-mayache-blue',
-    yearTagBackground: 'bg-white bg-opacity-20',
-    yearTagTextColor: 'text-white'
-  },
-  {
-    id: 'inception',
-    title: 'INCEPTION',
-    description: 'CREATED A MULTI-CONTAINER INFRASTRUCTURE USING DOCKER COMPOSE WITH NGINX, WORDPRESS, AND MARIADB SERVICES.',
-    year: '1337 SCHOOL',
-    background: 'bg-mayache-teal',
     yearTagBackground: 'bg-white bg-opacity-20',
     yearTagTextColor: 'text-white'
   },
@@ -86,19 +77,17 @@ const ProjectSwapper = () => {
           }}
           className="h-full"
         >
-          <div className={`${activeProject.background} h-full flex flex-col`}>
-            <div className="section-content flex-grow flex flex-col justify-between p-6">
-              <div>
-                <span className={`inline-block px-2 py-1 ${activeProject.yearTagBackground || 'bg-black'} ${activeProject.yearTagTextColor || 'text-white'} text-xs font-bold rounded mb-2`}>
-                  {activeProject.year}
-                </span>
-                <h2 className={`font-archivo ${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-3xl font-black mb-1 leading-tight`}>
-                  {activeProject.title}
-                </h2>
-                <p className={`${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-xs font-normal uppercase`}>
-                  {activeProject.description}
-                </p>
-              </div>
+          <GridSection background={activeProject.background}>
+            <div className="section-content">
+              <span className={`inline-block px-2 py-1 ${activeProject.yearTagBackground || 'bg-black'} ${activeProject.yearTagTextColor || 'text-white'} text-xs font-bold rounded mb-2`}>
+                {activeProject.year}
+              </span>
+              <h2 className={`font-archivo ${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-3xl font-black mb-1 leading-tight`}>
+                {activeProject.title}
+              </h2>
+              <p className={`${activeProject.background === 'bg-mayache-yellow' ? 'text-black' : 'text-white'} text-xs font-normal uppercase`}>
+                {activeProject.description}
+              </p>
               
               <div className="mt-auto pt-4 flex justify-between items-center">
                 <div className="flex space-x-1">
@@ -137,7 +126,7 @@ const ProjectSwapper = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </GridSection>
         </motion.div>
       </AnimatePresence>
     </div>
