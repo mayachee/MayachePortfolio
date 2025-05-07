@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   
   // Handle scrolling effect
   useEffect(() => {
@@ -30,10 +32,27 @@ const Header = () => {
     
     return () => clearInterval(timer);
   }, []);
+
+  // Close language menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.lang-menu') && !target.closest('.lang-button')) {
+        setIsLangMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    setIsLangMenuOpen(false);
   };
+
+  // Get current language
+  const currentLanguage = i18n.language || 'en';
   
   const formattedTime = currentTime.toLocaleTimeString([], { 
     hour: '2-digit', 
@@ -59,7 +78,69 @@ const Header = () => {
             </h1>
           </div>
           
-          {/* Language buttons hidden as they don't appear in the reference image */}
+          {/* Language dropdown */}
+          <div className="relative ml-4 lang-button">
+            <button 
+              className="flex items-center justify-center bg-mayache-dark hover:bg-mayache-teal transition-colors duration-300 rounded-full h-8 w-8 text-white shadow-lg hover:shadow-mayache-teal/30"
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              aria-label="Change language"
+            >
+              <span className="uppercase text-xs font-bold">{currentLanguage.slice(0, 2)}</span>
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full"></span>
+            </button>
+            
+            {isLangMenuOpen && (
+              <div className="absolute top-full left-0 mt-1 lang-menu">
+                <motion.div 
+                  className="bg-black border border-gray-700 rounded-lg shadow-lg p-1 min-w-[120px] backdrop-blur-lg"
+                  initial={{ opacity: 0, y: -5, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.3, type: "spring", stiffness: 500, damping: 30 }}
+                >
+                  <motion.button 
+                    className={`flex items-center w-full px-3 py-2 text-xs text-left rounded hover:bg-mayache-dark transition-colors duration-300 ${currentLanguage === 'en' ? 'bg-mayache-teal bg-opacity-20 font-medium' : ''}`}
+                    onClick={() => changeLanguage('en')}
+                    whileHover={{ x: 2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="flag mr-2">🇬🇧</span>
+                    <span>English</span>
+                    {currentLanguage === 'en' && <span className="ml-auto w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+                  </motion.button>
+                  <motion.button 
+                    className={`flex items-center w-full px-3 py-2 text-xs text-left rounded hover:bg-mayache-dark transition-colors duration-300 ${currentLanguage === 'de' ? 'bg-mayache-teal bg-opacity-20 font-medium' : ''}`}
+                    onClick={() => changeLanguage('de')}
+                    whileHover={{ x: 2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="flag mr-2">🇩🇪</span>
+                    <span>Deutsch</span>
+                    {currentLanguage === 'de' && <span className="ml-auto w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+                  </motion.button>
+                  <motion.button 
+                    className={`flex items-center w-full px-3 py-2 text-xs text-left rounded hover:bg-mayache-dark transition-colors duration-300 ${currentLanguage === 'fr' ? 'bg-mayache-teal bg-opacity-20 font-medium' : ''}`}
+                    onClick={() => changeLanguage('fr')}
+                    whileHover={{ x: 2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="flag mr-2">🇫🇷</span>
+                    <span>Français</span>
+                    {currentLanguage === 'fr' && <span className="ml-auto w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+                  </motion.button>
+                  <motion.button 
+                    className={`flex items-center w-full px-3 py-2 text-xs text-left rounded hover:bg-mayache-dark transition-colors duration-300 ${currentLanguage === 'es' ? 'bg-mayache-teal bg-opacity-20 font-medium' : ''}`}
+                    onClick={() => changeLanguage('es')}
+                    whileHover={{ x: 2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="flag mr-2">🇪🇸</span>
+                    <span>Español</span>
+                    {currentLanguage === 'es' && <span className="ml-auto w-1.5 h-1.5 bg-green-500 rounded-full"></span>}
+                  </motion.button>
+                </motion.div>
+              </div>
+            )}
+          </div>
         </div>
         
         <div className="flex items-center">
