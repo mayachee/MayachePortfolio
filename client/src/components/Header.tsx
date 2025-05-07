@@ -54,7 +54,7 @@ const Header = () => {
           <div className="logo">
             <h1 className="font-archivo text-white text-2xl md:text-3xl font-black">
               <span className="relative inline-block">
-                M<span className="text-red-500">A</span>Y<span className="text-blue-500">A</span>CHE
+                M<span className="text-mayache-green">A</span>Y<span className="text-mayache-teal">A</span>CHE
               </span>
             </h1>
           </div>
