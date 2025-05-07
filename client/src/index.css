@@ -72,16 +72,16 @@
   --radius: 0.5rem;
 
   /* Custom colors - Professional & Creative Palette */
-  --mayache-green: 148 55% 45%;    /* More subdued professional green */
-  --mayache-purple: 260 60% 55%;   /* Sophisticated purple */
-  --mayache-pink: 330 75% 55%;     /* Balanced pink */
-  --mayache-red: 355 80% 50%;      /* Less aggressive red */
-  --mayache-yellow: 45 85% 60%;    /* Warmer professional yellow */
-  --mayache-blue: 210 70% 50%;     /* Classic professional blue */
-  --mayache-brown: 25 60% 40%;     /* Rich earthy brown */
-  --mayache-orange: 20 80% 55%;    /* Muted professional orange */
-  --mayache-teal: 175 65% 45%;     /* Balanced teal */
-  --mayache-dark: 220 20% 18%;     /* Slightly blue-tinted dark */
+  --mayache-green: 152 45% 40%;    /* Corporate professional green */
+  --mayache-purple: 255 50% 50%;   /* Executive purple */
+  --mayache-pink: 335 60% 45%;     /* Corporate pink */
+  --mayache-red: 350 65% 45%;      /* Business-friendly red */
+  --mayache-yellow: 43 70% 55%;    /* Professional gold accent */
+  --mayache-blue: 212 60% 45%;     /* Corporate blue */
+  --mayache-brown: 28 50% 35%;     /* Executive brown */
+  --mayache-orange: 24 65% 50%;    /* Professional orange */
+  --mayache-teal: 180 55% 40%;     /* Business teal */
+  --mayache-dark: 215 30% 15%;     /* Rich corporate dark */
 }
 
 @layer base {
@@ -90,7 +90,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-mayache-dark text-foreground;
+    @apply font-sans antialiased bg-black text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -168,87 +168,87 @@
 
   .bg-mayache-green,
   .bg-green-400 {
-    background-color: hsl(148, 55%, 45%);
+    background-color: hsl(152, 45%, 40%);
   }
 
   .bg-mayache-purple,
   .bg-purple-600 {
-    background-color: hsl(260, 60%, 55%);
+    background-color: hsl(255, 50%, 50%);
   }
 
   .bg-mayache-pink,
   .bg-pink-500 {
-    background-color: hsl(330, 75%, 55%);
+    background-color: hsl(335, 60%, 45%);
   }
 
   .bg-mayache-red,
   .bg-red-500 {
-    background-color: hsl(355, 80%, 50%);
+    background-color: hsl(350, 65%, 45%);
   }
 
   .bg-mayache-yellow,
   .bg-yellow-400 {
-    background-color: hsl(45, 85%, 60%);
+    background-color: hsl(43, 70%, 55%);
   }
 
   .bg-mayache-blue {
-    background-color: hsl(210, 70%, 50%);
+    background-color: hsl(212, 60%, 45%);
   }
   
   .bg-mayache-brown {
-    background-color: hsl(25, 60%, 40%);
+    background-color: hsl(28, 50%, 35%);
   }
   
   .bg-mayache-orange {
-    background-color: hsl(20, 80%, 55%);
+    background-color: hsl(24, 65%, 50%);
   }
   
   .bg-mayache-teal {
-    background-color: hsl(175, 65%, 45%);
+    background-color: hsl(180, 55%, 40%);
   }
 
   .bg-mayache-dark {
-    background-color: hsl(220, 20%, 18%);
+    background-color: hsl(215, 30%, 15%);
   }
 
   .text-mayache-green {
-    color: hsl(148, 55%, 45%);
+    color: hsl(152, 45%, 40%);
   }
 
   .text-mayache-purple {
-    color: hsl(260, 60%, 55%);
+    color: hsl(255, 50%, 50%);
   }
 
   .text-mayache-pink {
-    color: hsl(330, 75%, 55%);
+    color: hsl(335, 60%, 45%);
   }
 
   .text-mayache-red {
-    color: hsl(355, 80%, 50%);
+    color: hsl(350, 65%, 45%);
   }
 
   .text-mayache-yellow {
-    color: hsl(45, 85%, 60%);
+    color: hsl(43, 70%, 55%);
   }
 
   .text-mayache-blue {
-    color: hsl(210, 70%, 50%);
+    color: hsl(212, 60%, 45%);
   }
   
   .text-mayache-brown {
-    color: hsl(25, 60%, 40%);
+    color: hsl(28, 50%, 35%);
   }
   
   .text-mayache-orange {
-    color: hsl(20, 80%, 55%);
+    color: hsl(24, 65%, 50%);
   }
   
   .text-mayache-teal {
-    color: hsl(175, 65%, 45%);
+    color: hsl(180, 55%, 40%);
   }
 
   .text-mayache-dark {
-    color: hsl(220, 20%, 18%);
+    color: hsl(215, 30%, 15%);
   }
 
   /* Advanced hover and animation effects */
@@ -389,7 +389,7 @@
     width: 100%;
     min-height: 100vh;
     height: 100%;
-    background-color: hsl(220, 20%, 12%);
+    background-color: hsl(215, 30%, 11%);
     overflow: hidden;
     position: relative;
   }
