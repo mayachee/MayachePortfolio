@@ -341,10 +341,10 @@ const ProjectSwapper = () => {
               
               <motion.div 
                 variants={controlsVariants}
-                className="mt-auto pt-4 flex justify-between items-center space-x-2 md:space-x-3"
+                className="mt-auto pt-4 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:justify-between sm:items-center project-controls"
               >
                 <motion.div 
-                  className="flex space-x-4 md:space-x-3 lg:space-x-2"
+                  className="flex justify-center space-x-5 sm:space-x-4 md:space-x-3 lg:space-x-2 project-indicators"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ 
                     opacity: 1, 
@@ -359,7 +359,7 @@ const ProjectSwapper = () => {
                   {projects.map((_: Project, idx: number) => (
                     <motion.button
                       key={idx}
-                      className={`w-4 h-4 md:w-3 md:h-3 lg:w-2 lg:h-2 rounded-full ${
+                      className={`w-5 h-5 sm:w-4 sm:h-4 md:w-3 md:h-3 lg:w-2 lg:h-2 rounded-full project-indicator ${
                         idx === activeProjectIndex 
                           ? 'bg-white' 
                           : 'bg-white opacity-30'
@@ -367,8 +367,8 @@ const ProjectSwapper = () => {
                       initial={{ scale: 0.6, opacity: 0 }}
                       animate={{ 
                         scale: idx === activeProjectIndex ? 1.25 : 1,
-                        opacity: idx === activeProjectIndex ? 0.9 : 0.3,
-                        boxShadow: idx === activeProjectIndex ? '0 0 10px rgba(255, 255, 255, 0.5)' : 'none',
+                        opacity: idx === activeProjectIndex ? 1 : 0.4,
+                        boxShadow: idx === activeProjectIndex ? '0 0 10px rgba(255, 255, 255, 0.7)' : 'none',
                         transition: { 
                           delay: 0.45 + (idx * 0.05),
                           type: "spring",
@@ -387,9 +387,9 @@ const ProjectSwapper = () => {
                     />
                   ))}
                 </motion.div>
-                <div className="flex space-x-3">
+                <div className="flex justify-center space-x-4 project-nav-buttons">
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-12 h-12 md:w-10 md:h-10 lg:w-8 lg:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-14 h-14 sm:w-12 sm:h-12 md:w-10 md:h-10 flex items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
                     onClick={prevProject}
                     aria-label="Previous project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -406,12 +406,12 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-7 h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-8 h-8 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>
                   <motion.button 
-                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-12 h-12 md:w-10 md:h-10 lg:w-8 lg:h-8 flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110`}
+                    className={`${activeProject.background === 'bg-mayache-yellow' ? 'bg-black text-white' : 'bg-white bg-opacity-20 text-white'} w-14 h-14 sm:w-12 sm:h-12 md:w-10 md:h-10 flex items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
                     onClick={nextProject}
                     aria-label="Next project"
                     whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
@@ -428,7 +428,7 @@ const ProjectSwapper = () => {
                       }
                     }}
                   >
-                    <svg className="w-7 h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-8 h-8 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-5 lg:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </motion.button>

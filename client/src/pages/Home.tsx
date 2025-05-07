@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
@@ -34,15 +35,29 @@ const Home = () => {
               id="about"
               delay={0.1}
               index={0}
+              className="intro-section"
             >
-              <div className="section-content flex flex-col justify-between">
+              <div className="section-content flex flex-col justify-between h-full">
                 <div className="absolute top-4 right-4 hidden sm:block">
                   <span className="text-xs font-bold text-white">EST. 2020</span>
                 </div>
-                <div className="relative mt-8 md:mt-16">
-                  <h2 className="font-archivo text-white text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+                <div className="flex items-center sm:items-start sm:block absolute top-4 left-4 sm:relative sm:top-0 sm:left-0">
+                  <span className="sm:hidden px-2 py-1 bg-black bg-opacity-30 text-white text-xs rounded-md font-bold">EST. 2020</span>
+                </div>
+                <div className="relative mt-4 sm:mt-8 md:mt-16">
+                  <motion.h1 
+                    className="font-archivo text-white text-4xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
                     {t('intro.title').split('\n').map((line, i) => (
-                      <span key={i}>
+                      <motion.span 
+                        key={i}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                      >
                         {i === 0 ? (
                           <>
                             {line.replace('MAYACHE', '')} 
@@ -52,14 +67,19 @@ const Home = () => {
                           line
                         )}
                         <br/>
-                      </span>
+                      </motion.span>
                     ))}
-                  </h2>
+                  </motion.h1>
                 </div>
-                <div>
-                  <p className="text-white text-sm mt-4 md:mt-6 font-normal uppercase tracking-wide">
+                <div className="mt-6 sm:mt-4 md:mt-6">
+                  <motion.p 
+                    className="text-white text-base sm:text-sm md:text-base mt-2 font-normal uppercase tracking-wide"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     {t('intro.description')}
-                  </p>
+                  </motion.p>
                 </div>
               </div>
             </GridSection>
@@ -76,21 +96,29 @@ const Home = () => {
               index={1}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
                   {t('nav.experience')}
                 </h2>
-                <div className="space-y-4">
-                  <div>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">07/2021 – 12/2021</span>
-                    <h3 className="font-archivo text-white text-lg font-bold leading-tight">
+                <div className="space-y-5">
+                  <div className="experience-item">
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-2 space-y-2 sm:space-y-0 sm:space-x-3">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">07/2021 – 12/2021</span>
+                      <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-50"></div>
+                      <span className="text-white text-sm uppercase opacity-75">{t('experience.company')}</span>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mb-2">
                       {t('experience.title')}
                     </h3>
-                    <p className="text-white text-xs uppercase">
-                      {t('experience.company')}
-                    </p>
-                    <ul className="text-white text-xs uppercase mt-2 space-y-1 list-disc pl-4">
+                    <ul className="text-white text-sm uppercase mt-3 space-y-2 list-disc pl-5">
                       {t('experience.duties').split('\n').map((duty, index) => (
-                        <li key={index}>{duty}</li>
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: 0.1 + (index * 0.1) }}
+                        >
+                          {duty}
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
@@ -116,14 +144,14 @@ const Home = () => {
               index={2}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-3 md:mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2">
+                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-3 md:mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2 section-header">
                   {t('nav.skills')}
                 </h2>
                 
                 {/* Hard Skills */}
-                <div className="mb-4 md:mb-6">
-                  <h3 className="font-archivo text-white text-lg md:text-xl font-bold mb-2 md:mb-3">{t('skills.title')}</h3>
-                  <div className="space-y-2 md:space-y-3">
+                <div className="mb-6 md:mb-8">
+                  <h3 className="font-archivo text-white text-xl md:text-2xl font-bold mb-4 md:mb-5">{t('skills.title')}</h3>
+                  <div className="space-y-3 md:space-y-4">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
                         <span className="text-white text-sm font-archivo uppercase">C / C#</span>
