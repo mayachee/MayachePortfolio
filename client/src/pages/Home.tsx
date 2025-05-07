@@ -418,29 +418,45 @@ const Home = () => {
               index={3}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
                   {t('nav.education')}
                 </h2>
-                <div className="space-y-4">
-                  <div>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">2020-PRESENT</span>
-                    <h3 className="font-archivo text-white text-lg font-bold leading-tight">
+                <div className="space-y-6">
+                  <motion.div 
+                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">2020-PRESENT</span>
+                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
                       {t('education.degree1')}
                     </h3>
-                    <p className="text-white text-xs uppercase">
+                    <p className="text-white text-sm uppercase tracking-wide">
                       {t('education.school1')}
                     </p>
-                  </div>
+                  </motion.div>
                   
-                  <div>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-1">09/2019 – 07/2021</span>
-                    <h3 className="font-archivo text-white text-lg font-bold leading-tight">
+                  <motion.div 
+                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">09/2019 – 07/2021</span>
+                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
                       {t('education.degree2')}
                     </h3>
-                    <p className="text-white text-xs uppercase">
+                    <p className="text-white text-sm uppercase tracking-wide">
                       {t('education.school2')}
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </GridSection>
