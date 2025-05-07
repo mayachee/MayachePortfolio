@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
 import ProjectSwapper from "@/components/ProjectSwapper";
+import PageTransition from "@/components/PageTransition";
 import { FaGithub } from "react-icons/fa";
 import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
 
@@ -20,11 +21,12 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
-      <Header />
-      
-      <main className="flex-grow">
-        <div className="grid-container">
+    <PageTransition>
+      <div className="min-h-screen flex flex-col bg-black">
+        <Header />
+        
+        <main className="flex-grow">
+          <div className="grid-container">
           {/* Left column - Green Block */}
           <div className="left-column">
             <GridSection 
@@ -336,6 +338,7 @@ const Home = () => {
               background="bg-mayache-teal"
               className="col-span-1"
               id="education"
+              delay={0.4}
             >
               <div className="section-content">
                 <h2 className="font-archivo text-white text-2xl font-black mb-3 leading-tight">
@@ -370,6 +373,7 @@ const Home = () => {
       
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
