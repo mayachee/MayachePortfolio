@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
                 <div>
                   <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide">
-                    With over a decade of industry-leading web development expertise, I've mastered the complete digital creation process from strategy to launch. My holistic approach combines advanced storytelling techniques with premium branding, motion design, and behavioral psychology to craft immersive digital experiences that captivate audiences and deliver exceptional business results for elite global clients.
+                    A dedicated and self-taught Full-Stack Developer and Designer with a strong foundation in software engineering, specializing in creating and designing innovative websites, applications, and digital solutions. Currently pursuing advanced studies at 1337 Coding School (part of Mohammed VI Polytechnic University and 42 Network), I bring hands-on experience in web development, UI/UX design, and modern frameworks. With fluent German skills (B2 level) and a strong motivation to relocate to an English-speaking country, I am eager to contribute to the global tech industry as a Software Developer and work on innovative projects.
                   </p>
                 </div>
               </div>
