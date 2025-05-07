@@ -1,27 +1,30 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-// Animation variants for page transitions
+// Enhanced animation variants for page transitions with subtle scale effect
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: 10,
+    scale: 0.98,
+    y: 15,
   },
   in: {
     opacity: 1,
+    scale: 1,
     y: 0,
   },
   out: {
     opacity: 0,
-    y: -10,
+    scale: 0.99,
+    y: -15,
   },
 };
 
-// Animation transition settings
+// Improved animation transition settings with custom cubic bezier
 const pageTransition = {
   type: 'tween',
-  ease: 'anticipate',
-  duration: 0.5,
+  ease: [0.33, 1, 0.68, 1], // custom cubic bezier for smooth motion
+  duration: 0.6,
 };
 
 interface PageTransitionProps {
@@ -32,7 +35,7 @@ interface PageTransitionProps {
 const PageTransition = ({ children, className = '' }: PageTransitionProps) => {
   return (
     <motion.div
-      className={className}
+      className={`${className} overflow-hidden`}
       initial="initial"
       animate="in"
       exit="out"
