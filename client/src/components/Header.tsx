@@ -73,7 +73,7 @@ const Header = () => {
           <div className="text-right flex items-center">
             <h2 className="font-archivo text-white text-2xl md:text-3xl font-black tracking-tight">
               <span className="inline-block">
-                PORT<span className="text-cyan-400">FOLIO</span>
+                PORT<span className="text-mayache-teal">FOLIO</span>
               </span>
             </h2>
             <button 
