@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
                 <div className="relative mt-16">
                   <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tight">
-                    I'M <span className="text-blue-400">MAYACHE</span>,
+                    I'M <span className="text-mayache-teal">MAYACHE</span>,
                     <br/>
                     A DESIGNER<br/>
                     AND<br/>
