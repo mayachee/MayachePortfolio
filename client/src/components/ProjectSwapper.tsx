@@ -12,47 +12,61 @@ type Project = {
   yearTagTextColor?: string;
 };
 
-// Enhanced project carousel animation variants
+// Enhanced project carousel animation variants with improved transitions
 const projectVariants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 100 : -100,
+    x: direction > 0 ? 120 : -120,
     opacity: 0,
-    scale: 0.95,
+    scale: 0.92,
+    filter: "blur(8px)",
   }),
   center: {
     x: 0,
     opacity: 1,
     scale: 1,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.5,
-      ease: [0.25, 1, 0.5, 1],
+      x: { 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 30,
+        duration: 0.6
+      },
+      opacity: { duration: 0.4 },
+      scale: { duration: 0.4 },
+      filter: { duration: 0.3 },
       when: "beforeChildren",
-      staggerChildren: 0.1,
+      staggerChildren: 0.08,
     }
   },
   exit: (direction: number) => ({
-    x: direction < 0 ? 100 : -100,
+    x: direction < 0 ? 120 : -120,
     opacity: 0,
-    scale: 0.95,
+    scale: 0.92,
+    filter: "blur(8px)",
     transition: {
-      duration: 0.5,
-      ease: [0.25, 1, 0.5, 1],
+      x: { duration: 0.4 },
+      opacity: { duration: 0.3 },
+      scale: { duration: 0.3 },
+      filter: { duration: 0.2 },
     }
   })
 };
 
-// Animation variants for project content elements
+// Animation variants for project content elements with improved staggering
 const contentVariants = {
   hidden: { 
     opacity: 0,
-    y: 15 
+    y: 20,
+    scale: 0.98
   },
   visible: { 
-    opacity: 1,
+    opacity: 1, 
     y: 0,
+    scale: 1,
     transition: {
-      duration: 0.4,
-      ease: [0.25, 1, 0.5, 1],
+      duration: 0.5,
+      ease: [0.2, 0.65, 0.3, 0.9], // Custom cubic bezier for smooth animation
     }
   }
 };
