@@ -350,6 +350,7 @@
   .animate-skill-fill {
     animation: skill-fill 1.5s ease-out forwards;
     width: 0;
+    background-color: hsl(84, 97%, 62%); /* Bright lime #AFFC41 */
   }
   
   @keyframes skill-fill {
@@ -364,6 +365,10 @@
       width: var(--width, 100%);
       opacity: 1;
     }
+  }
+  
+  .skill-bar-bg {
+    background-color: rgba(255, 255, 255, 0.1);
   }
   
   .blur-xl {

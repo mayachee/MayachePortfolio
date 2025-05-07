@@ -125,7 +125,7 @@ const Home = () => {
                       </div>
                       <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full bg-mayache-green rounded-full animate-skill-fill" 
                           style={{ width: '85%', animationDelay: '0.1s' }}
                         ></div>
                       </div>
@@ -136,9 +136,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">JAVA</span>
                         <span className="text-white text-xs font-archivo">80%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '80%', animationDelay: '0.2s' }}
                         ></div>
                       </div>
@@ -149,9 +149,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
                         <span className="text-white text-xs font-archivo">90%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '90%', animationDelay: '0.3s' }}
                         ></div>
                       </div>
@@ -162,9 +162,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
                         <span className="text-white text-xs font-archivo">95%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '95%', animationDelay: '0.4s' }}
                         ></div>
                       </div>
@@ -175,9 +175,9 @@ const Home = () => {
                         <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
                         <span className="text-white text-xs font-archivo">75%</span>
                       </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-white rounded-full animate-skill-fill" 
+                          className="h-full rounded-full animate-skill-fill" 
                           style={{ width: '75%', animationDelay: '0.5s' }}
                         ></div>
                       </div>
