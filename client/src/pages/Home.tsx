@@ -44,9 +44,9 @@ const Home = () => {
                 <div className="flex items-center sm:items-start sm:block absolute top-4 left-4 sm:relative sm:top-0 sm:left-0">
                   <span className="sm:hidden px-2 py-1 bg-black bg-opacity-30 text-white text-xs rounded-md font-bold">EST. 2020</span>
                 </div>
-                <div className="relative mt-4 sm:mt-8 md:mt-16">
+                <div className="relative mt-2 sm:mt-8 md:mt-16">
                   <motion.h1 
-                    className="font-archivo text-white text-4xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+                    className="font-archivo text-white text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -57,6 +57,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                        className="inline-block mb-1"
                       >
                         {i === 0 ? (
                           <>
@@ -71,9 +72,9 @@ const Home = () => {
                     ))}
                   </motion.h1>
                 </div>
-                <div className="mt-6 sm:mt-4 md:mt-6">
+                <div className="mt-3 sm:mt-4 md:mt-6">
                   <motion.p 
-                    className="text-white text-base sm:text-sm md:text-base mt-2 font-normal uppercase tracking-wide"
+                    className="text-white text-sm sm:text-sm md:text-base font-normal uppercase tracking-wide"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
