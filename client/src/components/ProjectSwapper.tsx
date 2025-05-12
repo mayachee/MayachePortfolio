@@ -145,7 +145,7 @@ const ProjectSwapper = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    const years = ['2021-2022', '2020-2021', '1337 SCHOOL', '2022', '1337 SCHOOL'];
+    const years = ['2025', '2020-2021', '1337 SCHOOL', '2022', '1337 SCHOOL'];
     const ids = ['car-rental', 'wordpress', 'inception', 'react-laravel', 'ft-transcendence'];
     const projectColors = [
       { background: 'bg-mayache-blue', yearTagBackground: 'bg-white bg-opacity-20', yearTagTextColor: 'text-white' },
