@@ -4,17 +4,25 @@ export default {
     skills: "FÄHIGKEITEN",
     portfolio: "PORTFOLIO",
     contact: "KONTAKT",
+    experience: "BERUFSERFAHRUNG",
+    education: "AUSBILDUNG",
+    projects: "PROJEKTE",
+  },
+  header: {
+    jobTitle: "Kreativer Entwickler",
   },
   intro: {
-    title: "ICH BIN MAYACHE,\nDESIGNER\nUND\nFULLSTACK\nENTWICKLER\nAUS\nMAROKKO.",
-    description: "Ich entwickle seit mehr als 10 Jahren Webseiten. Ich dachte immer, dass es nicht viel Spaß macht, sich nur auf einen Bereich zu konzentrieren, also habe ich den gesamten Prozess gelernt: Planung, Entwicklung und Veröffentlichung von Webseiten. Das ermöglichte es mir, mich auf Storytelling zu spezialisieren und Fähigkeiten wie Branding, Design und Animation zu nutzen, um die Aufmerksamkeit der Nutzer auf die richtigen Stellen zu lenken und ansprechendere und einprägsamere Erlebnisse zu schaffen.",
+    title: "ICH BIN MAYACHE,\nDESIGNER\nUND\nSOFTWARE\nENTWICKLER\nAUS\nMAROKKO.",
+    description: "Ein engagierter und autodidaktischer Full-Stack-Entwickler und Designer mit einer soliden Grundlage in Softwareentwicklung, spezialisiert auf die Erstellung und Gestaltung innovativer Websites, Anwendungen und digitaler Lösungen. Derzeit absolviere ich ein fortgeschrittenes Studium an der 1337 Coding School (Teil der Mohammed VI Polytechnic University und des 42 Network) und bringe praktische Erfahrung in Webentwicklung, UI/UX-Design und modernen Frameworks mit. Mit fließenden Deutschkenntnissen (B2-Niveau) und einer starken Motivation, in ein englischsprachiges Land zu ziehen, bin ich bestrebt, als Softwareentwickler zur globalen Technologiebranche beizutragen und an innovativen Projekten zu arbeiten.",
   },
-  internship: {
-    title: "PRAKTIKUM",
-    description: "Tag schöne Ergänzung schreckliche vernünftige Güte zwei Verachtung. Abend für verheiratete seine Kontolöschung. Schätzbare mich zur Verfügung stellen von Mondlicht herzliche Neugier. Verzögerung schnelle Freude teilen lassen Alter Herrenhaus sechs. Ging warum weit sah viele wussten. Exquisiter hervorragender Sohn Gentleman ihre Schärfe. Ist Stimme Gesamtleistung Herr ye könnte immer noch rund sein.",
+  experience: {
+    title: "WEB-ENTWICKLUNGSPRAKTIKANT",
+    company: "ITT ONE, TETOUAN, MAROKKO",
+    duties: "Mitarbeit an Webentwicklungsprojekten und Sammlung praktischer Erfahrungen in Front-End- und Back-End-Technologien.\nBeitrag zur Entwicklung von E-Commerce-Plattformen und internen Tools zur Steigerung der Teamproduktivität.",
   },
   skills: {
-    title: "FÄHIGKEITEN",
+    title: "HARD SKILLS",
+    softTitle: "SOFT SKILLS",
     list: [
       "FIGMA",
       "PHOTOSHOP",
@@ -24,6 +32,12 @@ export default {
       "PYTHON",
       "PHP",
     ],
+  },
+  education: {
+    degree1: "INFORMATIK",
+    school1: "1337 SCHOOL (42 NETWORK), UM6P",
+    degree2: "FACHINFORMATIKER",
+    school2: "TECHNIKEN DER IT-ENTWICKLUNG",
   },
   portfolio: {
     webflow: {
@@ -45,20 +59,37 @@ export default {
     github: "GitHub",
     items: [
       {
-        title: "E-Commerce Plattform",
+        title: "AUTO-VERMIETUNGS APP (2025)",
+        description: "ICH HABE EINE FULL-STACK AUTO-VERMIETUNGS-ANWENDUNG MIT NEXT.JS UND DJANGO ENTWICKELT. ICH HABE ECHTZEIT-FAHRZEUGVERFOLGUNG, FORTGESCHRITTENE RESERVIERUNGSVERWALTUNG UND SICHERE ZAHLUNGSINTEGRATION IMPLEMENTIERT. RESPONSIVE BENUTZEROBERFLÄCHE MIT TAILWIND CSS UND MATERIAL DESIGN KOMPONENTEN.",
         tech: "NextJS, TailwindCSS, Stripe",
         live: "#",
         github: "#",
       },
       {
-        title: "SaaS Dashboard",
-        tech: "React, NextJS, GraphQL",
+        title: "WORDPRESS WEBSITES",
+        description: "ICH HABE BENUTZERDEFINIERTE WORDPRESS-THEMES UND PLUGINS FÜR ÜBER 10 KUNDEN-WEBSITES ENTWICKELT. ICH HABE RESPONSIVE DESIGNS MIT ERWEITERTEN ANPASSUNGSOPTIONEN ERSTELLT. ICH HABE WEB-ANALYTIK, SEO-OPTIMIERUNG UND E-COMMERCE-FUNKTIONALITÄT IMPLEMENTIERT. ICH HABE LEISTUNG UND SICHERHEIT AUF ALLEN WEBSITES AUFRECHTERHALTEN.",
+        tech: "WordPress, PHP, JavaScript",
         live: "#",
         github: "#",
       },
       {
-        title: "KI Inhaltsgenerator",
-        tech: "Python, NextJS, OpenAI",
+        title: "INCEPTION",
+        description: "ICH HABE EINE MULTI-CONTAINER-INFRASTRUKTUR MIT DOCKER COMPOSE MIT NGINX-, WORDPRESS- UND MARIADB-DIENSTEN ERSTELLT. ICH HABE SICHERE KONFIGURATION MIT TLS-ZERTIFIKATEN, OPTIMIERTEM CACHING UND AUTOMATISIERTEM DEPLOYMENT IMPLEMENTIERT. ENTWORFEN FÜR HOHE VERFÜGBARKEIT UND SKALIERBARKEIT IN PRODUKTIONSUMGEBUNGEN.",
+        tech: "Docker, Nginx, MariaDB",
+        live: "#",
+        github: "#",
+      },
+      {
+        title: "REACT + LARAVEL PROJEKT",
+        description: "ICH HABE EINE MODERNE WEBANWENDUNG MIT REACT-FRONTEND UND LARAVEL-BACKEND ENTWICKELT. ICH HABE AUTHENTIFIZIERUNG MIT JWT, ECHTZEIT-BENACHRICHTIGUNGEN MIT PUSHER UND INTEGRIERTE RESTFUL-API-DIENSTE IMPLEMENTIERT. MIT DATANVISUALISIERUNGS-DASHBOARDS UND UMFASSENDER ADMIN-FUNKTIONALITÄT.",
+        tech: "React, Laravel, JWT",
+        live: "#",
+        github: "#",
+      },
+      {
+        title: "FT_TRANSCENDENCE",
+        description: "ICH HABE EIN ECHTZEIT-MULTIPLAYER-PONG-SPIEL MIT REACTJS, NESTJS UND WEBSOCKETS ENTWICKELT. ICH HABE BENUTZERAUTHENTIFIZIERUNG MIT OAUTH 2.0, LIVE-CHAT-FUNKTIONALITÄT, FREUNDE-SYSTEM UND TURNIER-BESTENLISTEN IMPLEMENTIERT. ICH HABE RESPONSIVE UI MIT BENUTZERDEFINIERTEN ANIMATIONEN UND SPIELPHYSIK ENTWORFEN.",
+        tech: "React, NestJS, WebSockets",
         live: "#",
         github: "#",
       },

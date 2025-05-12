@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GridSection from "@/components/GridSection";
+import ProjectSwapper from "@/components/ProjectSwapper";
+import PageTransition from "@/components/PageTransition";
 import { FaGithub } from "react-icons/fa";
-import { SiWordpress, SiFigma } from "react-icons/si";
-import MessageSentImg from "../assets/message-sent.png";
-import PortfolioBgImg from "../assets/portfolio-bg.jpg";
-import UxSchoolImg from "../assets/ux-school.webp";
+import { SiWordpress, SiFigma, SiReact } from "react-icons/si";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -22,332 +22,387 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
-      <Header />
-      
-      <main className="flex-grow">
-        <div className="grid-container">
-          {/* Left column - Green Block */}
-          <GridSection 
-            background="bg-mayache-green" 
-            colSpan="col-span-2" 
-            rowSpan="row-span-2"
-            id="about"
-          >
-            <div className="flex flex-col h-full justify-between relative">
-              <div className="absolute top-0 right-0 bg-black bg-opacity-10 p-2 rounded-bl-lg">
-                <span className="text-xs font-bold text-black opacity-70">EST. 2020</span>
-              </div>
-              <div className="relative">
-                <div className="absolute -left-2 top-0 w-1 h-32 bg-black bg-opacity-20 rounded"></div>
-                <span className="inline-block px-3 py-1 bg-black text-white text-sm font-bold rounded mb-4 hover-scale shadow-md">
-                  <span className="inline-block w-2 h-2 rounded-full bg-white mr-2 animate-pulse"></span>
-                  CREATIVE DEVELOPER
-                </span>
-                <h2 className="font-archivo text-black text-5xl font-extrabold leading-tight tracking-tighter text-shadow-sm relative z-10">
-                  <span className="relative inline-block">
-                    I'M <span className="gradient-text bg-clip-text">MAYACHE</span>,
-                    <span className="absolute -right-2 -top-2 bg-mayache-teal text-white text-xs px-1 rounded-full font-bold transform rotate-12">PRO</span>
-                  </span>
-                  <br/>
-                  A DESIGNER<br/>
-                  AND<br/>
-                  SOFTWARE<br/>
-                  DEVELOPER<br/>
-                  BASED IN<br/>
-                  MOROCCO.
-                </h2>
-                <div className="flex space-x-2 mt-2">
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">React</span>
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Next.js</span>
-                  <span className="inline-block bg-black bg-opacity-10 text-black text-xs px-2 py-1 rounded">Figma</span>
-                </div>
-              </div>
-              <div>
-                <p className="text-black text-sm mt-6 font-normal uppercase tracking-wide leading-relaxed">
-                  I have been building websites for more than 10 years. I always thought that focusing on just one area was not much fun, so I learned the whole process: planning, building and launching websites. This allowed me to specialize in storytelling, using skills like branding, design and motion, to drive the user's attention to the right places and create more engaging and memorable experiences.
-                </p>
-
-              </div>
-            </div>
-          </GridSection>
-
-          {/* Middle column - Purple Block */}
-          <div className="col-span-1 grid grid-rows-2 gap-2">
-            {/* INTERNSHIP Section with Slider */}
+    <PageTransition>
+      <div className="min-h-screen flex flex-col bg-black">
+        <Header />
+        
+        <main className="flex-grow">
+          <div className="grid-container">
+          {/* Left column - Teal Block */}
+          <div className="left-column">
             <GridSection 
-              background="bg-mayache-purple" 
-              id="internship"
+              background="bg-mayache-teal" 
+              id="about"
+              delay={0.1}
+              index={0}
+              className="intro-section"
             >
-              <div className="flex flex-col h-full justify-between relative overflow-hidden">
-                {/* Indicator dots */}
-                <div className="flex space-x-1 mb-2">
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 1 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 2 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
-                  <div className={`w-2 h-2 rounded-full ${activeInternship === 3 ? 'bg-white' : 'bg-white bg-opacity-30'} transition-all duration-300`}></div>
+              <div className="section-content flex flex-col justify-between h-full">
+                <div className="absolute top-4 right-4 hidden sm:block">
+                  <span className="text-xs font-bold text-white">EST. 2020</span>
                 </div>
-                
-                {/* Content container with slider */}
-                <div className="relative overflow-hidden h-36">
-                  {/* INTERNSHIP 1 */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2022-2023</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">WEB DEVELOPMENT</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Focused on frontend development with modern frameworks including React and Next.js. Created responsive interfaces.
-                    </p>
-                  </div>
-                  
-                  {/* INTERNSHIP 2 */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2023-2024</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">UI/UX DESIGN</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Explored user experience design and interface prototyping. Created wireframes and conducted user testing.
-                    </p>
-                  </div>
-                  
-                  {/* INTERNSHIP 3 */}
-                  <div className={`transition-all duration-500 absolute inset-0 ${activeInternship === 3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-                    <span className="inline-block px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded mb-2">2024-2025</span>
-                    <h2 className="font-archivo text-white text-4xl font-black mb-2 leading-tight">
-                      INTERNSHIP
-                    </h2>
-                    <h3 className="text-white text-base font-archivo mb-2">BACKEND DEV</h3>
-                    <p className="text-white text-xs font-normal uppercase tracking-wide leading-relaxed">
-                      Specialized in server-side technologies and database optimization. Built secure APIs with best practices.
-                    </p>
-                  </div>
+                <div className="flex items-center sm:items-start sm:block absolute top-3 left-3 sm:relative sm:top-0 sm:left-0">
+                  <span className="sm:hidden px-2 py-1 bg-black bg-opacity-30 text-white text-xs rounded-md font-bold">EST. 2020</span>
                 </div>
-                
-                {/* Navigation buttons */}
-                <div className="flex space-x-2 mt-auto justify-end">
-                  <button 
-                    className="bg-white bg-opacity-20 backdrop-blur-sm w-8 h-8 flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-colors duration-200 rounded-full shadow-md"
-                    onClick={showPreviousInternship}
+                <div className="relative mt-2 sm:mt-8 md:mt-16">
+                  <motion.h1 
+                    className="font-archivo text-white text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                  <button 
-                    className="bg-white bg-opacity-20 backdrop-blur-sm w-8 h-8 flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-colors duration-200 rounded-full shadow-md"
-                    onClick={showNextInternship}
+                    {t('intro.title').split('\n').map((line, i) => (
+                      <motion.span 
+                        key={i}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                        className="inline-block mb-1"
+                      >
+                        {i === 0 ? (
+                          <>
+                            {line.replace('MAYACHE', '')} 
+                            <span className="text-mayache-green">MAYACHE</span>
+                          </>
+                        ) : (
+                          line
+                        )}
+                        <br/>
+                      </motion.span>
+                    ))}
+                  </motion.h1>
+                </div>
+                <div className="mt-3 sm:mt-4 md:mt-6">
+                  <motion.p 
+                    className="text-white text-sm sm:text-sm md:text-base font-normal uppercase tracking-wide"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
+                    {t('intro.description')}
+                  </motion.p>
                 </div>
-              </div>
-            </GridSection>
-            
-            {/* UI/UX Private School section */}
-            <GridSection 
-              background="bg-mayache-yellow"
-            >
-              <div className="flex flex-col h-full justify-between hover-lift">
-                <div>
-                  <span className="inline-block px-2 py-1 bg-black text-white text-xs font-bold rounded mb-2">FEATURED</span>
-                  <h2 className="font-archivo text-black text-3xl font-black mb-1 leading-tight">
-                    UI/UX PRIVATE SCHOOL
-                  </h2>
-                  <h3 className="text-black text-base font-archivo mb-2 opacity-90">DESIGN ACADEMY</h3>
-                  <p className="text-black text-xs font-normal uppercase tracking-wide leading-relaxed">
-                    Specialized in UI/UX design for educational platforms. Creating innovative digital experiences with modern interface design principles.
-                  </p>
-                </div>
-
               </div>
             </GridSection>
           </div>
 
-          <div className="col-span-1 grid grid-rows-2 gap-2">
-            {/* Right column top - Red Block with hover effect */}
+          {/* Middle column */}
+          <div className="column">
+            {/* INTERNSHIP Section with Slider - Blue Block */}
             <GridSection 
-              background="bg-mayache-red" 
-              colSpan=""
+              background="bg-mayache-blue" 
+              id="experience"
+              className="transition-all"
+              delay={0.15}
+              index={1}
+            >
+              <div className="section-content">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
+                  {t('nav.experience')}
+                </h2>
+                <div className="space-y-5">
+                  <div className="experience-item">
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-2 space-y-2 sm:space-y-0 sm:space-x-3">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">2025</span>
+                      <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-50"></div>
+                      <span className="text-white text-sm uppercase opacity-75">{t('experience.company')}</span>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mb-2">
+                      {t('experience.title')}
+                    </h3>
+                    <ul className="text-white text-sm uppercase mt-3 space-y-2 list-disc pl-5">
+                      {t('experience.duties').split('\n').map((duty, index) => (
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: 0.1 + (index * 0.1) }}
+                        >
+                          {duty}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </GridSection>
+            
+            {/* Projects Grid with Swapping Feature */}
+            <div className="row-span-2">
+              <ProjectSwapper />
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div className="column">
+            {/* Skills - Purple Block */}
+            <GridSection 
+              background="bg-mayache-purple"
               id="skills"
+              rowSpan="row-span-2" 
+              className="overflow-y-auto"
+              delay={0.2}
+              index={2}
             >
-              <div className="relative overflow-hidden h-full group" style={{ perspective: '1500px' }}>
-                <div className="h-full w-full transition-all duration-700 ease-out transform-gpu preserve-3d hover:rotate-y-180 cursor-pointer relative">
-                  {/* Front side - HARDSKILL */}
-                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-gradient-to-br from-mayache-red to-mayache-red/90 backface-hidden">
-                    <div className="absolute top-4 right-4 flex space-x-1">
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-60"></span>
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full opacity-80"></span>
-                      <span className="block w-1.5 h-1.5 bg-white rounded-full"></span>
-                    </div>
-                    
-                    <div className="flex items-center mb-2">
-                      <span className="inline-flex items-center px-2 py-1 bg-white bg-opacity-20 text-white text-xs font-bold rounded">
-                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
-                        FLIP ME
-                      </span>
-                      <div className="ml-auto rotate-180 text-white/30 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
+              <div className="section-content">
+                <h2 className="font-archivo text-white text-2xl md:text-3xl font-black mb-3 md:mb-4 leading-tight sticky top-0 z-10 bg-mayache-purple py-2 section-header">
+                  {t('nav.skills')}
+                </h2>
+                
+                {/* Hard Skills */}
+                <div className="mb-6 md:mb-8">
+                  <h3 className="font-archivo text-white text-xl md:text-2xl font-bold mb-4 md:mb-5">{t('skills.title')}</h3>
+                  <div className="space-y-3 md:space-y-4">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">C / C#</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-mayache-green rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '0.1s' }}
+                        ></div>
                       </div>
                     </div>
                     
-                    <h2 className="font-archivo text-white text-4xl font-black mb-6 leading-tight text-shadow-sm relative">
-                      HARD<br/>SKILLS
-                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-white opacity-30"></div>
-                    </h2>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">FIGMA</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">PHOTOSHOP</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">REACT</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">NEXT.JS</span>
-                        </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">JAVA</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
                       </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">JAVA/C++</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">PYTHON</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">PHP</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-white bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-white rounded-full"></span>
-                          </span>
-                          <span className="text-white text-base font-archivo uppercase">TYPESCRIPT</span>
-                        </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '0.2s' }}
+                        ></div>
                       </div>
                     </div>
                     
-                    {/* Decorative circles */}
-                    <div className="absolute bottom-3 right-3 w-24 h-24 bg-black bg-opacity-5 rounded-full"></div>
-                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-black bg-opacity-5 rounded-full"></div>
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
+                        <span className="text-white text-xs font-archivo">90%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '90%', animationDelay: '0.3s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
+                        <span className="text-white text-xs font-archivo">95%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '95%', animationDelay: '0.4s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
+                        <span className="text-white text-xs font-archivo">75%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '75%', animationDelay: '0.5s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
+                        <span className="text-white text-xs font-archivo">70%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '70%', animationDelay: '0.6s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
+                        <span className="text-white text-xs font-archivo">65%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '65%', animationDelay: '0.7s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
+                        <span className="text-white text-xs font-archivo">75%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '75%', animationDelay: '0.8s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '0.9s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">MERN STACK</span>
+                        <span className="text-white text-xs font-archivo">88%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '88%', animationDelay: '1.0s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">NEXT.JS</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.1s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">DJANGO</span>
+                        <span className="text-white text-xs font-archivo">78%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '78%', animationDelay: '1.2s' }}
+                        ></div>
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Back side - SOFTSKILL */}
-                  <div className="absolute inset-0 flex flex-col h-full p-5 bg-white rotate-y-180 backface-hidden">
-                    <div className="absolute top-4 right-4 flex space-x-1">
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-60"></span>
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full opacity-80"></span>
-                      <span className="block w-1.5 h-1.5 bg-mayache-red rounded-full"></span>
-                    </div>
-                  
-                    <div className="flex items-center mb-2">
-                      <span className="inline-flex items-center px-2 py-1 bg-mayache-red text-white text-xs font-bold rounded">
-                        <span className="w-2 h-2 bg-white rounded-full mr-1.5 animate-pulse"></span>
-                        FLIP BACK
-                      </span>
-                      <div className="ml-auto text-mayache-red/30 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
+                </div>
+                
+                {/* Soft Skills */}
+                <div>
+                  <h3 className="font-archivo text-white text-xl font-bold mb-3">{t('skills.softTitle')}</h3>
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
+                        <span className="text-white text-xs font-archivo">95%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '95%', animationDelay: '1.3s' }}
+                        ></div>
                       </div>
                     </div>
                     
-                    <h2 className="font-archivo text-mayache-red text-4xl font-black mb-4 leading-tight relative">
-                      SOFT<br/>SKILLS
-                      <div className="absolute bottom-0 left-0 w-14 h-1 bg-mayache-red opacity-30"></div>
-                    </h2>
-                    
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">TEAM PLAYER</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">COMMUNICATION</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">LEADERSHIP</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">CREATIVITY</span>
-                        </div>
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
+                        <span className="text-white text-xs font-archivo">90%</span>
                       </div>
-                      <div className="space-y-3">
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">ADAPTABILITY</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">PROBLEM SOLVING</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">TIME MANAGEMENT</span>
-                        </div>
-                        <div className="flex items-center transform hover:translate-x-1 transition-transform duration-200">
-                          <span className="flex items-center justify-center w-5 h-5 bg-mayache-red bg-opacity-10 rounded-full mr-3">
-                            <span className="w-2 h-2 bg-mayache-red rounded-full"></span>
-                          </span>
-                          <span className="text-mayache-red text-base font-archivo uppercase">DETAIL-ORIENTED</span>
-                        </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '90%', animationDelay: '1.4s' }}
+                        ></div>
                       </div>
                     </div>
                     
-                    {/* Decorative pattern */}
-                    <div className="absolute right-0 bottom-0 w-1/3 h-1/3 opacity-5">
-                      <div className="grid grid-cols-3 h-full w-full">
-                        {[...Array(9)].map((_, index) => (
-                          <div key={index} className="border border-mayache-red"></div>
-                        ))}
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.5s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
+                        <span className="text-white text-xs font-archivo">88%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '88%', animationDelay: '1.6s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
+                        <span className="text-white text-xs font-archivo">92%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '92%', animationDelay: '1.7s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
+                        <span className="text-white text-xs font-archivo">80%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '80%', animationDelay: '1.5s' }}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
+                        <span className="text-white text-xs font-archivo">85%</span>
+                      </div>
+                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full animate-skill-fill" 
+                          style={{ width: '85%', animationDelay: '1.6s' }}
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -355,124 +410,64 @@ const Home = () => {
               </div>
             </GridSection>
             
-            {/* Wanna Talk Block */}
+            {/* Education Section */}
             <GridSection 
-              background="bg-mayache-blue"
-              id="contact"
+              background="bg-mayache-green"
+              className="col-span-1"
+              id="education"
+              delay={0.25}
+              index={3}
             >
-              <div className="flex flex-col h-full justify-center hover-scale overflow-hidden relative">
-                {/* Background decoration */}
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-white bg-opacity-5 rounded-full transform translate-x-1/4 translate-y-1/4"></div>
-                <div className="absolute top-0 left-0 w-20 h-20 bg-white bg-opacity-5 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-                
-                <div className="text-center relative z-10">
-                  <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-white bg-opacity-10 blur-xl rounded-full transform scale-125 animate-pulse-slow"></div>
-                    <img 
-                      src={MessageSentImg} 
-                      alt="Message sent illustration" 
-                      className="w-32 h-32 mx-auto object-contain transition-transform duration-300 hover:scale-110 relative z-10"
-                    />
-                    <div className="absolute -top-2 -right-2 bg-white text-mayache-blue text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md animate-bounce-gentle">
-                      <span>+1</span>
+              <div className="section-content">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
+                  {t('nav.education')}
+                </h2>
+                <div className="space-y-6">
+                  <motion.div 
+                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">2020-PRESENT</span>
+                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
                     </div>
-                  </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
+                      {t('education.degree1')}
+                    </h3>
+                    <p className="text-white text-sm uppercase tracking-wide">
+                      {t('education.school1')}
+                    </p>
+                  </motion.div>
                   
-                  <h3 className="font-archivo text-white text-2xl font-black text-center mt-4 leading-tight text-shadow-sm">
-                    <span className="opacity-90">WANNA</span><br/>
-                    <span className="opacity-95">TALK?</span><br/>
-                    <span className="opacity-100">SEND ME A</span><br/>
-                    <span className="relative inline-block">
-                      MESSAGE
-                      <span className="absolute bottom-0 left-0 w-full h-1 bg-white opacity-30"></span>
-                    </span>
-                  </h3>
-                  
-
+                  <motion.div 
+                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">09/2019 – 07/2021</span>
+                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
+                      {t('education.degree2')}
+                    </h3>
+                    <p className="text-white text-sm uppercase tracking-wide">
+                      {t('education.school2')}
+                    </p>
+                  </motion.div>
                 </div>
               </div>
             </GridSection>
           </div>
-
-          {/* Bottom Row - Project Cards */}
-          {/* Project 1 - Orange Block */}
-          <GridSection 
-            background="bg-mayache-orange" 
-            colSpan="col-span-1"
-            id="portfolio"
-          >
-            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
-              {/* Corner decoration */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-white bg-opacity-10 transform rotate-45 translate-x-10 -translate-y-10 group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform duration-500"></div>
-              
-              <div className="flex items-center relative z-10">
-                <div className="flex space-x-2">
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <FaGithub className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                    <SiFigma className="h-5 w-5 text-white" />
-                  </div>
-                </div>
-                <span className="ml-auto inline-block px-2 py-0.5 bg-white bg-opacity-20 text-white text-xs font-bold rounded">2023</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
-                <h2 className="font-archivo text-white text-xl font-black leading-tight">
-                  BOOKING-APP
-                  <span className="text-sm ml-2 font-archivo-regular font-normal opacity-80">(MERN)</span>
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  A modern reservation system built using the MERN stack with real-time availability updates.
-                </p>
-
-              </div>
-            </div>
-          </GridSection>
-
-          {/* Portfolio showcase section - Teal Block */}
-          <GridSection 
-            colSpan="col-span-1"
-            background="bg-mayache-teal"
-          >
-            <div className="flex h-full flex-col justify-between hover-lift relative overflow-hidden group">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-3 h-full w-full">
-                  {[...Array(9)].map((_, index) => (
-                    <div key={index} className="border border-white border-opacity-20"></div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between relative z-10">
-                <div className="bg-white bg-opacity-20 p-1.5 rounded">
-                  <SiWordpress className="h-5 w-5 text-white" />
-                </div>
-                <span className="inline-block px-2 py-0.5 bg-white text-mayache-teal text-xs font-bold rounded shadow-sm">NEW</span>
-              </div>
-              
-              <div className="relative z-10">
-                <span className="inline-block w-10 h-1 bg-white mb-2"></span>
-                <h2 className="font-archivo text-white text-xl font-black leading-tight relative">
-                  PORTFOLIO SHOWCASE
-                  <div className="absolute -right-1 -top-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                </h2>
-                <p className="text-white text-xs mt-2 font-normal uppercase tracking-wide leading-relaxed">
-                  An elegantly designed portfolio collection featuring interactive animations and responsive layouts.
-                </p>
-
-              </div>
-            </div>
-          </GridSection>
-
-
         </div>
       </main>
       
       <Footer />
     </div>
+  </PageTransition>
   );
 };
 
