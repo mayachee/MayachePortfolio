@@ -87,18 +87,12 @@ const Home = () => {
                           <>
                             {line.replace('MAYACHE', '')} 
                             <motion.span 
-                              className="text-mayache-green relative"
+                              className="text-mayache-green"
                               initial={{ opacity: 0, scale: 0.8 }}
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ duration: 0.8, delay: 0.6 }}
                             >
                               MAYACHE
-                              <motion.div
-                                className="absolute -bottom-1 left-0 w-full h-1 bg-mayache-green opacity-30"
-                                initial={{ scaleX: 0 }}
-                                animate={{ scaleX: 1 }}
-                                transition={{ duration: 0.8, delay: 1.0 }}
-                              />
                             </motion.span>
                           </>
                         ) : (
@@ -133,32 +127,6 @@ const Home = () => {
                     {t('intro.description')}
                   </p>
                   
-                  {/* Call to Action */}
-                  <motion.div
-                    className="mt-6 sm:mt-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                  >
-                    <motion.button
-                      className="group inline-flex items-center px-6 py-3 bg-white bg-opacity-20 text-white text-sm font-semibold rounded-full border border-white border-opacity-30 hover:bg-opacity-30 transition-all duration-300 backdrop-blur-sm"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <span>View My Work</span>
-                      <motion.svg
-                        className="ml-2 w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        initial={{ x: 0 }}
-                        whileHover={{ x: 5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </motion.svg>
-                    </motion.button>
-                  </motion.div>
                 </motion.div>
               </div>
             </GridSection>
