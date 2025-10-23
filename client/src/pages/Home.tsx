@@ -103,17 +103,6 @@ const Home = () => {
                     ))}
                   </motion.h1>
 
-                  {/* Subtitle/Job Title */}
-                  <motion.div
-                    className="mt-4 sm:mt-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                  >
-                    <span className="inline-block px-4 py-2 bg-white bg-opacity-15 text-white text-sm font-semibold rounded-full border border-white border-opacity-20 backdrop-blur-sm">
-                      {t('header.jobTitle')}
-                    </span>
-                  </motion.div>
                 </div>
 
                 {/* Description */}
