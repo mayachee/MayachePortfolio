@@ -88,7 +88,7 @@ const Home = () => {
 
           {/* Middle column */}
           <div className="column">
-            {/* INTERNSHIP Section with Slider - Blue Block */}
+            {/* PROFESSIONAL EXPERIENCE Section - Blue Block */}
             <GridSection 
               background="bg-mayache-blue" 
               id="experience"
@@ -97,32 +97,91 @@ const Home = () => {
               index={1}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-6 leading-tight section-header">
                   {t('nav.experience')}
                 </h2>
-                <div className="space-y-5">
-                  <div className="experience-item">
-                    <div className="flex flex-col sm:flex-row sm:items-center mb-2 space-y-2 sm:space-y-0 sm:space-x-3">
-                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">2021</span>
-                      <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-50"></div>
-                      <span className="text-white text-sm uppercase opacity-75">{t('experience.company')}</span>
+                <div className="space-y-8">
+                  {/* Current Experience */}
+                  <motion.div 
+                    className="experience-item"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0 sm:space-x-4">
+                      <span className="inline-block px-4 py-2 bg-white bg-opacity-25 text-white text-sm font-bold rounded-full shadow-lg border border-white border-opacity-20">
+                        {t('experience.current.period')}
+                      </span>
+                      <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-60"></div>
+                      <span className="text-white text-sm uppercase opacity-90 font-semibold tracking-wide">
+                        {t('experience.current.company')}
+                      </span>
                     </div>
-                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mb-2">
-                      {t('experience.title')}
+                    <h3 className="font-archivo text-white text-xl sm:text-2xl font-bold leading-tight mb-4">
+                      {t('experience.current.title')}
                     </h3>
-                    <ul className="text-white text-sm uppercase mt-3 space-y-2 list-disc pl-5">
-                      {t('experience.duties').split('\n').map((duty, index) => (
+                    <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
+                      {t('experience.current.duties').split('\n').map((duty, index) => (
                         <motion.li
                           key={index}
-                          initial={{ opacity: 0, x: -10 }}
+                          className="flex items-start"
+                          initial={{ opacity: 0, x: -15 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: 0.1 + (index * 0.1) }}
+                          transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
                         >
-                          {duty}
+                          <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="leading-relaxed">{duty}</span>
                         </motion.li>
                       ))}
                     </ul>
-                  </div>
+                  </motion.div>
+
+                  {/* Divider */}
+                  <motion.div 
+                    className="flex items-center my-6"
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                  >
+                    <div className="flex-1 h-px bg-white bg-opacity-30"></div>
+                    <div className="mx-4 w-2 h-2 bg-white rounded-full opacity-60"></div>
+                    <div className="flex-1 h-px bg-white bg-opacity-30"></div>
+                  </motion.div>
+
+                  {/* Previous Experience */}
+                  <motion.div 
+                    className="experience-item"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-3 space-y-2 sm:space-y-0 sm:space-x-4">
+                      <span className="inline-block px-4 py-2 bg-white bg-opacity-20 text-white text-sm font-bold rounded-full shadow-lg border border-white border-opacity-15">
+                        {t('experience.previous.period')}
+                      </span>
+                      <div className="hidden sm:block h-1 w-1 bg-white rounded-full opacity-60"></div>
+                      <span className="text-white text-sm uppercase opacity-90 font-semibold tracking-wide">
+                        {t('experience.previous.company')}
+                      </span>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl sm:text-2xl font-bold leading-tight mb-4">
+                      {t('experience.previous.title')}
+                    </h3>
+                    <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
+                      {t('experience.previous.duties').split('\n').map((duty, index) => (
+                        <motion.li
+                          key={index}
+                          className="flex items-start"
+                          initial={{ opacity: 0, x: -15 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
+                        >
+                          <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="leading-relaxed">{duty}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
                 </div>
               </div>
             </GridSection>
