@@ -21,12 +21,16 @@ export default {
     description: "A passionate Full-Stack Developer and UI/UX Designer with expertise in modern web technologies and innovative digital solutions. Currently pursuing Software Engineering at 1337 Coding School (UM6P/42 Network), I specialize in building scalable web applications, designing intuitive user experiences, and implementing robust backend systems. With hands-on experience in Django, React, Next.js, and Docker, I've successfully delivered projects ranging from car rental platforms to real-time multiplayer games. Fluent in German (B2 certified) and driven by continuous learning, I'm ready to contribute to cutting-edge projects in the global tech industry.",
   },
   experience: {
-    title: "UI/UX DESIGNER & FRONTEND DEVELOPER",
-    company: "TECH STARTUP, TETOUAN, MOROCCO",
-    duties: "Led the development of Airbcar, Morocco's premier car rental platform, connecting customers with rental agencies through a centralized system.\nDesigned complete UI/UX for modern, intuitive user experience and built scalable backend API using Django and PostgreSQL.\nImplemented role-based access control, booking systems, and integrated Supabase with Redis for optimal performance.\nEstablished CI/CD pipelines using Docker and GitHub Actions for automated deployment and continuous integration.",
-    internship: {
+    current: {
+      title: "UI/UX DESIGNER & FRONTEND DEVELOPER",
+      company: "TECH STARTUP, TETOUAN, MOROCCO",
+      period: "06/2025 – 10/2025",
+      duties: "Led the development of Airbcar, Morocco's premier car rental platform, connecting customers with rental agencies through a centralized system.\nDesigned complete UI/UX for modern, intuitive user experience and built scalable backend API using Django and PostgreSQL.\nImplemented role-based access control, booking systems, and integrated Supabase with Redis for optimal performance.\nEstablished CI/CD pipelines using Docker and GitHub Actions for automated deployment and continuous integration.",
+    },
+    previous: {
       title: "WEB DEVELOPMENT INTERN",
       company: "ITT ONE, TETOUAN, MOROCCO",
+      period: "07/2021 – 12/2021",
       duties: "Contributed to web development projects, gaining practical experience in front-end and back-end technologies.\nAssisted in building e-commerce platforms and internal tools, enhancing team productivity and operational efficiency.",
     },
   },

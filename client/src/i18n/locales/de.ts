@@ -21,12 +21,16 @@ export default {
     description: "Ein leidenschaftlicher Full-Stack-Entwickler und UI/UX-Designer mit Expertise in modernen Web-Technologien und innovativen digitalen Lösungen. Derzeit studiere ich Software-Engineering an der 1337 Coding School (UM6P/42 Network) und spezialisiere mich auf den Aufbau skalierbarer Web-Anwendungen, die Gestaltung intuitiver Benutzererfahrungen und die Implementierung robuster Backend-Systeme. Mit praktischer Erfahrung in Django, React, Next.js und Docker habe ich erfolgreich Projekte von Autovermietungsplattformen bis hin zu Echtzeit-Multiplayer-Spielen geliefert. Fließend in Deutsch (B2 zertifiziert) und angetrieben von kontinuierlichem Lernen, bin ich bereit, zu innovativen Projekten in der globalen Tech-Industrie beizutragen.",
   },
   experience: {
-    title: "UI/UX DESIGNER & FRONTEND ENTWICKLER",
-    company: "TECH STARTUP, TETOUAN, MAROKKO",
-    duties: "Leitete die Entwicklung von Airbcar, Marokkos führender Autovermietungsplattform, die Kunden mit Vermietungsagenturen über ein zentralisiertes System verbindet.\nEntwarf das komplette UI/UX für eine moderne, intuitive Benutzererfahrung und baute eine skalierbare Backend-API mit Django und PostgreSQL.\nImplementierte rollenbasierte Zugriffskontrolle, Buchungssysteme und integrierte Supabase mit Redis für optimale Leistung.\nEtablierte CI/CD-Pipelines mit Docker und GitHub Actions für automatisierte Bereitstellung und kontinuierliche Integration.",
-    internship: {
+    current: {
+      title: "UI/UX DESIGNER & FRONTEND ENTWICKLER",
+      company: "TECH STARTUP, TETOUAN, MAROKKO",
+      period: "06/2025 – 10/2025",
+      duties: "Leitete die Entwicklung von Airbcar, Marokkos führender Autovermietungsplattform, die Kunden mit Vermietungsagenturen über ein zentralisiertes System verbindet.\nEntwarf das komplette UI/UX für eine moderne, intuitive Benutzererfahrung und baute eine skalierbare Backend-API mit Django und PostgreSQL.\nImplementierte rollenbasierte Zugriffskontrolle, Buchungssysteme und integrierte Supabase mit Redis für optimale Leistung.\nEtablierte CI/CD-Pipelines mit Docker und GitHub Actions für automatisierte Bereitstellung und kontinuierliche Integration.",
+    },
+    previous: {
       title: "WEB-ENTWICKLUNGSPRAKTIKANT",
       company: "ITT ONE, TETOUAN, MAROKKO",
+      period: "07/2021 – 12/2021",
       duties: "Mitarbeit an Webentwicklungsprojekten und Sammlung praktischer Erfahrungen in Front-End- und Back-End-Technologien.\nBeitrag zur Entwicklung von E-Commerce-Plattformen und internen Tools zur Steigerung der Teamproduktivität und operativen Effizienz.",
     },
   },

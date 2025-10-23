@@ -21,12 +21,16 @@ export default {
     description: "Un développeur Full-Stack et designer UI/UX passionné avec une expertise dans les technologies web modernes et les solutions numériques innovantes. Actuellement en cours d'ingénierie logicielle à l'école de codage 1337 (UM6P/Réseau 42), je me spécialise dans la création d'applications web évolutives, la conception d'expériences utilisateur intuitives et l'implémentation de systèmes backend robustes. Avec une expérience pratique en Django, React, Next.js et Docker, j'ai livré avec succès des projets allant des plateformes de location de voitures aux jeux multijoueurs en temps réel. Parlant couramment l'allemand (certifié B2) et motivé par l'apprentissage continu, je suis prêt à contribuer à des projets de pointe dans l'industrie technologique mondiale.",
   },
   experience: {
-    title: "DESIGNER UI/UX & DÉVELOPPEUR FRONTEND",
-    company: "STARTUP TECH, TÉTOUAN, MAROC",
-    duties: "Dirigé le développement d'Airbcar, la plateforme de location de voitures de premier plan au Maroc, connectant les clients avec les agences de location via un système centralisé.\nConçu l'UI/UX complète pour une expérience utilisateur moderne et intuitive et construit une API backend évolutive utilisant Django et PostgreSQL.\nImplémenté le contrôle d'accès basé sur les rôles, les systèmes de réservation et intégré Supabase avec Redis pour des performances optimales.\nÉtabli des pipelines CI/CD utilisant Docker et GitHub Actions pour le déploiement automatisé et l'intégration continue.",
-    internship: {
+    current: {
+      title: "DESIGNER UI/UX & DÉVELOPPEUR FRONTEND",
+      company: "STARTUP TECH, TÉTOUAN, MAROC",
+      period: "06/2025 – 10/2025",
+      duties: "Dirigé le développement d'Airbcar, la plateforme de location de voitures de premier plan au Maroc, connectant les clients avec les agences de location via un système centralisé.\nConçu l'UI/UX complète pour une expérience utilisateur moderne et intuitive et construit une API backend évolutive utilisant Django et PostgreSQL.\nImplémenté le contrôle d'accès basé sur les rôles, les systèmes de réservation et intégré Supabase avec Redis pour des performances optimales.\nÉtabli des pipelines CI/CD utilisant Docker et GitHub Actions pour le déploiement automatisé et l'intégration continue.",
+    },
+    previous: {
       title: "STAGIAIRE EN DÉVELOPPEMENT WEB",
       company: "ITT ONE, TÉTOUAN, MAROC",
+      period: "07/2021 – 12/2021",
       duties: "Collaboration sur des projets de développement web, acquérant une expérience pratique dans les technologies front-end et back-end.\nContribution au développement de plateformes de commerce électronique et d'outils internes, améliorant la productivité de l'équipe et l'efficacité opérationnelle.",
     },
   },

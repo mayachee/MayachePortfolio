@@ -21,12 +21,16 @@ export default {
     description: "Un desarrollador Full-Stack y diseñador UI/UX apasionado con experiencia en tecnologías web modernas y soluciones digitales innovadoras. Actualmente cursando Ingeniería de Software en 1337 Coding School (UM6P/Red 42), me especializo en construir aplicaciones web escalables, diseñar experiencias de usuario intuitivas e implementar sistemas backend robustos. Con experiencia práctica en Django, React, Next.js y Docker, he entregado exitosamente proyectos que van desde plataformas de alquiler de coches hasta juegos multijugador en tiempo real. Fluido en alemán (certificado B2) y motivado por el aprendizaje continuo, estoy listo para contribuir a proyectos innovadores en la industria tecnológica global.",
   },
   experience: {
-    title: "DISEÑADOR UI/UX & DESARROLLADOR FRONTEND",
-    company: "STARTUP TECH, TETUÁN, MARRUECOS",
-    duties: "Lideré el desarrollo de Airbcar, la plataforma de alquiler de coches líder de Marruecos, conectando clientes con agencias de alquiler a través de un sistema centralizado.\nDiseñé el UI/UX completo para una experiencia de usuario moderna e intuitiva y construí una API backend escalable usando Django y PostgreSQL.\nImplementé control de acceso basado en roles, sistemas de reserva e integré Supabase con Redis para un rendimiento óptimo.\nEstablecí pipelines CI/CD usando Docker y GitHub Actions para despliegue automatizado e integración continua.",
-    internship: {
+    current: {
+      title: "DISEÑADOR UI/UX & DESARROLLADOR FRONTEND",
+      company: "STARTUP TECH, TETUÁN, MARRUECOS",
+      period: "06/2025 – 10/2025",
+      duties: "Lideré el desarrollo de Airbcar, la plataforma de alquiler de coches líder de Marruecos, conectando clientes con agencias de alquiler a través de un sistema centralizado.\nDiseñé el UI/UX completo para una experiencia de usuario moderna e intuitiva y construí una API backend escalable usando Django y PostgreSQL.\nImplementé control de acceso basado en roles, sistemas de reserva e integré Supabase con Redis para un rendimiento óptimo.\nEstablecí pipelines CI/CD usando Docker y GitHub Actions para despliegue automatizado e integración continua.",
+    },
+    previous: {
       title: "PRACTICANTE EN DESARROLLO WEB",
       company: "ITT ONE, TETUÁN, MARRUECOS",
+      period: "07/2021 – 12/2021",
       duties: "Colaboración en proyectos de desarrollo web, adquiriendo experiencia práctica en tecnologías front-end y back-end.\nContribución al desarrollo de plataformas de comercio electrónico y herramientas internas, mejorando la productividad del equipo y la eficiencia operacional.",
     },
   },
