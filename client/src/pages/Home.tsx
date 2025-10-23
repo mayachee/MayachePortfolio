@@ -243,9 +243,19 @@ const Home = () => {
                   {t('nav.skills')}
                 </h2>
                 
-                {/* Hard Skills */}
-                <div className="mb-6 md:mb-8">
-                  <h3 className="font-archivo text-white text-xl md:text-2xl font-bold mb-4 md:mb-5">{t('skills.title')}</h3>
+                {/* Technical Skills */}
+                <motion.div 
+                  className="mb-8 md:mb-10"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                      <span className="text-white text-sm font-bold">💻</span>
+                    </div>
+                    <h3 className="font-archivo text-white text-xl md:text-2xl font-bold">{t('skills.title')}</h3>
+                  </div>
                   <div className="space-y-3 md:space-y-4">
                     <div className="space-y-1">
                       <div className="flex items-center justify-between">
