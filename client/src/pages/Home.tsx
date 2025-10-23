@@ -256,261 +256,168 @@ const Home = () => {
                     </div>
                     <h3 className="font-archivo text-white text-xl md:text-2xl font-bold">{t('skills.title')}</h3>
                   </div>
-                  <div className="space-y-3 md:space-y-4">
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">C / C#</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
-                      </div>
-                      <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-mayache-green rounded-full animate-skill-fill" 
-                          style={{ width: '85%', animationDelay: '0.1s' }}
-                        ></div>
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    {/* Programming Languages */}
+                    <div className="space-y-4">
+                      <h4 className="text-white text-sm font-semibold uppercase tracking-wider opacity-80 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-mayache-green rounded-full mr-2"></span>
+                        {t('skills.languages')}
+                      </h4>
+                      {['C/C++', 'Java', 'JavaScript', 'TypeScript', 'Python', 'PHP'].map((skill, index) => (
+                        <motion.div 
+                          key={skill}
+                          className="skill-item"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-white text-sm font-medium">{skill}</span>
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-20 px-2 py-1 rounded-full">
+                              {skill === 'JavaScript' ? '90%' : skill === 'Python' ? '85%' : skill === 'Java' ? '80%' : '75%'}
+                            </span>
+                          </div>
+                          <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                            <motion.div 
+                              className="h-full bg-gradient-to-r from-mayache-green to-mayache-teal rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: skill === 'JavaScript' ? '90%' : skill === 'Python' ? '85%' : skill === 'Java' ? '80%' : '75%' }}
+                              transition={{ duration: 1, delay: 0.6 + (index * 0.1) }}
+                            />
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">JAVA</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '80%', animationDelay: '0.2s' }}
-                        ></div>
-                      </div>
+
+                    {/* Frontend Technologies */}
+                    <div className="space-y-4">
+                      <h4 className="text-white text-sm font-semibold uppercase tracking-wider opacity-80 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-mayache-orange rounded-full mr-2"></span>
+                        {t('skills.frontend')}
+                      </h4>
+                      {['React', 'Next.js', 'Angular', 'TailwindCSS', 'Material-UI'].map((skill, index) => (
+                        <motion.div 
+                          key={skill}
+                          className="skill-item"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-white text-sm font-medium">{skill}</span>
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-20 px-2 py-1 rounded-full">
+                              {skill === 'React' ? '95%' : skill === 'Next.js' ? '90%' : skill === 'TailwindCSS' ? '88%' : '80%'}
+                            </span>
+                          </div>
+                          <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                            <motion.div 
+                              className="h-full bg-gradient-to-r from-mayache-orange to-mayache-green rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: skill === 'React' ? '95%' : skill === 'Next.js' ? '90%' : skill === 'TailwindCSS' ? '88%' : '80%' }}
+                              transition={{ duration: 1, delay: 0.7 + (index * 0.1) }}
+                            />
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">JAVASCRIPT</span>
-                        <span className="text-white text-xs font-archivo">90%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '90%', animationDelay: '0.3s' }}
-                        ></div>
-                      </div>
+
+                    {/* Backend Technologies */}
+                    <div className="space-y-4">
+                      <h4 className="text-white text-sm font-semibold uppercase tracking-wider opacity-80 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-mayache-blue rounded-full mr-2"></span>
+                        {t('skills.backend')}
+                      </h4>
+                      {['Django', 'Laravel', 'Express.js', 'Node.js', 'RESTful APIs'].map((skill, index) => (
+                        <motion.div 
+                          key={skill}
+                          className="skill-item"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-white text-sm font-medium">{skill}</span>
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-20 px-2 py-1 rounded-full">
+                              {skill === 'Django' ? '88%' : skill === 'Node.js' ? '85%' : skill === 'Laravel' ? '80%' : '75%'}
+                            </span>
+                          </div>
+                          <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                            <motion.div 
+                              className="h-full bg-gradient-to-r from-mayache-blue to-mayache-purple rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: skill === 'Django' ? '88%' : skill === 'Node.js' ? '85%' : skill === 'Laravel' ? '80%' : '75%' }}
+                              transition={{ duration: 1, delay: 0.8 + (index * 0.1) }}
+                            />
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">HTML/CSS</span>
-                        <span className="text-white text-xs font-archivo">95%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '95%', animationDelay: '0.4s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">LARAVEL</span>
-                        <span className="text-white text-xs font-archivo">75%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '75%', animationDelay: '0.5s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">PYTHON</span>
-                        <span className="text-white text-xs font-archivo">70%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '70%', animationDelay: '0.6s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">SPRING BOOT</span>
-                        <span className="text-white text-xs font-archivo">65%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '65%', animationDelay: '0.7s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">DOCKER</span>
-                        <span className="text-white text-xs font-archivo">75%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '75%', animationDelay: '0.8s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">FIGMA</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '80%', animationDelay: '0.9s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">MERN STACK</span>
-                        <span className="text-white text-xs font-archivo">88%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '88%', animationDelay: '1.0s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">NEXT.JS</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '85%', animationDelay: '1.1s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">DJANGO</span>
-                        <span className="text-white text-xs font-archivo">78%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '78%', animationDelay: '1.2s' }}
-                        ></div>
-                      </div>
+
+                    {/* Development Tools */}
+                    <div className="space-y-4">
+                      <h4 className="text-white text-sm font-semibold uppercase tracking-wider opacity-80 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-mayache-teal rounded-full mr-2"></span>
+                        {t('skills.devTools')}
+                      </h4>
+                      {['Docker', 'Git/GitHub', 'Supabase', 'Nginx', 'Postman'].map((skill, index) => (
+                        <motion.div 
+                          key={skill}
+                          className="skill-item"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.7 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-white text-sm font-medium">{skill}</span>
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-20 px-2 py-1 rounded-full">
+                              {skill === 'Git/GitHub' ? '95%' : skill === 'Docker' ? '85%' : '80%'}
+                            </span>
+                          </div>
+                          <div className="h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                            <motion.div 
+                              className="h-full bg-gradient-to-r from-mayache-teal to-mayache-blue rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: skill === 'Git/GitHub' ? '95%' : skill === 'Docker' ? '85%' : '80%' }}
+                              transition={{ duration: 1, delay: 0.9 + (index * 0.1) }}
+                            />
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
-                </div>
-                
+                </motion.div>
+
                 {/* Soft Skills */}
-                <div>
-                  <h3 className="font-archivo text-white text-xl font-bold mb-3">{t('skills.softTitle')}</h3>
-                  <div className="space-y-3">
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">PROBLEM SOLVING</span>
-                        <span className="text-white text-xs font-archivo">95%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '95%', animationDelay: '1.3s' }}
-                        ></div>
-                      </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                      <span className="text-white text-sm font-bold">🧠</span>
                     </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">TEAM COMMUNICATION</span>
-                        <span className="text-white text-xs font-archivo">90%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '90%', animationDelay: '1.4s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">SELF-DIRECTED LEARNING</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '85%', animationDelay: '1.5s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">ADAPTABILITY</span>
-                        <span className="text-white text-xs font-archivo">88%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '88%', animationDelay: '1.6s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">CREATIVITY</span>
-                        <span className="text-white text-xs font-archivo">92%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '92%', animationDelay: '1.7s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">TIME MANAGEMENT</span>
-                        <span className="text-white text-xs font-archivo">80%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '80%', animationDelay: '1.5s' }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white text-sm font-archivo uppercase">MULTILINGUAL</span>
-                        <span className="text-white text-xs font-archivo">85%</span>
-                      </div>
-                      <div className="h-2 skill-bar-bg rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full animate-skill-fill" 
-                          style={{ width: '85%', animationDelay: '1.6s' }}
-                        ></div>
-                      </div>
-                    </div>
+                    <h3 className="font-archivo text-white text-xl md:text-2xl font-bold">{t('skills.softTitle')}</h3>
                   </div>
-                </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {['Problem-Solving', 'Teamwork', 'Self-Learning', 'Adaptability', 'Communication'].map((skill, index) => (
+                      <motion.div 
+                        key={skill}
+                        className="skill-item bg-white bg-opacity-5 p-4 rounded-lg border border-white border-opacity-10"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.9 + (index * 0.1) }}
+                        whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.1)' }}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-mayache-green rounded-full mr-3"></div>
+                          <span className="text-white text-sm font-medium">{skill}</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </GridSection>
             
@@ -523,44 +430,124 @@ const Home = () => {
               index={3}
             >
               <div className="section-content">
-                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-4 leading-tight section-header">
+                <h2 className="font-archivo text-white text-2xl sm:text-2xl md:text-3xl font-black mb-6 leading-tight section-header">
                   {t('nav.education')}
                 </h2>
+                
                 <div className="space-y-6">
+                  {/* Current Education */}
                   <motion.div 
-                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
-                    initial={{ opacity: 0, y: 10 }}
+                    className="education-item bg-white bg-opacity-10 p-6 rounded-xl shadow-lg border border-white border-opacity-20 backdrop-blur-sm"
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.1 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.15)' }}
                   >
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">2020-PRESENT</span>
-                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
+                    <div className="flex justify-between items-start mb-4">
+                      <span className="inline-block px-4 py-2 bg-white bg-opacity-25 text-white text-sm font-bold rounded-full shadow-lg border border-white border-opacity-30">
+                        2022-PRESENT
+                      </span>
+                      <div className="w-3 h-3 rounded-full bg-white opacity-60"></div>
                     </div>
-                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mb-3">
                       {t('education.degree1')}
                     </h3>
-                    <p className="text-white text-sm uppercase tracking-wide">
+                    <p className="text-white text-sm font-medium mb-3 opacity-90">
                       {t('education.school1')}
+                    </p>
+                    <p className="text-white text-xs leading-relaxed opacity-80">
+                      {t('education.description1')}
                     </p>
                   </motion.div>
                   
+                  {/* Previous Education */}
                   <motion.div 
-                    className="education-item bg-black bg-opacity-10 p-4 rounded-lg shadow-inner"
-                    initial={{ opacity: 0, y: 10 }}
+                    className="education-item bg-white bg-opacity-10 p-6 rounded-xl shadow-lg border border-white border-opacity-20 backdrop-blur-sm"
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.2 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.15)' }}
                   >
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="inline-block px-3 py-1.5 bg-white bg-opacity-20 text-white text-sm font-medium rounded-full shadow-sm">09/2019 – 07/2021</span>
-                      <div className="w-2 h-2 rounded-full bg-mayache-teal mt-2"></div>
+                    <div className="flex justify-between items-start mb-4">
+                      <span className="inline-block px-4 py-2 bg-white bg-opacity-20 text-white text-sm font-bold rounded-full shadow-lg border border-white border-opacity-25">
+                        2019-2021
+                      </span>
+                      <div className="w-3 h-3 rounded-full bg-white opacity-60"></div>
                     </div>
-                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mt-3 mb-2">
+                    <h3 className="font-archivo text-white text-xl font-bold leading-tight mb-3">
                       {t('education.degree2')}
                     </h3>
-                    <p className="text-white text-sm uppercase tracking-wide">
+                    <p className="text-white text-sm font-medium mb-3 opacity-90">
                       {t('education.school2')}
                     </p>
+                    <p className="text-white text-xs leading-relaxed opacity-80">
+                      {t('education.description2')}
+                    </p>
+                  </motion.div>
+
+                  {/* Certifications */}
+                  <motion.div
+                    className="mt-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                  >
+                    <h3 className="font-archivo text-white text-lg font-bold mb-4 flex items-center">
+                      <span className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <span className="text-white text-xs font-bold">🏆</span>
+                      </span>
+                      {t('education.certifications')}
+                    </h3>
+                    <div className="space-y-3">
+                      {t('education.certs').map((cert, index) => (
+                        <motion.div 
+                          key={index}
+                          className="flex items-center p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
+                        >
+                          <div className="w-2 h-2 bg-mayache-orange rounded-full mr-3"></div>
+                          <span className="text-white text-sm font-medium">{cert}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                  {/* Languages */}
+                  <motion.div
+                    className="mt-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                  >
+                    <h3 className="font-archivo text-white text-lg font-bold mb-4 flex items-center">
+                      <span className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <span className="text-white text-xs font-bold">🌍</span>
+                      </span>
+                      {t('education.languages')}
+                    </h3>
+                    <div className="grid grid-cols-1 gap-3">
+                      {t('education.langList').map((lang, index) => (
+                        <motion.div 
+                          key={index}
+                          className="flex items-center justify-between p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 1.0 + (index * 0.1) }}
+                        >
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-mayache-teal rounded-full mr-3"></div>
+                            <span className="text-white text-sm font-medium">{lang}</span>
+                          </div>
+                          {lang.includes('B2') && (
+                            <span className="text-white text-xs font-semibold bg-mayache-teal bg-opacity-20 px-2 py-1 rounded-full">
+                              Certified
+                            </span>
+                          )}
+                        </motion.div>
+                      ))}
+                    </div>
                   </motion.div>
                 </div>
               </div>

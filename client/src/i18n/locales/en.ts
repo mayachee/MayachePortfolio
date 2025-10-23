@@ -18,7 +18,7 @@ export default {
   },
   intro: {
     title: "I'M MOHAMED YASSINE AYACHE,\nA CREATIVE DEVELOPER\nAND\n UI/UX DESIGNER\nBASED IN\nMOROCCO.",
-    description: "A passionate Full-Stack Developer and UI/UX Designer with expertise in modern web technologies and innovative digital solutions. Currently pursuing Software Engineering at 1337 Coding School (UM6P/42 Network), I specialize in building scalable web applications, designing intuitive user experiences, and implementing robust backend systems. With hands-on experience in Django, React, Next.js, and Docker, I've successfully delivered projects ranging from car rental platforms to real-time multiplayer games. Fluent in German (B2 certified) and driven by continuous learning, I'm ready to contribute to cutting-edge projects in the global tech industry.",
+    description: "A passionate Full-Stack Developer and UI/UX Designer with expertise in modern web technologies and innovative digital solutions. Currently pursuing Software Engineering at 1337 Coding School (UM6P/42 Network), I specialize in building scalable web applications, designing intuitive user experiences, and implementing robust backend systems. With hands-on experience in Laravel, Django, React, Next.js, PHP and Docker, I've successfully delivered projects ranging from car rental platforms to real-time multiplayer games.",
   },
   experience: {
     current: {
