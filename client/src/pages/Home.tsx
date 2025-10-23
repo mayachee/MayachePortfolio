@@ -37,32 +37,69 @@ const Home = () => {
               index={0}
               className="intro-section"
             >
-              <div className="section-content flex flex-col justify-between h-full">
+              <div className="section-content flex flex-col justify-between h-full relative">
+                {/* EST. 2020 Badge */}
                 <div className="absolute top-4 right-4 hidden sm:block">
-                  <span className="text-xs font-bold text-white">EST. 2020</span>
+                  <motion.span 
+                    className="text-xs font-bold text-white bg-white bg-opacity-10 px-3 py-1 rounded-full border border-white border-opacity-20"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                  >
+                    EST. 2020
+                  </motion.span>
                 </div>
+                
+                {/* Mobile EST. 2020 Badge */}
                 <div className="flex items-center sm:items-start sm:block absolute top-3 left-3 sm:relative sm:top-0 sm:left-0">
-                  <span className="sm:hidden px-2 py-1 bg-black bg-opacity-30 text-white text-xs rounded-md font-bold">EST. 2020</span>
+                  <motion.span 
+                    className="sm:hidden px-3 py-1 bg-black bg-opacity-40 text-white text-xs rounded-full font-bold border border-white border-opacity-20"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                  >
+                    EST. 2020
+                  </motion.span>
                 </div>
-                <div className="relative mt-2 sm:mt-8 md:mt-16">
+
+                {/* Main Content */}
+                <div className="relative mt-2 sm:mt-8 md:mt-16 flex-1 flex flex-col justify-center">
+                  {/* Title */}
                   <motion.h1 
-                    className="font-archivo text-white text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
-                    initial={{ opacity: 0, y: 20 }}
+                    className="font-archivo text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
                   >
                     {t('intro.title').split('\n').map((line, i) => (
                       <motion.span 
                         key={i}
-                        initial={{ opacity: 0, y: 15 }}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: 0.3 + (i * 0.1),
+                          ease: [0.2, 0.65, 0.3, 0.9]
+                        }}
                         className="inline-block mb-1"
                       >
                         {i === 0 ? (
                           <>
                             {line.replace('MAYACHE', '')} 
-                            <span className="text-mayache-green">MAYACHE</span>
+                            <motion.span 
+                              className="text-mayache-green relative"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ duration: 0.8, delay: 0.6 }}
+                            >
+                              MAYACHE
+                              <motion.div
+                                className="absolute -bottom-1 left-0 w-full h-1 bg-mayache-green opacity-30"
+                                initial={{ scaleX: 0 }}
+                                animate={{ scaleX: 1 }}
+                                transition={{ duration: 0.8, delay: 1.0 }}
+                              />
+                            </motion.span>
                           </>
                         ) : (
                           line
@@ -71,17 +108,58 @@ const Home = () => {
                       </motion.span>
                     ))}
                   </motion.h1>
-                </div>
-                <div className="mt-3 sm:mt-4 md:mt-6">
-                  <motion.p 
-                    className="text-white text-sm sm:text-sm md:text-base font-normal uppercase tracking-wide"
+
+                  {/* Subtitle/Job Title */}
+                  <motion.div
+                    className="mt-4 sm:mt-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
                   >
-                    {t('intro.description')}
-                  </motion.p>
+                    <span className="inline-block px-4 py-2 bg-white bg-opacity-15 text-white text-sm font-semibold rounded-full border border-white border-opacity-20 backdrop-blur-sm">
+                      {t('header.jobTitle')}
+                    </span>
+                  </motion.div>
                 </div>
+
+                {/* Description */}
+                <motion.div 
+                  className="mt-4 sm:mt-6 md:mt-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.0 }}
+                >
+                  <p className="text-white text-sm sm:text-sm md:text-base font-normal leading-relaxed tracking-wide opacity-90">
+                    {t('intro.description')}
+                  </p>
+                  
+                  {/* Call to Action */}
+                  <motion.div
+                    className="mt-6 sm:mt-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                  >
+                    <motion.button
+                      className="group inline-flex items-center px-6 py-3 bg-white bg-opacity-20 text-white text-sm font-semibold rounded-full border border-white border-opacity-30 hover:bg-opacity-30 transition-all duration-300 backdrop-blur-sm"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <span>View My Work</span>
+                      <motion.svg
+                        className="ml-2 w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        initial={{ x: 0 }}
+                        whileHover={{ x: 5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </motion.svg>
+                    </motion.button>
+                  </motion.div>
+                </motion.div>
               </div>
             </GridSection>
           </div>
