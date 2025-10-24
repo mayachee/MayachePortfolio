@@ -71,7 +71,7 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
                   >
-                    {t('intro.title').split('\n').map((line, i) => (
+                    {(t('intro.title') || '').split('\n').map((line, i) => (
                       <motion.span 
                         key={i}
                         initial={{ opacity: 0, y: 20 }}
@@ -155,20 +155,20 @@ const Home = () => {
                     <h3 className="font-archivo text-white text-xl sm:text-2xl font-bold leading-tight mb-4">
                       {t('experience.current.title')}
                     </h3>
-                    <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
-                      {t('experience.current.duties').split('\n').map((duty, index) => (
-                        <motion.li
-                          key={index}
-                          className="flex items-start"
-                          initial={{ opacity: 0, x: -15 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
-                        >
-                          <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="leading-relaxed">{duty}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
+                <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
+                  {(t('experience.current.duties') || '').split('\n').filter(duty => duty.trim()).map((duty, index) => (
+                    <motion.li
+                      key={index}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -15 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.3 + (index * 0.1) }}
+                    >
+                      <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="leading-relaxed">{duty}</span>
+                    </motion.li>
+                  ))}
+                </ul>
                   </motion.div>
 
                   {/* Divider */}
@@ -202,20 +202,20 @@ const Home = () => {
                     <h3 className="font-archivo text-white text-xl sm:text-2xl font-bold leading-tight mb-4">
                       {t('experience.previous.title')}
                     </h3>
-                    <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
-                      {t('experience.previous.duties').split('\n').map((duty, index) => (
-                        <motion.li
-                          key={index}
-                          className="flex items-start"
-                          initial={{ opacity: 0, x: -15 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
-                        >
-                          <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="leading-relaxed">{duty}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
+                <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
+                  {(t('experience.previous.duties') || '').split('\n').filter(duty => duty.trim()).map((duty, index) => (
+                    <motion.li
+                      key={index}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -15 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
+                    >
+                      <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="leading-relaxed">{duty}</span>
+                    </motion.li>
+                  ))}
+                </ul>
                   </motion.div>
                 </div>
               </div>
@@ -499,7 +499,7 @@ const Home = () => {
                       {t('education.certifications')}
                     </h3>
                     <div className="space-y-3">
-                      {t('education.certs').map((cert, index) => (
+                      {(t('education.certs') || []).map((cert, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -528,7 +528,7 @@ const Home = () => {
                       {t('education.languages')}
                     </h3>
                     <div className="grid grid-cols-1 gap-3">
-                      {t('education.langList').map((lang, index) => (
+                      {(t('education.langList') || []).map((lang, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center justify-between p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -540,7 +540,7 @@ const Home = () => {
                             <div className="w-2 h-2 bg-mayache-teal rounded-full mr-3"></div>
                             <span className="text-white text-sm font-medium">{lang}</span>
                           </div>
-                          {lang.includes('B2') && (
+                          {lang && lang.includes('B2') && (
                             <span className="text-white text-xs font-semibold bg-mayache-teal bg-opacity-20 px-2 py-1 rounded-full">
                               Certified
                             </span>
