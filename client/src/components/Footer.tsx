@@ -39,7 +39,7 @@ const Footer = () => {
               <SiLinkedin className="h-5 w-5" />
             </a>
             <a  className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
-              href="https://ik.imagekit.io/szcfr7vth/lebenlauf_mohamed_yassine_ayache.pdf?updatedAt=1759233747513" target="_blank">
+              href="https://ik.imagekit.io/szcfr7vth/M_Yassine_Ayache_lebenslauf.pdf?updatedAt=1761311534841" target="_blank">
               Lebenslauf PDF
             </a>
             <a  className="bg-gray-100 p-3 rounded-full hover:bg-gray-200 hover:scale-110 transition-all duration-300 text-black shadow-sm"
