@@ -71,7 +71,7 @@ const Home = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
                   >
-                    {(t('intro.title') || '').split('\n').map((line, i) => (
+                    {typeof t('intro.title') === 'string' ? t('intro.title').split('\n').map((line, i) => (
                       <motion.span 
                         key={i}
                         initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const Home = () => {
                         )}
                         <br/>
                       </motion.span>
-                    ))}
+                    )) : null}
                   </motion.h1>
 
                 </div>
@@ -156,7 +156,7 @@ const Home = () => {
                       {t('experience.current.title')}
                     </h3>
                 <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
-                  {(t('experience.current.duties') || '').split('\n').filter(duty => duty.trim()).map((duty, index) => (
+                  {typeof t('experience.current.duties') === 'string' ? t('experience.current.duties').split('\n').filter(duty => duty.trim()).map((duty, index) => (
                     <motion.li
                       key={index}
                       className="flex items-start"
@@ -167,7 +167,7 @@ const Home = () => {
                       <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       <span className="leading-relaxed">{duty}</span>
                     </motion.li>
-                  ))}
+                  )) : null}
                 </ul>
                   </motion.div>
 
@@ -203,7 +203,7 @@ const Home = () => {
                       {t('experience.previous.title')}
                     </h3>
                 <ul className="text-white text-sm uppercase mt-4 space-y-3 list-none pl-0">
-                  {(t('experience.previous.duties') || '').split('\n').filter(duty => duty.trim()).map((duty, index) => (
+                  {typeof t('experience.previous.duties') === 'string' ? t('experience.previous.duties').split('\n').filter(duty => duty.trim()).map((duty, index) => (
                     <motion.li
                       key={index}
                       className="flex items-start"
@@ -214,7 +214,7 @@ const Home = () => {
                       <span className="inline-block w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       <span className="leading-relaxed">{duty}</span>
                     </motion.li>
-                  ))}
+                  )) : null}
                 </ul>
                   </motion.div>
                 </div>
@@ -499,7 +499,7 @@ const Home = () => {
                       {t('education.certifications')}
                     </h3>
                     <div className="space-y-3">
-                      {(t('education.certs') || []).map((cert, index) => (
+                      {Array.isArray(t('education.certs')) ? t('education.certs').map((cert, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -510,7 +510,7 @@ const Home = () => {
                           <div className="w-2 h-2 bg-mayache-orange rounded-full mr-3"></div>
                           <span className="text-white text-sm font-medium">{cert}</span>
                         </motion.div>
-                      ))}
+                      )) : null}
                     </div>
                   </motion.div>
 
@@ -528,7 +528,7 @@ const Home = () => {
                       {t('education.languages')}
                     </h3>
                     <div className="grid grid-cols-1 gap-3">
-                      {(t('education.langList') || []).map((lang, index) => (
+                      {Array.isArray(t('education.langList')) ? t('education.langList').map((lang, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center justify-between p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -546,7 +546,7 @@ const Home = () => {
                             </span>
                           )}
                         </motion.div>
-                      ))}
+                      )) : null}
                     </div>
                   </motion.div>
                 </div>
