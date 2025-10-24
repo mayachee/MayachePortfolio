@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// This is a simplified config for Vercel deployment
+// Frontend-only config for Vercel deployment
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -14,7 +14,13 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist"), // Direct to dist for Vercel
+    outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(import.meta.dirname, "client", "index.html"),
+    },
+  },
+  server: {
+    port: 3000,
   },
 });
