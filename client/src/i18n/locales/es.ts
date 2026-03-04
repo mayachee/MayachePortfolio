@@ -103,17 +103,17 @@ export default {
     description2: "Técnico Especializado en Desarrollo IT. Formación integral en tecnologías web, gestión de bases de datos y metodologías de desarrollo de software.",
     certifications: "CERTIFICACIONES",
     certs: [
-      "Telc Alemán B2 (Diciembre 2022)",
-      "Microsoft Office Specialist Master (Abril 2021)",
-      "CODENAF Laravel 8 (2021)",
+      "12/08/2022 — Telc Alemán B2",
+      "12/12/2025 — EF SET Certificado C1",
+      "24/04/2021 — Microsoft Office Specialist Master",
+      "2021 — CODENAF Laravel 8",
     ],
     languages: "IDIOMAS",
     langList: [
       "Árabe: Nativo",
+      "Inglés: C1",
       "Alemán: B2 (Certificado)",
-      "Inglés: Intermedio",
       "Francés: Básico",
-      "Español: Básico",
     ],
   },
   portfolio: {

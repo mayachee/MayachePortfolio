@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -13,6 +13,7 @@ interface GridSectionProps {
   className?: string;
   delay?: number;
   index?: number; // Added index for staggered animations
+  style?: CSSProperties;
 }
 
 // Enhanced animation variants for grid sections with advanced physics
@@ -90,7 +91,8 @@ const GridSection = ({
   colSpan,
   className = "",
   delay = 0,
-  index = 0
+  index = 0,
+  style
 }: GridSectionProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -117,11 +119,14 @@ const GridSection = ({
         duration: 0.7, 
         ease: [0.2, 0.65, 0.3, 0.9] // Match cubic bezier from other components
       }}
-      style={backgroundImage ? {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      } : {}}
+      style={{
+        ...(backgroundImage ? {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        } : {}),
+        ...style
+      }}
     >
       {backgroundImage && (
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

@@ -29,13 +29,12 @@ const Home = () => {
         <main className="flex-grow">
           <div className="grid-container">
           {/* Left column - Teal Block */}
-          <div className="left-column">
+          <div className="left-column" >
             <GridSection 
               background="bg-mayache-teal" 
               id="about"
               delay={0.1}
               index={0}
-              className="intro-section"
             >
               <div className="section-content flex flex-col justify-between h-full relative">
                 {/* EST. 2020 Badge */}
@@ -49,24 +48,12 @@ const Home = () => {
                     EST. 2020
                   </motion.span>
                 </div>
-                
-                {/* Mobile EST. 2020 Badge */}
-                <div className="flex items-center sm:items-start sm:block absolute top-3 left-3 sm:relative sm:top-0 sm:left-0">
-                  <motion.span 
-                    className="sm:hidden px-3 py-1 bg-black bg-opacity-40 text-white text-xs rounded-full font-bold border border-white border-opacity-20"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                  >
-                    EST. 2020
-                  </motion.span>
-                </div>
 
                 {/* Main Content */}
                 <div className="relative mt-2 sm:mt-8 md:mt-16 flex-1 flex flex-col justify-center">
                   {/* Title */}
                   <motion.h1 
-                    className="font-archivo text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+                    className="font-archivo text-white text-lg xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight w-full"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
@@ -81,7 +68,7 @@ const Home = () => {
                           delay: 0.3 + (i * 0.1),
                           ease: [0.2, 0.65, 0.3, 0.9]
                         }}
-                        className="inline-block mb-1"
+                        className="block mb-1 w-full"
                       >
                         {i === 0 ? (
                           <>
@@ -112,7 +99,7 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.0 }}
                 >
-                  <p className="text-white text-sm sm:text-sm md:text-base font-normal leading-relaxed tracking-wide opacity-90">
+                  <p className="text-white text-sm md:text-base font-normal leading-relaxed tracking-wide opacity-90 break-words">
                     {t('intro.description')}
                   </p>
                   
@@ -123,7 +110,7 @@ const Home = () => {
 
           {/* Middle column */}
           <div className="column">
-            {/* PROFESSIONAL EXPERIENCE Section - Blue Block */}
+            {/*EXPERIENCE Section - Blue Block */}
             <GridSection 
               background="bg-mayache-blue" 
               id="experience"
@@ -252,7 +239,7 @@ const Home = () => {
                 >
                   <div className="flex items-center mb-6">
                     <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-white text-sm font-bold">💻</span>
+                      <span className="w-3 h-3 bg-white rounded-full"></span>
                     </div>
                     <h3 className="font-archivo text-white text-xl md:text-2xl font-bold">{t('skills.title')}</h3>
                   </div>
@@ -395,7 +382,7 @@ const Home = () => {
                 >
                   <div className="flex items-center mb-6">
                     <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-white text-sm font-bold">🧠</span>
+                      <span className="w-3 h-3 bg-white rounded-full"></span>
                     </div>
                     <h3 className="font-archivo text-white text-xl md:text-2xl font-bold">{t('skills.softTitle')}</h3>
                   </div>
@@ -494,12 +481,12 @@ const Home = () => {
                   >
                     <h3 className="font-archivo text-white text-lg font-bold mb-4 flex items-center">
                       <span className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
-                        <span className="text-white text-xs font-bold">🏆</span>
+                        <span className="w-2 h-2 bg-white rounded-full"></span>
                       </span>
                       {t('education.certifications')}
                     </h3>
                     <div className="space-y-3">
-                      {Array.isArray(t('education.certs')) ? t('education.certs').map((cert, index) => (
+                      {Array.isArray(t('education.certs', { returnObjects: true })) ? (t('education.certs', { returnObjects: true }) as string[]).map((cert, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -523,12 +510,12 @@ const Home = () => {
                   >
                     <h3 className="font-archivo text-white text-lg font-bold mb-4 flex items-center">
                       <span className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
-                        <span className="text-white text-xs font-bold">🌍</span>
+                        <span className="w-2 h-2 bg-white rounded-full"></span>
                       </span>
                       {t('education.languages')}
                     </h3>
                     <div className="grid grid-cols-1 gap-3">
-                      {Array.isArray(t('education.langList')) ? t('education.langList').map((lang, index) => (
+                      {Array.isArray(t('education.langList', { returnObjects: true })) ? (t('education.langList', { returnObjects: true }) as string[]).map((lang, index) => (
                         <motion.div 
                           key={index}
                           className="flex items-center justify-between p-3 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10"
@@ -540,11 +527,21 @@ const Home = () => {
                             <div className="w-2 h-2 bg-mayache-teal rounded-full mr-3"></div>
                             <span className="text-white text-sm font-medium">{lang}</span>
                           </div>
-                          {lang && lang.includes('B2') && (
-                            <span className="text-white text-xs font-semibold bg-mayache-teal bg-opacity-20 px-2 py-1 rounded-full">
-                              Certified
+                          {lang && lang.includes('C1') && (
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-20 px-2 py-1 rounded-full">
+                              C1
                             </span>
                           )}
+                          {lang && lang.includes('B2') && (
+                            <span className="text-white text-xs font-semibold bg-mayache-teal bg-opacity-20 px-2 py-1 rounded-full">
+                              B2
+                            </span>
+                          )}
+                          {lang && lang.toLowerCase().includes('basic') || lang && lang.toLowerCase().includes('basique') || lang && lang.toLowerCase().includes('basico') || lang && lang.toLowerCase().includes('grundkenntnisse') ? (
+                            <span className="text-white text-xs font-semibold bg-white bg-opacity-10 px-2 py-1 rounded-full">
+                              Basic
+                            </span>
+                          ) : null}
                         </motion.div>
                       )) : null}
                     </div>

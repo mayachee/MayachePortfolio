@@ -58,7 +58,7 @@ This will create optimized production files in the `/dist` directory.
 The HARDSKILLS/SOFTSKILLS cards feature a 3D flip effect with distinct styling for each side. The front displays technical skills while the back reveals soft skills with an elegantly contrasting design.
 
 ### Internship Timeline
-A dynamic slider that showcases different professional experiences with smooth transitions and navigation controls.
+A dynamic slider that showcases different experiences with smooth transitions and navigation controls.
 
 ### Responsive Grid Layout
 The portfolio implements a modern grid-based layout that adapts seamlessly from mobile to desktop, maintaining visual hierarchy and aesthetic appeal across all device sizes.

@@ -103,17 +103,17 @@ export default {
     description2: "Spezialisierter Techniker in IT-Entwicklung. Umfassende Ausbildung in Web-Technologien, Datenbankmanagement und Software-Entwicklungsmethodologien.",
     certifications: "ZERTIFIZIERUNGEN",
     certs: [
-      "Telc Deutsch B2 (Dezember 2022)",
-      "Microsoft Office Specialist Master (April 2021)",
-      "CODENAF Laravel 8 (2021)",
+      "12/08/2022 — Telc Deutsch B2",
+      "12/12/2025 — EF SET Zertifiziert C1",
+      "24/04/2021 — Microsoft Office Specialist Master",
+      "2021 — CODENAF Laravel 8",
     ],
     languages: "SPRACHEN",
     langList: [
       "Arabisch: Muttersprache",
+      "Englisch: C1",
       "Deutsch: B2 (Zertifiziert)",
-      "Englisch: Mittelstufe",
       "Französisch: Grundkenntnisse",
-      "Spanisch: Grundkenntnisse",
     ],
   },
   portfolio: {

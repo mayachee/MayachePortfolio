@@ -142,24 +142,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     transition={{ delay: 0.4 }}
                   >
                     <button
-                      onClick={() => handleLinkClick("portfolio")}
-                      className="w-full text-left flex items-center py-5 px-4 text-gray-800 font-bold hover:bg-mayache-orange hover:bg-opacity-10 rounded-lg transition-colors"
+                      onClick={() => handleLinkClick("education")}
+                      className="w-full text-left flex items-center py-5 px-4 text-gray-800 font-bold hover:bg-mayache-teal hover:bg-opacity-10 rounded-lg transition-colors"
                     >
-                      <span className="w-2 h-2 bg-mayache-orange rounded-full mr-3"></span>
-                      <span className="uppercase text-sm tracking-wide">{t("nav.portfolio")}</span>
-                    </button>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    <button
-                      onClick={() => handleLinkClick("contact")}
-                      className="w-full text-left flex items-center py-5 px-4 text-gray-800 font-bold hover:bg-mayache-blue hover:bg-opacity-10 rounded-lg transition-colors"
-                    >
-                      <span className="w-2 h-2 bg-mayache-blue rounded-full mr-3"></span>
-                      <span className="uppercase text-sm tracking-wide">{t("nav.messages")}</span>
+                      <span className="w-2 h-2 bg-mayache-teal rounded-full mr-3"></span>
+                      <span className="uppercase text-sm tracking-wide">{t("nav.education")}</span>
                     </button>
                   </motion.li>
                 </ul>
@@ -170,7 +157,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 <h3 className="text-xs text-gray-500 uppercase mb-3 font-bold">{t("nav.connect")}</h3>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/mayachee" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 p-4 rounded-full hover:bg-gray-200 transition-colors"
@@ -178,7 +165,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     <SiGithub className="h-6 w-6 text-black" />
                   </a>
                   <a 
-                    href="https://figma.com" 
+                    href="https://www.figma.com/@mayache" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 p-4 rounded-full hover:bg-gray-200 transition-colors"
@@ -186,7 +173,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     <SiFigma className="h-6 w-6 text-black" />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/mayachee/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 p-4 rounded-full hover:bg-gray-200 transition-colors"
