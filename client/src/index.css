@@ -71,11 +71,11 @@
   --ring: 142 77% 73%;
   --radius: 0.5rem;
 
-  /* Custom colors - Coolors.co Palette: https://coolors.co/palette/3c1642-086375-1dd3b0-affc41-b2ff9e */
+  /* Custom colors - Palette: teal #1DD3B0, coral #FF4D4D, purple #3C1642, blue #086375 */
   --mayache-purple: 287 50% 17%;   /* Dark purple #3C1642 */
   --mayache-blue: 190 88% 24%;     /* Teal blue #086375 */
   --mayache-teal: 167 77% 47%;     /* Bright teal #1DD3B0 */
-  --mayache-green: 84 97% 62%;     /* Bright lime #AFFC41 */
+  --mayache-green: 0 100% 65%;     /* Hot coral #FF4D4D */
   --mayache-light-green: 103 100% 81%; /* Light lime #B2FF9E */
   
   /* Additional complementary colors to maintain variety */
@@ -125,7 +125,7 @@
   
   /* Color utility classes */
   .bg-mayache-green {
-    background-color: hsl(84, 97%, 62%); /* Bright lime #AFFC41 */
+    background-color: hsl(0, 100%, 65%); /* Hot coral #FF4D4D */
   }
 
   .bg-mayache-purple {
@@ -149,7 +149,7 @@
   }
 
   .text-mayache-green {
-    color: hsl(84, 97%, 62%); /* Bright lime #AFFC41 */
+    color: hsl(0, 100%, 65%); /* Hot coral #FF4D4D */
   }
 
   .text-mayache-purple {
