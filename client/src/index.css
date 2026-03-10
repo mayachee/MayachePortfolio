@@ -50,40 +50,40 @@
 }
 
 :root {
-  --background: 220 30% 8%;
-  --foreground: 0 0% 100%;
-  --muted: 220 20% 20%;
-  --muted-foreground: 220 15% 65%;
-  --popover: 220 30% 10%;
-  --popover-foreground: 0 0% 100%;
-  --card: 220 30% 10%;
-  --card-foreground: 0 0% 100%;
-  --border: 220 20% 25%;
-  --input: 220 20% 25%;
-  --primary: 45 100% 62%;
-  --primary-foreground: 220 60% 10%;
-  --secondary: 220 25% 14%;
-  --secondary-foreground: 0 0% 100%;
-  --accent: 265 80% 55%;
-  --accent-foreground: 0 0% 100%;
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 8% 14%;
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 6%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 6%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 8% 18%;
+  --input: 240 8% 18%;
+  --primary: 263 90% 65%;          /* Electric Violet */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 8% 12%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 174 100% 43%;          /* Neon Cyan */
+  --accent-foreground: 240 10% 4%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-  --ring: 45 100% 62%;
+  --ring: 263 90% 65%;
   --radius: 0.5rem;
 
-  /* Custom colors - Midnight Jewels palette */
-  --mayache-purple: 265 60% 22%;   /* Deep Violet */
-  --mayache-blue: 162 62% 22%;     /* Deep Emerald */
-  --mayache-teal: 222 60% 25%;     /* Deep Cobalt Blue */
-  --mayache-green: 45 100% 62%;    /* Gold accent */
-  --mayache-light-green: 163 80% 50%; /* Bright Mint */
+  /* Custom colors — Vivid Dark palette */
+  --mayache-purple: 263 90% 18%;   /* Deep Electric Violet */
+  --mayache-blue: 221 83% 18%;     /* Deep Royal Blue */
+  --mayache-teal: 174 80% 14%;     /* Deep Neon Cyan */
+  --mayache-green: 263 90% 65%;    /* Electric Violet (accent) */
+  --mayache-light-green: 174 100% 43%; /* Neon Cyan */
 
   /* Additional complementary colors */
-  --mayache-pink: 335 60% 45%;     /* Kept for compatibility */
-  --mayache-red: 6 65% 28%;        /* Deep Crimson */
-  --mayache-orange: 30 95% 58%;    /* Amber */
-  --mayache-yellow: 148 58% 20%;   /* Pine Forest */
-  --mayache-dark: 220 60% 6%;      /* Dark Navy */
+  --mayache-pink: 322 80% 55%;     /* Hot Pink */
+  --mayache-red: 0 90% 55%;        /* Electric Red */
+  --mayache-orange: 25 100% 55%;   /* Electric Orange */
+  --mayache-yellow: 45 100% 55%;   /* Electric Yellow */
+  --mayache-dark: 240 10% 3%;      /* Pure Dark */
 }
 
 @layer base {
@@ -123,49 +123,49 @@
     font-family: 'Archivo', sans-serif;
   }
   
-  /* Color utility classes — Midnight Jewels palette */
+  /* Color utility classes — Vivid Dark palette */
   .bg-mayache-green {
-    background-color: hsl(6, 65%, 28%); /* Deep Crimson */
+    background-color: hsl(263, 90%, 18%); /* Deep Electric Violet */
   }
 
   .bg-mayache-purple {
-    background-color: hsl(265, 60%, 22%); /* Deep Violet */
+    background-color: hsl(263, 85%, 14%); /* Ultra Deep Violet */
   }
 
   .bg-mayache-blue {
-    background-color: hsl(162, 62%, 22%); /* Deep Emerald */
+    background-color: hsl(221, 83%, 18%); /* Deep Royal Blue */
   }
 
   .bg-mayache-teal {
-    background-color: hsl(222, 60%, 25%); /* Deep Cobalt Blue */
+    background-color: hsl(174, 80%, 14%); /* Deep Neon Cyan */
   }
 
   .bg-mayache-yellow {
-    background-color: hsl(148, 58%, 20%); /* Pine Forest */
+    background-color: hsl(322, 75%, 18%); /* Deep Hot Pink */
   }
 
   .bg-mayache-orange {
-    background-color: hsl(30, 95%, 58%); /* Amber */
+    background-color: hsl(25, 100%, 55%); /* Electric Orange */
   }
 
   .bg-mayache-red {
-    background-color: hsl(6, 65%, 28%); /* Deep Crimson */
+    background-color: hsl(0, 90%, 55%); /* Electric Red */
   }
 
   .text-mayache-green {
-    color: hsl(45, 100%, 62%); /* Gold */
+    color: hsl(263, 90%, 72%); /* Bright Electric Violet */
   }
 
   .text-mayache-purple {
-    color: hsl(265, 80%, 70%); /* Soft Violet */
+    color: hsl(263, 90%, 72%); /* Bright Electric Violet */
   }
 
   .text-mayache-blue {
-    color: hsl(162, 80%, 55%); /* Bright Mint */
+    color: hsl(210, 100%, 70%); /* Bright Royal Blue */
   }
 
   .text-mayache-teal {
-    color: hsl(185, 100%, 68%); /* Bright Cyan */
+    color: hsl(174, 100%, 50%); /* Pure Neon Cyan */
   }
 
   /* Grid layout */
@@ -176,7 +176,7 @@
     width: 100%;
     height: auto;
     min-height: 100vh;
-    background-color: hsl(220, 60%, 6%); /* Dark Navy background */
+    background-color: hsl(240, 10%, 3%); /* Pure Dark background */
     overflow: hidden;
     position: relative;
   }
