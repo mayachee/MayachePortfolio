@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <a
               className="bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 text-black text-sm font-medium shadow-sm"
-              href="https://ik.imagekit.io/szcfr7vth/Lebenslauf_Mohamed_Yassine_Ayache.pdf"
+              href="https://ik.imagekit.io/szcfr7vth/Yassine_Ayache_lebenslauf.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,7 +51,7 @@ const Footer = () => {
             </a>
             <a
               className="bg-gray-100 px-4 py-2 rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 text-black text-sm font-medium shadow-sm"
-              href="https://ik.imagekit.io/szcfr7vth/Resume_Mohamed_Yassine_Ayache.pdf"
+              href="https://ik.imagekit.io/szcfr7vth/Yassine_Ayache_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
